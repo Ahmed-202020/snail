@@ -1,0 +1,159 @@
+.edit-profile-info{
+    .show-case{
+        .image-profile{
+            img{
+                transition: all 300ms ease ;
+                -webkit-transition: all 300ms ease ;
+                -moz-transition: all 300ms ease ;
+                -ms-transition: all 300ms ease ;
+                -o-transition: all 300ms ease ;
+                filter: blur(6px);
+                -webkit-filter: blur(6px);
+            }
+            .overlay{
+                background-color: rgba($black , 0.4) ;
+                position: absolute ;
+                top: 0 ;
+                left: 0 ;
+                opacity: 0.9;
+                width: 115px ;
+                height: 115px ;
+                line-height: 115px ;
+                border-radius: 50% ;
+                -webkit-border-radius: 50% ;
+                -moz-border-radius: 50% ;
+                -ms-border-radius: 50% ;
+                -o-border-radius: 50% ;
+            }
+        }
+        .camera{
+            position: absolute;
+            top: -49px ;
+            left: 50% ;
+            width: 115px ;
+            height: 115px ;
+            text-align: center ;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            img{
+                position: absolute ;
+                left: 50% ;
+                transform: translate(-50% , 100%);
+                -webkit-transform: translate(-50% , 100%);
+                -moz-transform: translate(-50% , 100%);
+                -ms-transform: translate(-50% , 100%);
+                -o-transform: translate(-50% , 100%);
+            }
+            input[type="file"]{
+                display: none ;
+            }
+        }
+        .form-group{
+            .main-sector , .sub-sector , .exp-sector , .importants-sector{
+                @extend %select ; 
+                .form-control{
+                    text-align: right ;
+                    background-position-x: 8%
+                }
+            }
+            textarea{
+                resize: none ;
+                height: 200px;
+                resize: auto;
+            }
+            .importants-sector{
+                margin-top: 20px ;
+                margin-bottom: 15px ;
+            }
+            label.key-country{
+                top: 85px !important ;
+            }
+            label{
+                .importants{
+                    flex-wrap: wrap ;
+                    .custom-input{
+                        position: relative;
+                        display: flex ;
+                        width: 30% ;
+                        .form-control{
+                            position: relative;
+                            width: 100% ;
+                            padding-inline: 10px ;
+                            margin-left: 15px !important ;
+                        }
+                        .close{
+                            position: absolute ;
+                            cursor: pointer;
+                            z-index: 100;
+                            width: 10px ;
+                            left: 20px ;
+                            top: 5px ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//ltr 
+html[dir = "ltr"]{
+    .edit-profile-info{
+        .show-case{
+            .form-group{
+                .main-sector , .sub-sector , .exp-sector , .importants-sector{
+                    .form-control{
+                        text-align: left ;
+                        background-position-x: 92%
+                    }
+                }
+                label{
+                    .importants{
+                        .custom-input{
+                            .close{
+                                left: initial ;
+                                right: 7px ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:575.98px){
+    .edit-profile-info{
+        .show-case{
+            .form-group{
+                label{
+                    .importants{
+                        .custom-input{
+                            width: 42% ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:280px){
+    .edit-profile-info{
+        .show-case{
+            .form-group{
+                label{
+                    .importants{
+                        .custom-input{
+                            width: 48% ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

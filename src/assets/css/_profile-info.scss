@@ -1,0 +1,396 @@
+.profile-info{
+    padding: 50px 70px 200px ;
+    .branch{
+        @extend %branch ; 
+        margin-bottom: 125px;
+        .shape{
+            img{
+                &:nth-child(2){
+                    z-index: 5 ;
+                }
+                &:nth-child(3){
+                    position: absolute ;
+                    right: 8px ;
+                    transform: scaleX(1.2);
+                    -webkit-transform: scaleX(1.2);
+                    -moz-transform: scaleX(1.2);
+                    -ms-transform: scaleX(1.2);
+                    -o-transform: scaleX(1.2);
+                }
+                &:nth-child(4){
+                    position: absolute ;
+                    right: 104px ;
+                    z-index: -1;
+                    transform: scaleX(1.2) ;
+                    -webkit-transform: scaleX(1.2) ;
+                    -moz-transform: scaleX(1.2) ;
+                    -ms-transform: scaleX(1.2) ;
+                    -o-transform: scaleX(1.2) ;
+                }
+            }
+            .text{
+                &:last-child(){
+                    right: 130px ;
+                }   
+            }
+        }
+    }
+    .show-case{
+        position: relative ;
+        padding: 170px 0 100px ;
+        background-color: $light-bg ;
+        border: 2px solid $light-line ;
+        width: 70% ;
+        border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -ms-border-radius: 10px ;
+        -o-border-radius: 10px ;
+        margin-inline:auto;
+        .image-profile{
+            position: absolute ;
+            left: 50% ;
+            top: -50px ;
+            transform: translateX(-50% );
+            -webkit-transform: translateX(-50% );
+            -moz-transform: translateX(-50% );
+            -ms-transform: translateX(-50% );
+            -o-transform: translateX(-50% );
+            img{
+                width: 115px ;
+                margin-bottom: 15px ;
+                border: 1px solid $min-color ;
+                border-radius: 50% ;
+                -webkit-border-radius: 50% ;
+                -moz-border-radius: 50% ;
+                -ms-border-radius: 50% ;
+                -o-border-radius: 50% ;
+            }
+            .name{
+                text-align: center ;
+                color: $black ;
+            }
+            .stars{
+                position: absolute;
+                width: 15% ;
+                bottom:  -50px ;
+                left: 100% ;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+                display: flex;
+                img{
+                    border: none ;
+                }
+                img + img{
+                    margin-right: 3px ;
+                }
+            }
+        }
+        .breef{
+            width: 75% ;
+            margin-inline: auto ;
+            margin-bottom: 55px ;
+            color: $black ;
+            text-align: center;
+            font-size: 16pt ;
+        }
+        .form-group{
+            width: 42% ;
+            margin-inline: auto ; 
+            @extend %form ; 
+            select{
+                top: -4px ;
+            }
+            label.key-country{
+                top: 152px !important ;
+            }
+            label{
+                display: flex ;
+                flex-direction: column ;
+                span{
+                    color: $min-color ;
+                    font-size: 12pt;
+                    margin-bottom: 10px ;
+                }
+            }
+            label{
+                .importants{
+                    display: flex ;
+                    align-items: baseline ;
+                    .form-control{
+                        text-align: center;
+                        width: 20%;
+                        padding: 8px 5px ;
+                    }
+                    input:first-child{
+                        margin-left: 15px ;
+                    }
+                }
+            }
+            .form-control{
+                background-color: $white ;
+                text-align: right ;
+                font-size: 14pt ;
+            }
+            .buttons{
+                margin-top: 60px ;
+                .signup{
+                    background-image: none ;
+                    color: $min-color ;
+                    font-size: 14pt ;
+                }
+            }
+        }
+    }
+}
+#change-pass-prof{
+    .modal-content{
+        border: none ;
+        .show-case{
+            padding: 125px 0 200px ;
+            .out{
+                position: absolute ;
+                right: 30px  ;
+                top: 30px ;
+                cursor: pointer ;
+            }
+            .title{
+                text-align: center ;  
+                font-weight: bolder ;
+                color: $black ;
+                font-size: 18pt ;
+                margin-bottom: 5px ;
+            }
+            .sub{
+                text-align: center ;
+                font-size: 10pt ;
+                margin-bottom: 80px ;
+            }
+            .form-group{
+                margin-inline: auto ; 
+                width: 40% ;
+                @extend %form ; 
+                .eye{
+                    top: 3% ;
+                }
+                .eye-2{
+                    top: 27% ;
+                }
+                .buttons{
+                    margin-top: 80px ;
+                }
+            }
+        }
+    }
+}
+
+//ltr 
+html[dir = "ltr"]{
+    .branch{
+        @extend %branch-ltr ; 
+        .shape{
+            img{
+                &:nth-child(3){
+                    left: 7px ;
+                    right: initial ;
+                }
+                &:nth-child(4){
+                    right: initial ;
+                    left: 95px ;
+                    transform: rotateY(180deg);
+                    -webkit-transform: rotateY(180deg);
+                    -moz-transform: rotateY(180deg);
+                    -ms-transform: rotateY(180deg);
+                    -o-transform: rotateY(180deg);
+                }
+            }
+            .text{
+                left: 120px ;
+                right: initial ;
+                &:nth-of-type(1){
+                    left: 27px ;
+                    right: initial ;
+                }
+            } 
+        }
+    }
+    .show-case{
+        .image-profile{
+            .stars{
+                left: -5% ;
+                img + img{
+                    margin-left: 3px ;
+                    margin-right: 0 ;
+                }
+            }
+        }
+        .form-group{
+            label{
+                .importants{
+                    input:first-child{
+                        margin-right: 15px ;
+                    }
+                }
+            }
+            @extend %form-ltr ; 
+            .form-control{
+                text-align: left ;
+            }
+        }
+    }
+    #change-pass-prof{
+        .modal-content{
+            .show-case{
+                .out{
+                    left: 30px ;
+                    right: initial ;
+                }
+                .form-group{
+                    @extend %form-ltr ; 
+                }
+            }
+        }
+    }
+}
+
+//responsive(rtl)
+@media(max-width: 1199.98px){
+    .profile-info{
+        .show-case{
+            width: 77% ;
+            .form-group{
+                label{
+                    .importants{
+                        .form-control{
+                            width: 25% ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 1024px){
+    .profile-info{
+        .show-case{
+            width: 82% ;
+            .form-group{
+                width: 60%;
+            }
+        }
+    }
+}
+@media(max-width: 912px){
+    .profile-info{
+        .show-case{
+            width: 100% ;
+            .form-group{
+                width: 50% ;
+            }
+        }
+    }
+}
+@media(max-width: 820px){
+    .profile-info{
+        .show-case{
+            .form-group{
+                width: 60% ;
+            }
+        }
+    }
+    #change-pass-prof.modal{
+        .modal-dialog{
+            max-width: 92% !important ;
+        }
+    }
+}
+@media(max-width: 768px){
+    .profile-info{
+        .branch{
+            margin-bottom: 180px ;
+        }
+        .show-case{
+            .form-group{
+                width: 60% ;
+            }
+        }
+    }
+}
+@media(max-width: 575.98px){
+    .profile-info{
+        padding: 50px 30px 200px ;
+    }
+    #change-pass-prof.modal{
+        .modal-dialog{
+            max-width: 99% !important ;
+            .modal-content{
+                .show-case{
+                    .form-group{
+                        width: 70% ;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 500px){
+    .profile-info{
+        padding: 50px 10px 200px ;
+        .show-case{
+            .form-group{
+                width: 95% ;
+            }
+        }
+    }
+    #change-pass-prof.modal{
+        .modal-dialog{
+            .modal-content{
+                .show-case{
+                    .form-group{
+                        width: 95% ;
+                        .form-control{
+                            padding-inline: 10px ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 280px){
+    .profile-info{
+        .branch{
+            .shape{
+                right: 70px ;
+            }
+        }
+        .show-case{
+            .form-group{
+                label{
+                    .importants{
+                        .form-control{
+                            width: 30% ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//responsive(ltr)
+@media(max-width: 280px){
+    html[dir = "ltr"]{
+        .profile-info{
+            .branch{
+                .shape{
+                    left: 70px ;
+                    right: initial ;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,450 @@
+.payments{
+    .branch{
+        .shape{
+            .text{
+                &:last-child{
+                    right: 127px ;
+                }
+            }
+        }
+    }
+    .sections{
+        .section{
+            .show-case{
+                position: relative;
+                align-items: stretch ;
+                padding: 15px 50px ;
+                height: 180px ;
+                .title{
+                    margin-right: 8px ;
+                    font-size: 17pt ;
+                    margin-top: 5px ;
+                }
+                .price{
+                    position: absolute;
+                    color: $min-color ;
+                    left: 3% ;
+                    font-size: 24pt ;
+                    bottom: 20px;
+                }
+            }
+            &:hover{
+                transform: scaleX(1);
+                -webkit-transform: scaleX(1);
+                -moz-transform: scaleX(1);
+                -ms-transform: scaleX(1);
+                -o-transform: scaleX(1);
+            }
+        }
+    }
+    .data-bank{
+        margin-top: 50px ;
+        .title{
+            color: $min-color ;
+            font-size: 17pt ;
+            margin-bottom: 20px ;
+        }
+        .form-group{
+            width: 33% ;
+            .form-control{
+                box-shadow: none ;
+                background-color: $light-bg ;
+                padding: 15px 30px  ;
+                border-radius: 8px ;
+                -webkit-border-radius: 8px ;
+                -moz-border-radius: 8px ;
+                -ms-border-radius: 8px ;
+                -o-border-radius: 8px ;
+                border: 1px solid $light-line;
+                &::placeholder{
+                    color: $light-line;
+                }   
+            }
+            .btn{
+                @extend %btn-black ; 
+                background-image: linear-gradient($btn-1 , $btn-2);
+                margin-top: 80px ;
+                padding-block: 10px ;
+                font-size: 18pt ;
+                width: 100% ; 
+                margin-bottom: 0 ;
+            }
+        }
+    }
+}
+.bank-info{
+    .modal-content{
+        border: none ;
+        padding: 70px 50px 120px ;
+        &>.title{
+            @extend %title-style ;
+            margin-bottom: 30px ;
+            &:after{
+                right: 37.5% ;
+            }
+        }
+        .section{
+            @extend %section ; 
+            width: 38% ;
+            margin-inline: auto ;
+            margin-bottom: 80px ;
+            &:hover{
+                transform: scaleX(1);
+                -webkit-transform: scaleX(1);
+                -moz-transform: scaleX(1);
+                -ms-transform: scaleX(1);
+                -o-transform: scaleX(1);
+            }
+            .show-case{
+                flex-direction: column ;
+                padding: 25px 50px ;
+                height: 170px ;
+                .req-amount{
+                    display: flex ;
+                    align-items: baseline ;
+                    margin-bottom: 25px ;
+                    .title{
+                        font-size: 18pt ;
+                        margin-right: 12px ;
+                    }
+                }
+                .price{
+                    color: $min-color ;
+                    font-size: 20pt ;
+                }
+            }
+        }
+        .form-group{
+            display: flex ;
+            flex-direction: column ;
+            justify-content: center ;
+            width: 45% ;
+            margin-inline: auto ;
+            label{
+                &>span{
+                    color: $min-color ;
+                    font-size: 14pt ;
+                    margin-bottom: 10px ;
+                    display: inline-block ;
+                }
+                .form-control{
+                    @extend %form-control ; 
+                }
+            }
+            label + label{
+                margin-top: 5px ;
+            }
+            .btn{
+                @extend %btn-black ; 
+                background-image: linear-gradient($btn-1 , $btn-2);
+                width: 100% ;
+                font-size: 18pt ;
+                padding-block: 8px ;
+                margin-bottom: 0 ;
+                margin-top: 70px ;
+            }
+        }
+    }
+}
+
+//ltr 
+html[dir = "ltr"]{
+    .payments{
+        .branch{
+            .shape{
+                .text{
+                    &:last-child{
+                        left: 112px ;
+                        right: initial ;
+                    }
+                }
+            }
+        }
+        .sections{
+            .section{
+                .show-case{
+                    .title{
+                        margin-left: 8px ;
+                        margin-right: 0 ;
+                    }
+                    .price{
+                        right: 3% ;
+                        left: initial ;
+                    }
+                }
+            }
+        }
+    
+    }
+    .bank-info{
+        .modal-content{
+            &>.title{
+                @extend %title-style ;
+                &:after{
+                    left : 37.5% ;
+                    right: initial ;
+                }
+            }
+            .section{
+                .show-case{
+                    .req-amount{
+                        .title{
+                            margin-right: 0 ;
+                            margin-left: 12px ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//responsive-design [rtl]
+
+@media(max-width:1399.98px ){
+    .bank-info{
+        .modal-content{
+            .section{
+                width: 44% ;
+            }
+        }
+    }
+}
+@media(max-width:1280px ){
+    .bank-info{
+        .modal-content{
+            .section{
+                width: 50% ;
+            }
+            .title{
+                &::after{
+                    right: 36% ;
+                }
+            }
+        }
+    }
+}
+@media(max-width:1199.98px ){
+    .payments{
+        .sections{
+            .section{
+                .show-case{
+                    padding: 50px 45px ;
+                }
+            }
+        }
+    }
+    .bank-info{
+        .modal-content{
+            .title{
+                &::after{
+                    right: 35% ;
+                }
+            }
+        }
+    }
+}
+@media(max-width:1024px ){
+    .payments{
+        .data-bank{
+            .form-group{
+                width: 46% ;
+                .btn{
+                    margin-top: 50px ;
+                }
+            }
+        }
+    }
+    .bank-info{
+        .modal-content{
+            .title{
+                &::after{
+                    right: 32% ;
+                }
+            }
+            .section{
+                width: 60% ;
+            }
+        }
+    }
+}
+@media(max-width:991.98px ){
+    .bank-info{
+        .modal-content{
+            .title{
+                &::after{
+                    right: 31%  ;
+                }
+            }
+            .section{
+                width: 62% ;
+            }
+            .form-group{
+                width: 50% ;
+            }
+        }
+    }
+}
+@media(max-width:912px ){
+    .payments{
+        padding: 50px 50px 300px ;
+    }
+    .bank-info{
+        .modal-dialog{
+            max-width: 90% !important ;
+        }
+        .modal-content{
+            padding: 70px 10px 200px ;
+        }
+    }
+}
+@media(max-width:575.98px ){
+    .payments{
+        .data-bank{
+            .form-group{
+                width: 80% ;
+            }
+        }
+    }
+    .bank-info{
+        .modal-dialog{
+            max-width: 98% !important ;
+        }
+        .modal-content{
+            .title{
+                &::after{
+                    right: 28% ;
+                }
+            }
+            .section{
+                width: 80% ;
+            }
+            .form-group{
+                width: 80% ;
+            }
+        }
+    }
+}
+@media(max-width:500px ){
+    .payments{
+        padding: 50px 20px 300px ;
+    }
+    .bank-info{
+        .modal-content{
+            .title{
+                &::after{
+                    content: initial ;
+                }
+            }
+            .section{
+                width: 100% ;
+                .show-case{
+                    padding-inline: 15px ;
+                    .req-amount{
+                        .title{
+                            font-size: 15pt ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:280px ){
+    .payments{
+        .branch{
+            display: none ;
+        }
+        padding: 50px 5px 300px ;
+        .data-bank{
+            .form-group{
+                width: 100% ;
+            }
+        }
+    }
+}
+
+//responsive-design [ltr]
+
+@media(max-width:1280px ){
+    html[dir = "ltr"]{
+        .bank-info{
+            .modal-content{
+                .title{
+                    &::after{
+                        left: 36% ;
+                        right: initial ;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:1199.98px ){
+    html[dir = "ltr"]{
+        .bank-info{
+            .modal-content{
+                .title{
+                    &::after{
+                        left: 35% ;
+                        right: initial ;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:1024px ){
+    html[dir = "ltr"]{
+        .bank-info{
+            .modal-content{
+                .title{
+                    &::after{
+                        left: 32% ;
+                        right: initial ;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:991.98px ){
+    html[dir = "ltr"]{
+        .bank-info{
+            .modal-content{
+                .title{
+                    &::after{
+                        left: 31% ;
+                        right: initial ;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:575.98px ){
+    html[dir = "ltr"]{
+        .bank-info{
+            .modal-content{
+                .title{
+                    &::after{
+                        left: 28% ;
+                        right: initial ;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:500px ){
+    .bank-info{
+        .modal-content{
+            .title{
+                &::after{
+                    content: initial !important ;
+                }
+            }
+        }
+    }
+}

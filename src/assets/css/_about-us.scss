@@ -1,0 +1,84 @@
+.about-us{
+    padding: 50px 70px 200px;
+    .branch{
+        @extend %branch ; 
+    }
+    .show-case{
+        padding-inline: 280px ;
+        text-align: center ;
+        .text{
+            color: $black ;
+            font-size: 16pt ;
+            &:first-child{
+                margin-bottom: 40px ;
+            }
+        }
+    }
+}
+
+//ltr 
+html[dir = "ltr"]{
+    .about-us{
+        .branch{
+            @extend %branch-ltr ; 
+        }
+    }
+}
+
+@media(max-width:1199.98px){
+    .about-us{
+        .show-case{
+            padding-inline: 120px ;
+        }
+    }
+}
+@media(max-width:912px){
+    .about-us{
+        .show-case{
+            padding-inline: 70px ;
+        }
+    }
+}
+@media(max-width:768px){
+    .about-us{
+        .show-case{
+            padding-inline: 50px ;
+        }
+    }
+}
+@media(max-width:575.98px){
+    .about-us{
+        padding: 50px 50px 200px ;
+        .show-case{
+            padding-inline: 30px ;
+        }
+    }
+}
+@media(max-width:500px){
+    .about-us{
+        padding: 50px 20px 200px ;
+        .branch{
+            .shape{
+                right: 45% !important ;
+            }
+        }
+        .show-case{
+            padding-inline: 10px ;
+        }
+    }
+}
+
+
+//ltr res 
+@media(max-width:500px){
+    html[dir = "ltr"]{
+        .about-us{
+            .branch{
+                .shape{
+                    right: initial !important ;
+                    left: 45% !important;
+                }
+            }
+        }
+    }
+}

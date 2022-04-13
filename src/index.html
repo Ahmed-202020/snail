@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ar" dir = "rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/bootstrap.rtl.min.css" />
+        <link rel="stylesheet" href="./assets/fontawesome-free-5.15.1-web/css/all.min.css" />
+        <link rel="stylesheet" href="./assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
+        <link rel="stylesheet" href="./assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" />
+        <title>حلزون snail</title>
+    </head>
+    <body>
+        <div id = "header" class="header">
+            <nav class="navbar navbar-expand ">
+                <div class="container-fluid p-0">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="min-nav">
+                            <div class="lang">
+                                <div class="dropdown">
+                                    <a class="nav-link text-lang dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        العربية
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item drop-1 active-lang ar" href="#">العربية</a></li>
+                                        <li><a class="dropdown-item en" href="#">English</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="navbar-brand">
+                                <a href="./index.html"><img src="./assets/logo/1.png" alt="شعار"></a>
+                            </div>
+                            <div class="sign">
+                                <a class="btn" href="./create-account" data-bs-toggle= "modal" data-bs-target="#create">مستشار جديد</a>
+                                <a class="btn" href="./login.html" data-bs-toggle= "modal" data-bs-target="#register">تسجيل الدخول</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div id="slider" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="./assets/img/header1 bg.png" class="d-block w-100" alt="photo">
+                    <div class="overlay">
+                        <div class="text">قم بتقديم استشاراتك الأن بكل سهولة ويسر</div>
+                    </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./assets/img/header2 bg.png" class="d-block w-100" alt="photo">
+                        <div class="overlay">
+                            <div class="text">قم بتقديم استشاراتك الأن بكل سهولة ويسر</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a href="#services" class="btn">خدمتنا</a>
+                    <a href="#services" class="next-section">
+                        <img src="./assets/icons/Group 40954.svg" alt="arrow">
+                    </a>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
+                </button>
+            </div>
+        </div>
+        <section id="services" class="services">
+            <div class="title">الخدمات المقدمة</div>
+            <div class="show-case">
+                <div class="card">
+                    <img src="./assets/icons/Group 45155.svg" class="card-img-top" alt="استشارات خاصة">
+                    <div class="card-body">
+                        <p class="card-text">استشارات خاصة</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./assets/icons/Group 44809.svg" class="card-img-top" alt="عيادات متعددة">
+                    <div class="card-body">
+                        <p class="card-text">عيادات متعددة</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./assets/icons/reports.svg"  class="card-img-top" alt="تقارير لحيوانك">
+                    <div class="card-body">
+                        <p class="card-text">تقارير لحيوانك</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="features">
+            <div class="feature">
+                <div class="show-case">
+                    <div class="text">نقدم خدمات متكاملة للعديد من الاستشارات المختلفة فقط لحيوانك الخاص بك</div>
+                    <a href="#services" class="btn">خدمتنا</a>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="image">
+                    <img src="./assets/img/image1.png" alt="img">
+                </div>
+            </div>
+            <div class="feature">
+                <div class="image">
+                    <img src="./assets/img/image2.png" alt="img">
+                </div>
+            </div>
+            <div class="feature">
+                <div class="show-case">
+                    <div class="text">نمتلك العديد من العيادات وبها العديد من الأطباء ذو الخبرة العالية فقط تقديم المساعدة وفي الخدمة دائما</div>
+                    <a href="#services" class="btn">خدمتنا</a>
+                </div>
+            </div>
+        </div>
+        <section  class="vip-consultant slider-1">
+            <div class="title">
+                <div>أهم العيادات</div>
+            </div>
+            <div class="container-fluid p-0">
+                <div id="consultant-slider" class="consultant-slider owl-carousel">
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/img/download (1).png"  alt="person">
+                        </div>
+                        <div class="card-body">
+                            <div class="title">فيبيتس كلينك</div>
+                            <div class="stars">                                
+                                <img data-star="one" data-star-half="one" src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="two" data-star-half="two" src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="three" data-star-half="three"  src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="four" data-star-half="four"  src="./assets/icons/Star.svg" alt="star">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/img/download (4).png"  alt="person">
+                        </div>
+                        <div class="card-body">
+                            <div class="title">دكتور زوو</div>
+                            <div class="stars">                                
+                                <img data-star="one" data-star-half="one" src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="two" data-star-half="two" src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="three" data-star-half="three"  src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="four" data-star-half="four"  src="./assets/icons/Star.svg" alt="star">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/img/download (6).png"  alt="person">
+                        </div>
+                        <div class="card-body">
+                            <div class="title">سوول كلينك</div>
+                            <div class="stars">                                
+                                <img data-star="one" data-star-half="one" src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="two" data-star-half="two" src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="three" data-star-half="three"  src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="four" data-star-half="four"  src="./assets/icons/Star.svg" alt="star">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/img/download (1).png"  alt="person">
+                        </div>
+                        <div class="card-body">
+                            <div class="title">فيبيتس كلينك</div>
+                            <div class="stars">                                
+                                <img data-star="one" data-star-half="one" src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="two" data-star-half="two" src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="three" data-star-half="three"  src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="four" data-star-half="four"  src="./assets/icons/Star.svg" alt="star">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/img/download (4).png"  alt="person">
+                        </div>
+                        <div class="card-body">
+                            <div class="title">دكتور زوو</div>
+                            <div class="stars">                                
+                                <img data-star="one" data-star-half="one" src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="two" data-star-half="two" src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="three" data-star-half="three"  src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="four" data-star-half="four"  src="./assets/icons/Star.svg" alt="star">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/img/download (6).png"  alt="person">
+                        </div>
+                        <div class="card-body">
+                            <div class="title">سوول كلينك</div>
+                            <div class="stars">                                
+                                <img data-star="one" data-star-half="one" src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="two" data-star-half="two" src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="three" data-star-half="three"  src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="four" data-star-half="four"  src="./assets/icons/Star.svg" alt="star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section  class="vip-consultant-2 clients-preview slider-2 ">
+            <div class="title">
+                <div>توصيات الأخرين لبعض عيادتنا</div>
+            </div>
+            <div class="container-fluid  p-0">
+                <div id="preview-slider" class="consultant-slider owl-carousel">
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/img/2qqw@3x.png"  alt="person">
+                        </div>
+                        <div class="card-body">
+                            <div class="title">محمد أحمد</div>
+                            <p class="card-text">عيادة في بيتس </p>
+                            <div class="stars">                                
+                                <img data-star="one" data-star-half="one" src="./assets/icons/Star-outline.svg" alt="star">
+                                <img data-star="two" data-star-half="two" src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="three" data-star-half="three"  src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="four" data-star-half="four"  src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="five" data-star-half="five"  src="./assets/icons/Star.svg" alt="star">
+                            </div>
+                            <div class="text">عيادة رائعة وبها العديد من الدكاترة الماهرين. قاموا بمداواة حيواني الخاص</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/img/2qqw@3x.png"  alt="person">
+                        </div>
+                        <div class="card-body">
+                            <div class="title">محمد أحمد</div>
+                            <p class="card-text">عيادة في بيتس </p>
+                            <div class="stars">                                
+                                <img data-star="one" data-star-half="one" src="./assets/icons/Star-outline.svg" alt="star">
+                                <img data-star="two" data-star-half="two" src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="three" data-star-half="three"  src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="four" data-star-half="four"  src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="five" data-star-half="five"  src="./assets/icons/Star.svg" alt="star">
+                            </div>
+                            <div class="text">عيادة رائعة وبها العديد من الدكاترة الماهرين. قاموا بمداواة حيواني الخاص</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/img/2qqw@3x.png"  alt="person">
+                        </div>
+                        <div class="card-body">
+                            <div class="title">محمد أحمد</div>
+                            <p class="card-text">عيادة في بيتس </p>
+                            <div class="stars">                                
+                                <img data-star="one" data-star-half="one" src="./assets/icons/Star-outline.svg" alt="star">
+                                <img data-star="two" data-star-half="two" src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="three" data-star-half="three"  src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="four" data-star-half="four"  src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="five" data-star-half="five"  src="./assets/icons/Star.svg" alt="star">
+                            </div>
+                            <div class="text">عيادة رائعة وبها العديد من الدكاترة الماهرين. قاموا بمداواة حيواني الخاص</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/img/2qqw@3x.png"  alt="person">
+                        </div>
+                        <div class="card-body">
+                            <div class="title">محمد أحمد</div>
+                            <p class="card-text">عيادة في بيتس </p>
+                            <div class="stars">                                
+                                <img data-star="one" data-star-half="one" src="./assets/icons/Star-outline.svg" alt="star">
+                                <img data-star="two" data-star-half="two" src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="three" data-star-half="three"  src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="four" data-star-half="four"  src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="five" data-star-half="five"  src="./assets/icons/Star.svg" alt="star">
+                            </div>
+                            <div class="text">عيادة رائعة وبها العديد من الدكاترة الماهرين. قاموا بمداواة حيواني الخاص</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/img/2qqw@3x.png"  alt="person">
+                        </div>
+                        <div class="card-body">
+                            <div class="title">محمد أحمد</div>
+                            <p class="card-text">عيادة في بيتس </p>
+                            <div class="stars">                                
+                                <img data-star="one" data-star-half="one" src="./assets/icons/Star-outline.svg" alt="star">
+                                <img data-star="two" data-star-half="two" src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="three" data-star-half="three"  src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="four" data-star-half="four"  src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="five" data-star-half="five"  src="./assets/icons/Star.svg" alt="star">
+                            </div>
+                            <div class="text">عيادة رائعة وبها العديد من الدكاترة الماهرين. قاموا بمداواة حيواني الخاص</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/img/2qqw@3x.png"  alt="person">
+                        </div>
+                        <div class="card-body">
+                            <div class="title">محمد أحمد</div>
+                            <p class="card-text">عيادة في بيتس </p>
+                            <div class="stars">                                
+                                <img data-star="one" data-star-half="one" src="./assets/icons/Star-outline.svg" alt="star">
+                                <img data-star="two" data-star-half="two" src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="three" data-star-half="three"  src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="four" data-star-half="four"  src="./assets/icons/Star.svg" alt="star">
+                                <img data-star="five" data-star-half="five"  src="./assets/icons/Star.svg" alt="star">
+                            </div>
+                            <div class="text">عيادة رائعة وبها العديد من الدكاترة الماهرين. قاموا بمداواة حيواني الخاص</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="why-choose-us">
+            <div class="title">لماذا نحن</div>
+            <div class="show-case">
+                <div class="card">
+                    <img src="./assets/icons/reports.svg" class="card-img-top" alt="استشارات عديدة">
+                    <div class="card-body">
+                        <p class="card-text">استشارات عديدة</p>
+                        <p class="text">قدمنا العديد من الاستشارات البيطرية للعديد من العملاء</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./assets/icons/Group 44809.svg" class="card-img-top" alt="عيادات متعددة">
+                    <div class="card-body">
+                        <p class="card-text">عيادات متعددة</p>
+                        <p class="text">نضم العديد من العيادات بها أطباء متميزين بخبرات عالية</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./assets/icons/money.svg" class="card-img-top" alt="مدفوعاتك فى أمان">
+                    <div class="card-body">
+                        <p class="card-text">مدفوعاتك فى أمان</p>
+                        <p class="text">تابع مدفوعاتك واسحب منها ما تحتاجه بكل سهولة وأمان</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="app">
+            <div class="show-case">
+                <div class="title">قم بتحميل التطبيق الان</div>
+                <img src="./assets/img/app-store-google-play-logo.png" alt="app">
+            </div>
+            <div class="image">
+                <img src="./assets/img/mob.png" alt="app">
+            </div>
+        </section>
+        <footer class="footer">
+            <a href="#header" class="icon"></a>
+            <div class="row">
+                <div class="col-4">
+                    <div class="logo">
+                        <img src="./assets/logo/2-0.png" alt="شعار">
+                    </div>
+                    <div class="explanation">
+                        <p class="text">موقع استشارات بيطرية يهدف الي  توصيل العملاء بالعيادات البيطرية، وتقديم العيادات لخدمتها المختلفة</p>
+                    </div>
+                </div>
+                <div class="col-4 order-3 order-sm-2  d-flex flex-column justify-content-center align-items-start">
+                    <ul class="items">
+                        <li class="item">
+                            <a href="./about-us.html" class="link">من نحن</a>
+                        </li>
+                        <li class="item">
+                            <a href="#services" class="link">خدمتنا</a>
+                        </li>
+                        <li class="item">
+                            <a href="./t_c.html" class="link">الشروط والاحكام</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-4 order-2 order-sm-3">
+                    <div class="contact">
+                        <div class="title"> تواصل معنا  </div>
+                        <ul class="items custom-items">
+                            <li class="item custom-item">
+                                <span>snail.com</span>
+                                <img src="./assets/icons/Icon zocial-email.svg" alt="email">
+                            </li>
+                            <li class="item custom-item">
+                                <span>201024848723+</span>
+                                <img src="./assets/icons/Icon feather-phone-call.svg" alt="phone">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">
+                </span class = "text">professional consultant.com ,inc </span>
+                <span class="year">2022</span>
+                <span class="copy"><img src="./assets/icons/Icon metro-copyright.svg" alt="copyright"></span> 
+            </p>
+        </footer>
+    </body>
+    <div id = "register"  class="modal modal-register register fade"  aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="signin">
+                            <div class="out">
+                                <a class="close-register">
+                                    <img src="./assets/icons/Icon ionic-ios-close-circle-outline.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="title">مرحبا بك فى المستشار المحترف</div>
+                            <div class="sub">تسجيل الدخول</div>
+                            <form  action="./home.html"   class="form-group error">
+                                <label for="key-country-1" class="key-country">
+                                    <img src="./assets/icons//علم-المملكة-العربية-السعودية-حاليا.svg" alt="علم">
+                                    <select  name="key" id="key-country-1">
+                                        <option value="KSA" selected>966+</option>
+                                        <option value="Egypt">002+</option>
+                                        <option value="known">111+</option>
+                                    </select>
+                                </label>
+                                <input  type="text" class="form-control select" name = "number"  placeholder="رقم الجوال" required>
+                                <input type="password" class="pass form-control" name = "password"  placeholder="كلمة المرور" required>
+                                <div class="eye"><img  src="./assets/icons/Icon ionic-ios-eye.svg" alt="eye"></div>
+                                <a href="#" class="forget" data-bs-toggle= "modal" data-bs-target="#forget-password">نسيت كلمة المرور ؟</a>
+                                <div class="text-error"></div>
+                                <div class="buttons">
+                                    <button   type="submit" class = "btn sign"  >تسجيل الدخول</button>
+                                    <button  data-bs-toggle= "modal" data-bs-target="#create" class="sign  signup btn" >مستشار جديد</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-6 ">
+                        <img  class="w-100 image" src="./assets/img/sign img.png" alt="sign">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "forget-password"  class="modal modal-forget fade" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="signin">
+                            <div class="out">
+                                <a class="close-register">
+                                    <img src="./assets/icons/Icon ionic-ios-close-circle-outline.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="title">نسيت كلمة المرور</div>
+                            <div class="sub">من فضلك ادخل رقم الجوال لارسال كلمة مرور مؤقتة لتغيير كلمة المرور الخاصة بك</div>
+                            <form  action="."   class="form-group error">
+                                <label for="key-country-1" class="key-country">
+                                    <img src="./assets/icons//علم-المملكة-العربية-السعودية-حاليا.svg" alt="علم">
+                                    <select  name="key" id="key-country-1">
+                                        <option value="KSA" selected>966+</option>
+                                        <option value="Egypt">002+</option>
+                                        <option value="known">111+</option>
+                                    </select>
+                                </label>
+                                <input  type="text" class="form-control select" name = "number"  placeholder="رقم الجوال" required>
+                                <div class="buttons">
+                                    <button   type="submit"   class = "btn sign">ارسال كلمة مرور مؤقتة</button>
+                                </div>
+                                <div class="text-error"></div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-6 ">
+                        <img  class="w-100 image" src="./assets/img/sign img.png" alt="sign">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "otp-pass"  class="modal otp fade" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="signin">
+                            <div class="out">
+                                <a class="close-register">
+                                    <img src="./assets/icons/Icon ionic-ios-close-circle-outline.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="title">كلمة المرور المؤقتة</div>
+                            <div class="sub">تم ارسال كلمة المرور المؤقتة الى رقم الجوال</div>
+                            <span class="code">9660000000000+</span>
+                            <form  action="."   class="form-group error">
+                                <div class="codes">
+                                    <input type="password" name="code" class="form-control one" placeholder="-"  required maxlength="1" >
+                                    <input type="password" name="code" class="form-control two" placeholder="-"  required maxlength="1"> 
+                                    <input type="password" name="code" class="form-control three" placeholder="-" required maxlength="1">
+                                    <input type="password" name="code" class="form-control four" placeholder="-"  required maxlength="1">
+                                </div>
+                                <div class="text-error"></div>
+                                <div class="buttons">
+                                    <button disabled  type="submit" class = "btn sign"  >تأكيد</button>
+                                </div>
+                            </form>
+                            <button   class="resent btn" >اعادة ارسال</button>
+                            <div class="timing">
+                                <span class="time">
+                                    <span class="seconds">45</span> : <span class="minutes">03</span>
+                                </span>
+                                <span>د.ق</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 ">
+                        <img  class="w-100 image" src="./assets/img/sign img.png" alt="sign">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "new-password"  class="modal modal-new-pass  fade" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="signin">
+                            <div class="out">
+                                <a class="close-register">
+                                    <img src="./assets/icons/Icon ionic-ios-close-circle-outline.svg" alt="اغلاق">
+                                </a>
+                            </div>
+                            <div class="title">كلمة مرور جديدة</div>
+                            <div class="sub">قم بإدخال كلمة المرور الجديدة</div>
+                            <form  action="./home.html"   class="form-group error ">
+                                <input type="password" class="pass form-control" name = "password"  placeholder="كلمة المرور الجديدة" required>
+                                <div class="eye"><img  src="./assets/icons/Icon ionic-ios-eye.svg" alt="eye"></div>
+                                <input type="password" class="pass-2 form-control" name = "password"  placeholder="تأكيد كلمة المرور الجديدة" required>
+                                <div class="eye eye-2"><img  src="./assets/icons/Icon ionic-ios-eye.svg" alt="eye"></div>
+                                <div class="buttons">
+                                    <button   type="submit" class = "btn sign"  >تغيير كلمة المرور</button>
+                                </div>
+                                <div class="text-error first"></div>
+                                <div class="text-error second"></div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-6 ">
+                        <img  class="w-100 image" src="./assets/img/sign img.png" alt="sign">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "create"  class="modal modal-create  create fade" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="col-6 ">
+                        <div class="signin">
+                            <div class="out">
+                                <a class="close-register">
+                                    <img src="./assets/icons/Icon ionic-ios-close-circle-outline.svg" alt="اغلاق">
+                                </a>
+                            </div>
+                            <div class="title">مرحبا بك فى المستشار المحترف</div>
+                            <div class="sub">تسجيل مستشار جديد</div>
+                            <form  action="." type ="submit"   class="form-group error ">
+                                <label for="key-country-2" class="key-country" >
+                                    <img src="./assets/icons//علم-المملكة-العربية-السعودية-حاليا.svg" alt="علم">
+                                    <select  name="key" id="key-country-2">
+                                        <option value="KSA" selected>966+</option>
+                                        <option value="Egypt">002+</option>
+                                        <option value="known">111+</option>
+                                    </select>
+                                </label>
+                                <label for="photo">
+                                    <img src="./assets/icons/Icon metro-image.svg" alt="image">
+                                    <input id="photo" type="file">
+                                </label>
+                                <input type="text" class="form-control name-input" name = "name"  placeholder="الاسم" required>
+                                <input type="text" class="form-control select" name = "number"  placeholder="رقم الجوال" required>
+                                <input type="text" class="form-control" name = "email" value=""  placeholder="البريد الالكترونى" required>
+                                <input type="text" disabled  class="form-control ph" name = "photo"  placeholder="الصورة الشخصية" >
+                                <div class="main-sector">
+                                    <select name="" id="" class="form-control ">
+                                        <option  value="" disabled selected>التخصص الرئيسي</option>
+                                        <option value="">مستششار 1</option>
+                                        <option value="">مستششار 2</option>
+                                        <option value="">مستششار 3</option>
+                                        <option value="">مستششار 4</option>
+                                    </select>
+                                </div>
+                                <div class="sub-sector">
+                                    <select name="" id="" class="form-control " >
+                                        <option  value="" disabled selected>التخصص الفرعي</option>
+                                        <option value="">مستششار 1</option>
+                                        <option value="">مستششار 2</option>
+                                        <option value="">مستششار 3</option>
+                                        <option value="">مستششار 4</option>
+                                    </select>
+                                </div>
+                                <div class="exp-sector">
+                                    <select name="" id="" class="form-control " >
+                                        <option  value="" disabled selected>عدد سنين الخبرة</option>
+                                        <option value="">مستششار 1</option>
+                                        <option value="">مستششار 2</option>
+                                        <option value="">مستششار 3</option>
+                                        <option value="">مستششار 4</option>
+                                    </select>
+                                </div>
+                                <input type="text" class="form-control" name = "number"  placeholder="رقم الهوية او الاقامة" required>
+                                <label for="agree">
+                                    <input id="agree" type="checkbox"  required>
+                                    <span>أوافق علي الشروط و الاحكام</span>
+                                </label>
+                                <div class="text-error first"></div>
+                                <div class="text-error second"></div>
+                                <div class="text-error third"></div>
+                                <div class="buttons">
+                                    <button  type="submit" class = "btn sign" >التالى</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-6 ">
+                        <img  class="w-100 image" src="./assets/img/sign img.png" alt="sign">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "otp-phone"  class="modal otp fade" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="signin">
+                            <div class="out">
+                                <a class="close-register">
+                                    <img src="./assets/icons/Icon ionic-ios-close-circle-outline.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="title">كلمة المرور المؤقتة</div>
+                            <div class="sub">تم ارسال كلمة المرور المؤقتة الى رقم الجوال</div>
+                            <span class="code">9660000000000+</span>
+                            <form  action="./home.html"   class="form-group error ">
+                                <div class="codes">
+                                    <input type="password" name="code" class="form-control one" placeholder="-"  required maxlength="1" >
+                                    <input type="password" name="code" class="form-control two" placeholder="-"  required maxlength="1"> 
+                                    <input type="password" name="code" class="form-control three" placeholder="-" required maxlength="1">
+                                    <input type="password" name="code" class="form-control four" placeholder="-"  required maxlength="1">
+                                </div>
+                                <div class="text-error"></div>
+                                <div class="buttons">
+                                    <button disabled  type="submit" class = "btn sign"  >تأكيد</button>
+                                </div>
+                            </form>
+                            <button   class="resent btn" >اعادة ارسال</button>
+                            <div class="timing">
+                                <span class="time">
+                                    <span class="seconds">45</span> : <span class="minutes">03</span>
+                                </span>
+                                <span>د.ق</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 ">
+                        <img  class="w-100 image" src="./assets/img/sign img.png" alt="sign">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/otp.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</html>

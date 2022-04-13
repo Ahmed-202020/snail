@@ -1,0 +1,157 @@
+.modal-create{
+    .modal-dialog{
+        .row{
+            .col-6{
+                height: auto !important ;
+                .signin{
+                    .title{
+                        font-size: 18pt ;
+                    }
+                    .form-group{
+                        label.key-country{
+                            top: 69px ;
+                        }
+                        label[for = "agree"]{
+                            position: relative;
+                            span{
+                                font-size: 10pt ;
+                                text-decoration: underline ;
+                                color: $min-color ;
+                                margin-right: 30px ;
+                                cursor: pointer ;
+                            }
+                            input#agree{
+                                display: none ;
+                            }
+                            input+span::before{
+                                position:absolute ;
+                                right: 1px ;
+                                top: 8px ;
+                                width: 20px ;
+                                height: 20px ;
+                                text-align: center ;
+                                line-height: 20px ;
+                                box-shadow: 0 0 1px $min-color ;
+                                content: "" ;
+                                background-color: transparent ;
+                                border: 1px solid $min-color ;
+                                border-radius: 4px ;
+                                -webkit-border-radius: 4px ;
+                                -moz-border-radius: 4px ;
+                                -ms-border-radius: 4px ;
+                                -o-border-radius: 4px ;
+                            }
+                            input:checked+span::before{
+                                content: url("../icons/Icon\ material-done.svg");
+                            }
+                        }
+                        label[for = "photo"]{
+                            position: absolute  ;
+                            top: 182px ;
+                            height: 45px ;
+                            width: 100% ;
+                            img{
+                                width:30px  !important;
+                                display: block ;
+                                margin-right: auto ;
+                                margin-left: 25px ;
+                                margin-top: 4px ;
+                            }
+                            input#photo{
+                                display: none ;
+                            }
+                        }
+                        .main-sector , .sub-sector , .exp-sector{
+                            position: relative;
+                            .form-control{
+                                width: 100% ;
+                                border: 1px solid $light-line !important ;
+                                text-align: right;
+                                position: initial ;
+                                color: $light-line ;
+                                background-image: url("../icons/Icon\ ionic-md-arrow-dropdown.svg");
+                                background-repeat: no-repeat;
+                                background-position-x: 5%;
+                                background-position-y: 20px;
+                                option{
+                                    color: $min-color;
+                                }
+                            }
+                        }
+                        .buttons{
+                            margin-top: 70px ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//ltr
+html[dir = "ltr"]{
+    .modal-create{
+        .modal-dialog{
+            .row{
+                .col-6{
+                    .signin{
+                        .form-group{
+                            .main-sector , .sub-sector , .exp-sector , .importants-sector{
+                                @extend %select ; 
+                            }
+                        }
+                        label[for = "agree"]{
+                            span{
+                                margin-left: 30px ;
+                                margin-right: 0 ;
+                            }
+                            input+span::before{
+                                left: 1px ;
+                                right: initial ;
+                            }
+                        }
+                        label[for = "photo"]{
+                            img{
+                                margin-left: 0 ;
+                                left: 82% ;
+                                position: relative ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width : 1024px){
+    .modal-create{
+        .modal-dialog{
+            max-width: 82% !important ;
+        }
+    }
+}
+@media(max-width : 912px){
+    .modal-create{
+        .modal-dialog{
+            max-width: 90% !important ;
+        }
+    }
+}
+@media(max-width : 575.98px){
+    .modal-create{
+        .modal-dialog{
+            max-width: 97% !important ;
+            .row{
+                .col-6{
+                    .signin{
+                        padding: 100px 10px 80px ;
+                        .title{
+                            font-size: 12pt ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,2615 @@
+@import "./vars" ; 
+@import "./login" ; 
+@import "./signup" ;
+@import "./otp" ; 
+@import "./forget-password" ; 
+@import "./new-password" ; 
+@import "./errors" ; 
+@import "./about-us" ; 
+@import "./t-c" ; 
+@import "./profile" ; 
+@import "./profile-info" ; 
+@import "./edit-profile-info" ; 
+@import "./new-orders" ; 
+@import "./new-order-info" ; 
+@import "./payments" ; 
+
+.header{
+    .navbar{
+        display: block;
+        padding-block: 0;
+        position: relative;
+        background-color: $white ;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        .min-nav{
+            display: grid;
+            grid-template-columns: repeat(auto-fill , minmax(calc(100% / 3) , 1fr));
+            align-items: center ;
+            padding: 10px 70px 20px ;
+            width: 100% ;
+            .lang{
+                text-align: right;
+                .dropdown-toggle{
+                    &::after{
+                        border: none;
+                        content: url("../icons/Icon\ ionic-ios-arrow-forward.svg");
+                    }
+                }
+                .dropdown{
+                    @extend %drop ; 
+                    .dropdown-menu{
+                        right: 80px;
+                        z-index: 1545;
+                    }
+                    .text-lang{
+                        color: $min-color ;
+                    }
+                }
+            }
+            .navbar-brand{
+                margin-left: 0 ;
+                text-align: center;
+                img{
+                    width: 40%;
+                }
+            }
+            .sign{
+                display: flex;
+                align-items: baseline;
+                justify-content: flex-end;
+                .btn{
+                    color: $white ;
+                    box-shadow: none ;
+                    background-image: linear-gradient($btn-1 , $btn-2) ;
+                    width: 40% ;
+                    height: 45px ;
+                    font-size: 16pt ;
+                    border: none;
+                    transition: all 300ms ease ;
+                    -webkit-transition: all 300ms ease ;
+                    -moz-transition: all 300ms ease ;
+                    -ms-transition: all 300ms ease ;
+                    -o-transition: all 300ms ease ;
+                    border-radius: 8px ;
+                    -webkit-border-radius: 8px ;
+                    -moz-border-radius: 8px ;
+                    -ms-border-radius: 8px ;
+                    -o-border-radius: 8px ;
+                    &:hover{
+                        filter: brightness(90%);
+                        -webkit-filter: brightness(90%);
+                    }
+                }
+                .btn+.btn{
+                    margin-right:25px ;
+                }
+            }
+        }
+        &:after{
+            position: absolute ;
+            content: "" ;
+            bottom:  -5px  ;
+            left: 0  ;
+            z-index: -1 ;
+            width: 100%;
+            height: 10px ;
+            background-color: #635238 ;
+            border-radius: 5px ;
+            -webkit-border-radius: 5px ;
+            -moz-border-radius: 5px ;
+            -ms-border-radius: 5px ;
+            -o-border-radius: 5px ;
+        }
+    }
+    #slider{
+        position: relative ;
+        .carousel-inner{
+            position: relative;
+            z-index: -2;
+            .carousel-item{
+                position: relative ;
+                .overlay{
+                    position: absolute ;
+                    top: 24% ;
+                    left: 50% ;
+                    transform: translateX(-50% );
+                    -webkit-transform: translateX(-50% );
+                    -moz-transform: translateX(-50% );
+                    -ms-transform: translateX(-50% );
+                    -o-transform: translateX(-50% );
+                    .text{
+                        color: $white ;
+                        font-size: 30pt ;
+                        width: 520px ;
+                        text-align: center ;
+                    }
+                }
+            }
+            .buttons{
+                position: absolute ;
+                top: 50% ;
+                left: 50% ;
+            }
+        }
+        .carousel-control-prev{
+            width: 60px;
+            height: 100% ;
+            top: 7px ;
+            background-color: rgba(#fdf8f2 , 0.2);
+            opacity: 1 ;
+            &::after{
+                position: relative ;
+                content: url("../icons/Icon\ ionicarrow-forward.svg") ;
+                top: 0 ;
+                left: 0 ;
+            }
+        }
+        .buttons{
+            position: absolute ;
+            top: 50% ;
+            left: 50% ;
+            width: 100% ;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            display: flex ;
+            flex-direction: column ;
+            align-items: center ;
+            justify-content: center ;
+            .btn{
+                @extend %btn-black ;
+            }
+        }
+        .carousel-indicators{
+            bottom: 25% ;
+            button{
+                width: 10px ;
+                height: 10px ;
+                border-radius: 50% ;
+                -webkit-border-radius: 50% ;
+                -moz-border-radius: 50% ;
+                -ms-border-radius: 50% ;
+                -o-border-radius: 50% ;
+                opacity: 1 ;
+            }
+            .active{
+                background-color: $active ;
+            }
+        }
+    }
+}
+.header-home{
+    .navbar{
+        .min-nav{
+            .sign{
+                .dropdown{
+                    .dropdown-menu{
+                        right: -160px ;
+                    }
+                }
+                .dropdown-toggle{
+                    &::after{
+                        content: "" ;
+                    }
+                }
+            }
+        }
+    }
+}
+.services{
+    padding: 150px 70px 200px ;
+    .title{
+        @extend %title-style ; 
+    }
+    .show-case{
+        @extend %show-case ; 
+        .card{
+            @extend %card ; 
+        }
+    }
+}
+.features{
+    padding:150px 0 100px ;
+    display: grid ;
+    grid-template-columns: repeat(auto-fill , minmax(calc(100% / 2) , 1fr));
+    .feature{
+        display: flex ;
+        flex-direction: column ;
+        justify-content: center;
+        background-color: $light-bg ;
+        .image{
+            img{
+                width: 100% ;
+            }
+        }
+        .show-case{
+            padding-inline:  50px ;
+            .text{
+                font-size: 28pt ;
+                color: $bg-color-1 ;
+                margin-bottom: 50px ; 
+                padding-inline: 10px ;
+            }
+            .btn{
+                @extend %btn-black ; 
+                width: 40% ;
+            }
+        }
+    }
+}
+.vip-consultant{
+    position: relative;
+    padding: 90px 0px 150px 0px;
+    background: $white;
+    &>.title{
+        @extend %title-style ; 
+        &:after{
+            right: 42% ;
+        }
+    }
+    .consultant-slider{
+        margin-top: 55px;
+        direction: ltr;
+        .owl-dots{
+            text-align: center;
+            margin-top: 80px;
+            .owl-dot{
+                height: 9px;
+                width: 30px;
+                background: $white;
+                border: 2px solid $black ;
+                border-radius: 15px;
+                display: inline-block;
+                margin: 0px 2px;
+                -webkit-transition: all 0.5s ease 0s;
+                -o-transition: all 0.5s ease 0s;
+                transition: all 0.5s ease 0s;
+            }
+            .active{
+                background: $active ; 
+                width: 100px;
+            }
+        }
+        .owl-dots.disabled{
+            display: inherit !important;
+        }
+    }
+    .owl-carousel{
+        .owl-stage-outer{
+            height: 550px ;
+        }
+        .owl-stage{
+            margin-top:120px;
+        }
+        .owl-item{
+            background-color: transparent !important;
+            height: 350px ;
+            margin-bottom: 200px;
+            .card{
+                border-radius: 0 ;
+                -webkit-border-radius: 0 ;
+                -moz-border-radius: 0 ;
+                -ms-border-radius: 0 ;
+                -o-border-radius: 0 ;
+                background-color: transparent ;
+                position: relative ;
+                border: none ;
+                width: 250px ;
+                height: 250px ;
+                transform: scale(0.96);
+                -webkit-transition: all 0.3s ease 0s;
+                -o-transition: all 0.3s ease 0s;
+                transition: all 0.3s ease 0s;
+                -moz-transition: all 0.3s ease 0s;
+                -ms-transition: all 0.3s ease 0s;
+                .image{
+                    img{
+                        transition: all 0.3s ease 0s;
+                        -moz-transition: all 0.3s ease 0s;
+                        -ms-transition: all 0.3s ease 0s;
+                    }
+                }
+                .card-body{
+                    position: relative;
+                    width: 60% ;
+                    margin-left: auto ;
+                    top: -90px ;
+                    display: flex ;
+                    flex-direction: column ;
+                    align-items: center ;
+                    justify-content: center ;
+                    box-shadow: 3px 3px 5px 1px #fdf8f2;
+                    background-color: $white;
+                    .title{
+                        color: $min-color ;
+                        font-weight: bold;
+                        font-size: 14pt ;
+                        margin-bottom: 10px;
+                    }
+                    .card-text{
+                        font-size: 14pt ;
+                    }
+                    .stars{
+                        display: flex ;
+                        align-items: center ;
+                        justify-content: center ;
+                        width: 15%;
+                        img{
+                            min-height: initial !important;
+                            max-height: initial !important ;
+                        }
+                        img+img{
+                            margin-left: 2px ;
+                        }
+                    }
+                }
+            }
+        } 
+        .center{
+            .card{
+                position: absolute ;
+                top: -20px !important;
+                left: -30px ;
+                border-color: $min-color;
+                height: 400px !important;
+                width: 320px !important;
+            }
+        }
+    } 
+}
+.vip-consultant-2.clients-preview{
+    padding-top: 150px ;
+    background: $light-bg;
+    .title{
+        margin-bottom: 0 ;
+        &::after{
+            right: 34.5% ;
+        }
+    }
+    .container-fluid{
+        margin-right: 150px ;
+        .owl-carousel{
+            .owl-stage-outer{
+                height: 400px ;
+                width: 105% ;
+                margin-top: -90px ;
+            }
+            .owl-item{
+                height: 260px ;
+                .card{
+                    background-color: $white ;
+                    padding-block: 0 ;
+                    .image{
+                        right: -80px  ;
+                        left: initial;
+                        top: 40% ;
+                        transform: translateY(-50%);
+                        -webkit-transform: translateY(-50%);
+                        -moz-transform: translateY(-50%);
+                        -ms-transform: translateY(-50%);
+                        -o-transform: translateY(-50%);
+                    }
+                    .card-body{
+                        align-items: stretch ;
+                        justify-content: stretch ;
+                        text-align: center ;
+                        padding-inline: 85px ;
+                        .title{
+                            text-align: right ;
+                            font-size: 25pt;
+                            color: $min-color ;
+                        }
+                        .card-text{
+                            color: $active ;
+                            text-align: right ;
+                            margin-bottom: 10px ;
+                        }
+                        .stars{
+                            width: 100% ;
+                            justify-content: flex-end ;
+                            margin-bottom: 15px ;
+                            img{
+                                width: 7% ;
+                                margin-right: 3px ;
+                            }
+                        }
+                        .text{
+                            font-size: 14pt ;
+                            color: $min-color ;
+                        }
+                    }
+                }  
+            }
+            .center{
+                .card{
+                    position: initial ;
+                    border-color: $min-color;
+                    height: 100% !important ;
+                    width: 100% !important;
+                }
+            }
+        }
+        .owl-dots{
+            text-align: left ;
+            margin-left: 230px ;
+        }
+    }
+}
+.why-choose-us{
+    padding: 150px 70px 250px ;
+    .title{
+        @extend %title-style ; 
+        &:after{
+            right: 43% ;
+            top: 35% ;
+        }
+    }
+    .show-case{
+        @extend %show-case ; 
+        grid-template-columns: repeat(auto-fill, minmax(calc(100% / 4), 1fr));
+        .card{
+            @extend %card ; 
+            height: 500px ;
+            .card-body{
+                font-size: 18pt ;
+                text-align: center ;
+                .card-text{
+                    font-weight: bold ;
+                    margin-bottom: 25px ;
+                    color: $min-color ;
+                }
+                .text{
+                    font-size: 14pt ;
+                    width: 300px ;
+                    color: $min-color ;
+                }
+            }
+        }
+    }
+}
+.app{
+    background-color: $light-bg;
+    position: relative;
+    margin-bottom: -50px ;
+    .show-case{
+        position: absolute;
+        padding:120px 70px 0 0;
+        .title{
+            font-size: 25pt;
+            color: $active ;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+        img{
+            width: 200px;
+        }
+    }
+    .image{
+        position: relative;
+        right: 53%;
+        width: 30%;
+        bottom: 140px ;
+        transform: rotate(-10deg);
+        -webkit-transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+        -o-transform: rotate(-10deg);
+        img{
+            width: 100%;
+        }
+    }
+}
+.footer{
+    position: relative;
+    background-image: url("../img/footer\ bg.png");
+    background-position: 0% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    .row{
+        padding: 40px 70px 200px 70px ;
+        .logo{
+            width: 120px;
+            margin-bottom: 70px;
+            img{
+                width: 100%;
+            }
+        }
+        .explanation{
+            .text{
+                color: $white;
+                font-size:14pt;
+                width: 275px ;
+            }
+        }
+        .items{
+            list-style: none;
+            margin-top: 30px;
+            .item{
+                .link{
+                    text-decoration: none;
+                    color: $white;
+                    font-size: 16pt;
+                    transition: all 300ms ease;
+                    -webkit-transition: all 300ms ease;
+                    -moz-transition: all 300ms ease;
+                    -ms-transition: all 300ms ease;
+                    -o-transition: all 300ms ease;
+                    &:hover{
+                        color: $min-color ;
+                        filter: brightness(90%);
+                        -webkit-filter: brightness(90%);
+                    }
+                }
+            }
+            .item + .item{
+                margin-top: 22pt;
+            }
+            .custom-item{
+                span{
+                    color: $white;
+                }
+            }
+            .custom-item + .custom-item{
+                margin-top: 5pt;
+            }
+        }
+        .contact{
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 60px ;
+            .title{
+                font-size: 16pt;
+                color: $btn-1;
+                width: 100%;
+                font-weight: bold;
+            }
+            .custom-items{
+                padding-right: 0;
+                margin-top: 20px ;
+                span{
+                    font-size: 16pt;
+                }
+            }
+        }
+    }
+    .copyright{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $min-color;
+        font-size: 15pt;
+        height: 40px;
+        margin-bottom: 0;
+        .copy{
+            font-size: 25pt;
+        }
+        .year{
+            font-size: 15pt;
+            margin-inline: 10px;
+        }
+    }
+    .icon{
+        position: absolute ;
+        top: -34px ;
+        left: 50% ;
+        transform: translateX(-50%) rotate(180deg);
+        background-image: linear-gradient($min-color , $btn-2) ;
+        border: 1px solid $light-line ;
+        border-radius: 50% ;
+        -webkit-border-radius: 50% ;
+        -moz-border-radius: 50% ;
+        -ms-border-radius: 50% ;
+        -o-border-radius: 50% ;
+        width: 70px ;
+        height: 70px ;
+        content: "" ;
+        -webkit-transform: translateX(-50%) rotate(180deg);
+        -moz-transform: translateX(-50%) rotate(180deg);
+        -ms-transform: translateX(-50%) rotate(180deg);
+        -o-transform: translateX(-50%) rotate(180deg);
+        &::before{
+            position: absolute ;
+            content: url("../icons/Group\ 40954.svg");
+            top: 33% ;
+            left: 50% ;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+        }
+    }
+}
+#notifications{
+    padding-left: 0 !important;
+    .modal-dialog{
+        margin-left: 50px ;
+        margin-top: 50px;
+        max-width: 50% !important;
+        .modal-content{
+            background-color: $light-bg ;
+            padding: 50px 60px 0 0;
+            height: 250px;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            box-shadow: 0 0 2px $light-line;
+            border: none !important;
+            .sub{
+                color: $black;
+                font-size: 15pt;
+                font-weight: bold;
+                margin-bottom: 40px;
+            }
+            .btn{
+                background-image: linear-gradient($btn-1 , $btn-2);
+                color: $white;
+                border: none ;
+                box-shadow: 0 3px 5px $light-line ;
+                border-radius: 8px;
+                -webkit-border-radius: 8px;
+                -moz-border-radius: 8px;
+                -ms-border-radius: 8px;
+                -o-border-radius: 8px;
+                width: 100px;
+                padding: 8px 10px;
+                font-size: 18pt;
+                &:focus{
+                    box-shadow: none;
+                }
+                &:hover{
+                    color: $white;
+                    filter: brightness(95%);
+                    -webkit-filter: brightness(95%);
+                }
+            }
+            .btn:last-child{
+                margin-right: 15px;
+                background-image: linear-gradient($light-bg , $light-line) !important ;
+                box-shadow: 0 0 2px $light-line;
+                color: $black ;
+            }
+        }
+        .modal-open{
+            padding: 0 !important;
+        }
+    }
+}
+
+//ltr (indexhtml , home.html)
+
+html[dir = "ltr"]{
+    .header{
+        .navbar{
+            .min-nav{
+                .lang{
+                    text-align: left ;
+                    .dropdown-toggle{
+                        &::after{
+                            margin-left: 0.255em;
+                            margin-right: 0 ;
+                        }
+                    }
+                    .dropdown{
+                        .dropdown-menu{
+                            left : 80px;
+                            right: initial ;
+                        }
+                    }
+                }
+                .navbar-brand{
+                    margin-right: 0 ;
+                }
+                .sign{
+                    .btn+.btn{
+                        margin-left: 25px ;
+                        margin-right: 0 ;
+                    }
+                }
+            }
+        }
+    }
+    .header-home{
+        .navbar{
+            .min-nav{
+                .sign{
+                    .dropdown{
+                        .dropdown-menu{
+                            left: -160px ;
+                            right: initial ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .services{
+        .title{
+            &::after{
+                left: 39.2% ;
+            }
+        }
+    }
+    .vip-consultant{
+        &>.title{
+            &::after{
+                left: 40% ;
+                right: initial ;
+            }
+        }
+    }
+    .vip-consultant.clients-preview{
+        .title{
+            &::after{
+                left: 35.5% ;
+            }
+        }
+        .container-fluid{
+            margin-left: 150px ;
+            margin-right: 0 ;
+            .owl-carousel{
+                .owl-item{
+                    .card{
+                        .image{
+                            left: -80px ;
+                            right: initial ;
+                        }
+                        .card-body{
+                            .title{
+                                text-align: left ;
+                            }
+                            .card-text{
+                                text-align: left ;
+                            }
+                        }
+                    }
+                }
+            }
+            .owl-dots{
+                text-align: right ;
+                margin-right: 230px ;
+                margin-left: 0 ;
+            }
+        }
+    }
+    .why-choose-us{
+        .title{
+            &::after{
+                left: 43% ;
+                right: initial ;
+            }
+        }
+    }
+    .app{
+        .show-case{
+            padding: 120px 0 0 70px ;
+        }
+        .image{
+            left: 53% ;
+            bottom: -2px ;
+            right: initial ;
+            img{
+                content: url("../img/en.png");
+            }
+        }
+    }
+    .footer{
+        .row{
+            .contact{
+                .custom-items{
+                    padding-left: 0 ;
+                }
+            }
+        }
+    }
+}
+
+//responsive-design(rtl) 
+
+@media(max-width:1399.98px){
+    .header{
+        .navbar{
+            .min-nav{
+                .sign{
+                    .btn{
+                        width: 50% ;
+                    }
+                }
+            }
+        }
+    }
+    .services{
+        .title{
+            &::after{
+                right: 38.5% ;
+            }
+        }
+    }
+    .vip-consultant{
+        .title{
+            &::after{
+                right: 39.5% ;
+            }
+        }
+        .owl-carousel{
+            .center{
+                .card{
+                    left: -16px;
+                    width: 300px !important; 
+                }
+            }
+        }
+    }
+    .vip-consultant.clients-preview{
+        .title{
+            &::after{
+                right: 35% ;
+            }
+        }
+    }
+    .why-choose-us{
+        .title{
+            &::after{
+                right: 42.7% ;
+            }
+        }
+    }
+}
+@media(min-width:1280px) and (max-width : 1281px){
+    .services{
+        .title{
+            &::after{
+                right: 37.2% ;
+            }
+        }
+    }
+    .vip-consultant{
+        .title{
+            &::after{
+                right: 38.7% ;
+            }
+        }
+        .owl-carousel{
+            .center{
+                .card{
+                    width: 276px !important; 
+                }
+            }
+        }
+    }
+    .vip-consultant.clients-preview{
+        .title{
+            &::after{
+                right: 33.5% ;
+            }
+        }
+    }
+    .why-choose-us{
+        .title{
+            &::after{
+                right: 41.8% ;
+            }
+        }
+    }
+}
+@media(max-width:1199.98px){
+    .services{
+        .title{
+            &::after{
+                right: 36.2% ;
+            }
+        }
+    }
+    .vip-consultant{
+        .title{
+            &::after{
+                right: 38.2% ;
+            }
+        }
+        .owl-carousel{
+            .center{
+                .card{
+                    left: -16px;
+                    width: 260px !important; 
+                }
+            }
+        }
+    }
+    .vip-consultant.clients-preview{
+        .title{
+            &::after{
+                right: 32.8% ;
+            }
+        }
+    }
+    .why-choose-us{
+        .title{
+            &::after{
+                right: 41.7% ;
+            }
+        }
+    }
+}
+@media(min-width:1024px) and (max-width : 1025px){
+    .header{
+        .navbar{
+            .min-nav{
+                .navbar-brand{
+                    img{
+                        width: 28% ;
+                    }
+                }
+                .sign{
+                    .btn{
+                        padding: 5px ;
+                        height: 40px ;
+                        font-size: 15pt ;
+                    }
+                }
+            }
+        }
+        #slider{
+            .carousel-inner{
+                .carousel-item{
+                    .overlay{
+                        .text{
+                            font-size: 26pt ;
+                        }
+                    }
+                }
+            }
+            .buttons{
+                .btn{
+                    margin-bottom: 10% ;
+                }
+            }
+        }
+    }
+    .services{
+        .title{
+            &::after{
+                right: 34.2% !important;
+            }
+        }
+        .show-case{
+            .card{
+                .card-body{
+                    font-size: 22pt ;
+                }
+            }
+        }
+    }
+    .features{
+        .feature{
+            .show-case{
+                .text{
+                    width: auto ;
+                    font-size: 20pt ;
+                }
+            }
+        }
+    }
+    .vip-consultant{
+        .title{
+            &::after{
+                right: 36% !important;
+            }
+        }
+        .owl-carousel{
+            .owl-item{
+                .card{
+                    .card-body{
+                        .title{
+                            font-size: 20pt ;
+                        }
+                    }
+                }
+            }
+            .center{
+                .card{
+                    width: 225px !important; 
+                }
+            }
+        }
+    }
+    .vip-consultant.clients-preview{
+        .title{
+            &::after{
+                right: 29% !important ;
+            }
+        }
+        .owl-carousel{
+            .owl-item{
+                .card{
+                    .image{
+                        right: -66px ;
+                        img{
+                            min-height: 100px ;
+                            max-height: 100px ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .why-choose-us{
+        .title{
+            &::after{
+                right: 40% !important ;
+            }
+        }
+        .show-case{
+            grid-template-columns: repeat(auto-fill, minmax(calc(100% / 3), 1fr));
+        }
+    }
+    .footer{
+        .row{
+            .logo{
+                margin-bottom: 40px ;
+            }
+            .items{
+                .item{
+                    .link{
+                        font-size: 15pt ;
+                    }
+                }
+            }
+            .contact{
+                .custom-items{
+                    span{
+                        font-size: 15pt ;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:991.98px){
+    .header{
+        .navbar{
+            .min-nav{
+                .navbar-brand{
+                    img{
+                        width: 30% ;
+                    }
+                }
+                .sign{
+                    .btn{
+                        font-size: 13pt ;
+                        height: 40px ;
+                    }
+                }
+            }
+        }
+        #slider{
+            .carousel-inner{
+                .carousel-item{
+                    .overlay{
+                        .text{
+                            font-size: 25pt ;
+                        }
+                    }
+                }
+            }
+            .buttons{
+                .btn{
+                    margin-bottom: 11% ;
+                    width: 25% ;
+                }
+            }
+        }
+    }
+    .services{
+        .title{
+            &::after{
+                right: 33% ;
+            }
+        }
+        .show-case{
+            .card{
+                padding-block: 50px ;
+                height: 332px ;
+                .card-body{
+                    font-size: 20pt ;
+                }
+            }
+        }
+    }
+    .features{
+        .feature{
+            .show-case{
+                .text{
+                    width: auto ;
+                    font-size: 20pt;
+                }
+            }
+        }
+    }
+    .vip-consultant{
+        .title{
+            &::after{
+                right: 35.7% ;
+            }
+        }
+        .owl-carousel{
+            .center{
+                .card{
+                    width: 353px !important; 
+                }
+            }
+        }
+    }
+    .vip-consultant.clients-preview{
+        .title{
+            &::after{
+                right: 29% ;
+            }
+        }
+    }
+    .why-choose-us{
+        .title{
+            &::after{
+                right: 39.5% ;
+            }
+        }
+        .show-case{
+            grid-template-columns: repeat(auto-fill, minmax(calc(100% / 3), 1fr)) !important ;
+        }
+    }
+    .app{
+        .show-case{
+            padding: 85px 70px 0 0 ;
+        }
+    }
+    .footer{
+        .row{
+            .logo{
+                margin-bottom: 40px ;
+            }
+            .items{
+                .item{
+                    .link{
+                        font-size: 15pt ;
+                    }
+                }
+                .item + .item{
+                    margin-top: 18px ;
+                }
+            }
+            .contact{
+                .custom-item{
+                    span{
+                        font-size: 15pt ;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(min-width:912px) and (max-width : 913px){
+    .header{
+        .navbar{
+            .min-nav{
+                .navbar-brand{
+                    img{
+                        width: 28% ;
+                    }
+                }
+                .sign{
+                    .btn{
+                        padding: 5px ;
+                        height: 37px ;
+                        font-size: 12pt ;
+                    }
+                }
+            }
+        }
+    }
+    .services{
+        .title{
+            &::after{
+                right: 31.5% !important;
+            }
+        }
+    }
+    .vip-consultant{
+        .title{
+            &::after{
+                right: 34.5% !important;
+            }
+        }
+        .owl-carousel{
+            .center{
+                .card{
+                    width: 327px !important; 
+                }
+            }
+        }
+    }
+    .vip-consultant.clients-preview{
+        .title{
+            &::after{
+                right: 27% !important ;
+            }
+        }
+    }
+    .why-choose-us{
+        .title{
+            &::after{
+                right: 38.5% !important ;
+            }
+        }
+    }
+    .footer{
+        .row{
+            .logo{
+                margin-bottom: 30px ;
+                width: 90px ;
+            }
+            .explanation{
+                .text{
+                    width: auto ;
+                    font-size: 12pt ;
+                }
+            }
+            .items{
+                .item{
+                    .link{
+                        font-size: 13pt ;
+                    }
+                }
+            }
+            .contact{
+                .custom-items{
+                    span{
+                        font-size: 13pt ;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(min-width:820px) and (max-width : 821px){
+    .header{
+        .navbar{
+            .min-nav{
+                padding: 10px 35px 20px !important;
+                .sign{
+                    .btn{
+                        font-size: 11pt ;
+                        padding: 5px;
+                        height: 35px ;
+                    }
+                }
+            }
+        }
+        #slider{
+            .buttons{
+                .btn{
+                    margin-bottom: 7% !important ;
+                    margin-top: 15px !important;
+                }
+            }
+            .carousel-indicators{
+                bottom: 19% !important;
+            }
+        }
+    }
+    .services{
+        .title{
+            &::after{
+                right: 29.5% !important;
+            }
+        }
+        .show-case{
+            grid-template-columns: repeat(auto-fill, minmax(calc(100% / 3), 1fr));
+        }
+    }
+    .features{
+        .feature{
+            .show-case{
+                .text{
+                    font-size: 15pt ;
+                }
+                .btn{
+                    width: 50% ;
+                }
+            }
+        }
+    }
+    .vip-consultant{
+        .title{
+            &::after{
+                right: 32.5% ;
+            }
+        }
+        .owl-carousel{
+            .center{
+                .card{
+                    width: 295px !important;
+                }
+            }
+        }
+    }
+    .vip-consultant.clients-preview{
+        .title{
+            &:after{
+                right: 24.5% ;
+            }
+        }
+    }
+    .why-choose-us{
+        .title{
+            &::after{
+                right: 37% ;
+            }
+        }
+    }
+    .app{
+        .show-case{
+            .title{
+                font-size: 20pt ;
+            }
+            img{
+                width: 160px ;
+            }
+        }
+    }
+    .footer{
+        .icon{
+            width: 60px ;
+            height: 60px ;
+            top: -28px ;
+        }
+        .row{
+            .col-4{
+                width: 100% ;
+                .logo{
+                    width: 100px ;
+                }
+                .explanation{
+                    .text{
+                        width: auto ;
+                        font-size: 15pt ;
+                        margin-bottom: 35px ;
+                    }
+                }
+                .items{
+                    display: flex ;
+                    align-items: baseline ;
+                    .item{
+                        .link{
+                            font-size: 17pt ;
+                        }
+                    }
+                    .item + .item{
+                        margin-top: 0 ;
+                        margin-right: 25px ;
+                    }
+                }
+            }
+            .col-4:not(:first-of-type){
+                text-align: center ;
+                .items{
+                    margin-right: 0 ;
+                    width: 100% ;
+                    justify-content: center ;
+                }
+                .contact{
+                    .title{
+                        font-size: 18pt ;
+                    }
+                    .custom-items{
+                        width: 100% ;
+                        justify-content: center ;
+                        span{
+                            font-size: 17pt ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:768px){
+    .header{
+        .navbar{
+            .min-nav{
+                padding: 10px 35px 20px !important;
+                .sign{
+                    .btn{
+                        font-size: 11pt ;
+                        padding: 5px;
+                        height: 35px ;
+                    }
+                }
+            }
+        }
+        #slider{
+            .buttons{
+                .btn{
+                    margin-bottom: 8% ;
+                    margin-top: 15px ;
+                }
+            }
+            .carousel-indicators{
+                bottom: 14% ;
+            }
+        }
+    }
+    .services{
+        .title{
+            font-size: 22pt ;
+            &::after{
+                width: 13px ;
+                height: 13px;
+                right: 30% ;
+                top: 38% ;
+            }
+        }
+        .show-case{
+            grid-template-columns: repeat(auto-fill, minmax(calc(100% / 3), 1fr));
+        }
+    }
+    .features{
+        .feature{
+            .show-case{
+                padding-inline: 25px ;
+                .text{
+                    font-size: 15pt ;
+                }
+                .btn{
+                    width: 60% ;
+                }
+            }
+        }
+    }
+    .vip-consultant{
+        .title{
+            font-size: 22pt ;
+            &::after{
+                width: 13px ;
+                height: 13px;
+                right: 33.5% ;
+                top: 38% ;
+            }
+        }
+        .owl-carousel{
+            .center{
+                .card{
+                    width: 278px !important; 
+                }
+            }
+        }
+    }
+    .vip-consultant.clients-preview{
+        .title{
+            &::after{
+                right: 26.2% ;
+            }
+        }
+    }
+    .why-choose-us{
+        .title{
+            font-size: 22pt ;
+            &::after{
+                width: 13px ;
+                height: 13px;
+                right: 36.5% ;
+                top: 38% ;
+            }
+        }
+    }
+    .app{
+        .show-case{
+            .title{
+                font-size: 20pt ;
+            }
+            img{
+                width: 160px ;
+            }
+        }
+    }
+    .footer{
+        .icon{
+            width: 60px ;
+            height: 60px ;
+            top: -28px ;
+        }
+        .row{
+            .col-4{
+                width: 100% ;
+                .logo{
+                    width: 100px ;
+                }
+                .explanation{
+                    .text{
+                        width: auto ;
+                        font-size: 15pt ;
+                        margin-bottom: 35px ;
+                    }
+                }
+                .items{
+                    display: flex ;
+                    align-items: baseline ;
+                    .item{
+                        .link{
+                            font-size: 17pt ;
+                        }
+                    }
+                    .item + .item{
+                        margin-top: 0 ;
+                        margin-right: 25px ;
+                    }
+                }
+            }
+            .col-4:not(:first-of-type){
+                text-align: center ;
+                .items{
+                    margin-right: 0 ;
+                    width: 100% ;
+                    justify-content: center ;
+                }
+                .contact{
+                    .title{
+                        font-size: 18pt ;
+                    }
+                    .custom-items{
+                        width: 100% ;
+                        justify-content: center ;
+                        span{
+                            font-size: 17pt ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:575.98px){
+    .header{
+        .navbar{
+            .min-nav{
+                display: block ;
+                .navbar-brand{
+                    position: relative ;
+                    top: -50px ;
+                    left: -150px ;
+                    img{
+                        width: 19% ;
+                    }
+                }
+                .lang{
+                    .dropdown{
+                        .text-lang{
+                            font-size: 18pt ;
+                        }
+                    }
+                }
+                .sign{
+                    .btn{
+                        height: 45px ;
+                        font-size: 16pt ;
+                    }
+                }
+            }
+        }
+        #slider{
+            .carousel-inner{
+                .carousel-item{
+                    .overlay{
+                        .text{
+                            font-size: 17pt ;
+                            width: 103% ;
+                            font-weight: bold ;
+                        }
+                    }
+                }
+            }
+            .buttons{
+                .btn{
+                    margin-bottom: 5% ;
+                    width: 40% ;
+                }
+            }
+            .carousel-indicators{
+                bottom: 9% ;
+            }
+        }
+    }
+    .header-home{
+        .navbar{
+            .min-nav{
+                display: grid ;
+                align-items: baseline ;
+                padding: 10px 35px 10px !important;
+                .navbar-brand{
+                    position: initial ;
+                    margin-right: 30px ;
+                    img{
+                        width: 40% ;
+                    }
+                }
+            }
+        }
+    }
+    .services{
+        padding: 100px 70px 120px ;
+        .title{
+            font-size: 20pt ;
+            margin-bottom: 70px ;
+            &::after{
+                right: 24% ;
+            }
+        }
+        .show-case{
+            grid-template-columns: repeat(auto-fill, minmax(calc(100% / 2), 1fr));
+        }
+    }
+    .features{
+        .feature{
+            .show-case{
+                padding-inline: 20px ;
+                .text{
+                    font-size: 12pt ;
+                }
+                .btn{
+                    margin-bottom: 2% ;
+                    width: 65% ;
+                    font-size: 15pt ;
+                }
+            }
+            .image{
+                img{
+                    width: 102% ;
+                }
+            }
+        }
+    }
+    .vip-consultant{
+        .title{
+            font-size: 20pt ;
+            &::after{
+                right: 29% ;
+            }
+        }
+        .owl-carousel{
+            .center{
+                .card{
+                    left: 0 !important ;
+                    width: 575px !important;
+                }
+            }
+        }
+    }
+    .vip-consultant.clients-preview{
+        .title{
+            font-size: 20pt ;
+            &::after{
+                right: 21% !important ;
+            }
+        }
+        .container-fluid{
+            margin-right: 0 ;
+            .owl-dots{
+                text-align: center ;
+                margin-left: 0 ;
+            }
+        }
+        .owl-carousel{
+            .owl-item{
+                .card{
+                    .image{
+                        right: -30px !important ;
+                        img{
+                            min-height: 100px ;
+                            max-height: 100px ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .why-choose-us{
+        .title{
+            font-size: 20pt ;
+            &::after{
+                right: 33% ;
+            }
+        }
+        .show-case{
+            grid-template-columns: repeat(auto-fill, minmax(calc(100% / 2), 1fr)) !important ;
+        }
+    }
+    .app{
+        .title{
+            font-size: 18pt ;
+        }
+        .show-case{
+            padding: 40px 70px 0 0;
+            img{
+                width: 125px ;
+            }
+        }
+    }
+    .footer{
+        .row{
+            padding: 40px 30px 200px 30px ;
+        }
+    }
+}
+@media(min-width:280px) and (max-width : 415px){
+    .header{
+        .navbar{
+            .min-nav{
+                .navbar-brand{
+                    left: -120px ;
+                }
+                .sign{
+                    .btn{
+                        font-size: 14pt ;
+                        height: 40px ;
+                    }
+                }
+            }
+        }
+        #slider{
+            .carousel-indicators{
+                display: none ;
+            }
+            .carousel-inner{
+                .carousel-item{
+                    .overlay{
+                        .text{
+                            width: 100% ;
+                            font-size: 12pt ;
+                        }
+                    }
+                }
+            }
+            .buttons{
+                .btn{
+                    font-size: 14pt ;
+                    width: 38% ;
+                }
+                .next-section{
+                    display: none ;
+                }
+            }
+        }
+    }
+    .header-home{
+        .navbar{
+            .min-nav{
+                .navbar-brand{
+                    margin-right: 50px ;
+                    img{
+                        width: 93% !important;
+                    }
+                }
+            }
+        }
+    }
+    .services{
+        padding: 100px 20px 50px ;
+        .title{
+            &::after{
+                content: initial;
+            }
+        }
+    }
+    .features{
+        .feature{
+            .show-case{
+                .text{
+                    font-size: 8pt ;
+                    margin-bottom: 10px ;
+                }
+            }
+        }
+    }
+    .vip-consultant{
+        .title{
+            &::after{
+                content: initial ;
+            }
+        }
+    }
+    .why-choose-us{
+        padding: 150px 20px ;
+        .title{
+            &::after{
+                content: initial ;
+            }
+        }
+    }
+    .app{
+        .show-case{
+            padding: 40px 30px 0 0;
+            .title{
+                font-size: 14pt ;
+                margin-bottom: 20px ;
+            }
+            img{
+                width: 90px ;
+            }
+        }
+        .image{
+            right: 58% ;
+        }
+    }
+    .footer{
+        .row{
+            padding: 40px 20px 200px ;
+            .col-4{
+                .explanation{
+                    .text{
+                        font-size: 13pt ;
+                    }
+                }
+                .items{
+                    .item{
+                        .link{
+                            font-size: 12pt ;
+                        }
+                    }
+                }
+            }
+            .col-4:not(:first-of-type){
+                .contact{
+                    .title{
+                        font-size: 15pt ;
+                    }
+                    .custom-item{
+                        span{
+                            font-size: 10pt ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(min-width:412px) and (max-width : 413px){
+    .vip-consultant{
+        .owl-carousel{
+            .center{
+                .card{
+                    width: 412px !important;
+                }
+            }
+        }
+    }
+}
+@media(min-width:414px) and (max-width : 415px){
+    .vip-consultant{
+        .owl-carousel{
+            .center{
+                .card{
+                    width: 414px !important;
+                }
+            }
+        }
+    }
+}
+@media(min-width:390px) and (max-width : 391px){
+    .vip-consultant{
+        .owl-carousel{
+            .center{
+                .card{
+                    width: 390px !important;
+                }
+            }
+        }
+    }
+}
+@media(min-width:393px) and (max-width : 394px){
+    .vip-consultant{
+        .owl-carousel{
+            .center{
+                .card{
+                    width: 393px !important;
+                }
+            }
+        }
+    }
+}
+@media(min-width:375px) and (max-width : 376px){
+    .vip-consultant{
+        .owl-carousel{
+            .center{
+                .card{
+                    width: 375px !important;
+                }
+            }
+        }
+    }
+}
+@media(min-width:360px) and (max-width : 361px){
+    .vip-consultant{
+        .owl-carousel{
+            .center{
+                .card{
+                    width: 360px !important;
+                }
+            }
+        }
+    }
+}
+@media(min-width:280px) and (max-width : 281px){
+    .header{
+        .navbar{
+            .min-nav{
+                padding: 10px 15px 20px !important;
+                .navbar-brand{
+                    left: -98px;
+                    top: -46px ;
+                    img{
+                        width: 25% ;
+                    }
+                }
+                .sign{
+                    .btn{
+                        font-size: 10pt ;
+                        height: 32px ;
+                    }
+                    .btn+.btn{
+                        margin-right: 12px ;
+                    }
+                }
+                .lang{
+                    .dropdown{
+                        .dropdown-menu{
+                            min-width: 10rem; 
+                        }
+                    }
+                }
+            }
+        }
+        #slider{
+            .carousel-inner{
+                .carousel-item{
+                    .overlay{
+                        top: 14% ;
+                        .text{
+                            font-size: 10pt;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header-home{
+        .min-nav{
+            .sign{
+                .dropdown{
+                    .dropdown-menu{
+                        right: -142px !important;
+                    }
+                }
+            }
+        }
+    }
+    .services{
+        padding: 100px 7px 50px ;
+        .title{
+            font-size: 16pt ;
+        }
+    }
+    .features{
+        .feature{
+            .show-case{
+                .text{
+                    margin-bottom: 5px ;
+                    font-size: 7pt ;
+                }
+                .btn{
+                    display: none ;
+                }
+            }
+        }
+    }
+    .vip-consultant{
+        .title{
+            font-size: 16pt ;
+        }
+        .owl-carousel{
+            .center{
+                .card{
+                    width: 280px !important;
+                }
+            }
+        }
+    }
+    .vip-consultant.clients-preview{
+        .title{
+            font-size: 16pt ;
+        }
+        .container-fluid{
+            .owl-carousel{
+                .owl-item{
+                    .card{
+                        .card-body{
+                            .card-text{
+                                margin-bottom: 7px ;
+                            }
+                        }
+                        .image{
+                            top: 85% ;
+                            right: 31%  !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .why-choose-us{
+        padding: 150px 10px ;
+    }
+    .app{
+        .show-case{
+            .title{
+                font-size: 11pt ;
+                margin-bottom: 14px ;
+            }
+            img{
+                width: 80px ;
+            }
+        }
+    }
+    .footer{
+        .icon{
+            width: 45px;
+            height: 45px;
+            top: -20px;
+            &::before{
+                top: 25% ;
+            }
+        }
+        .row{
+            padding: 40px 12px 200px ;
+            .col-4:not(:first-of-type){
+                .contact{
+                    .custom-item{
+                        span{
+                            font-size: 8pt ;
+                        }
+                    }
+                }
+                .items{
+                    padding-right: 0 ;
+                }
+            }
+        }
+        .copyright{
+            font-size: 10pt ;
+            .year{
+                font-size: 12pt ;
+            }
+            .copy{
+                font-size: 10pt ;
+            }
+        }
+    }
+}
+
+//responsive-design(ltr) 
+@media(max-width:1399.98px){
+    html[dir = "ltr"]{
+        .services{
+            .title{
+                &::after{
+                    left: 38.5% ;
+                    right: initial ;
+                }
+            }
+        }
+        .vip-consultant{
+            .title{
+                &::after{
+                    left: 39.5% ;
+                    right: initial;
+                }
+            }
+        }
+        .vip-consultant.clients-preview{
+            .title{
+                &::after{
+                    left: 35% ;
+                    right: initial ;
+                }
+            }
+        }
+        .why-choose-us{
+            .title{
+                &::after{
+                    left: 42.7% ;
+                    right: initial ;
+                }
+            }
+        }
+    }
+}
+@media(min-width:1280px) and (max-width : 1281px){
+    html[dir = "ltr"]{
+        .services{
+            .title{
+                &::after{
+                    right: initial ;
+                    left: 37.2% ;
+                }
+            }
+        }
+        .vip-consultant{
+            .title{
+                &::after{
+                    right: initial ;
+                    left: 38.7% ;
+                }
+            }
+        }
+        .vip-consultant.clients-preview{
+            .title{
+                &::after{
+                    right: initial ;
+                    left: 33.5% ;
+                }
+            }
+        }
+        .why-choose-us{
+            .title{
+                &::after{
+                    right: initial ;
+                    left: 41.8% ;
+                }
+            }
+        }
+    }
+}
+@media(max-width:1199.98px){
+    html[dir = "ltr"]{
+        .services{
+            .title{
+                &::after{
+                    right: initial ;
+                    left: 36.2% ;
+                }
+            }
+        }
+        .vip-consultant{
+            .title{
+                &::after{
+                    left: 38.2% ;
+                    right: initial ;
+                }
+            }
+        }
+        .vip-consultant.clients-preview{
+            .title{
+                &::after{
+                    right: initial ;
+                    left: 32.8% ;
+                }
+            }
+        }
+        .why-choose-us{
+            .title{
+                &::after{
+                    left: 41.7% ;
+                    right: initial ;
+                }
+            }
+        }
+    }
+}
+@media(min-width:1024px) and (max-width : 1025px){
+    html[dir = "ltr"]{
+        .services{
+            .title{
+                &::after{
+                    left: 34.2% !important ;
+                    right: initial !important;
+                }
+            }
+        }
+        .vip-consultant{
+            .title{
+                &::after{
+                    left: 36% !important;
+                    right: initial !important;
+                }
+            }
+        }
+        .vip-consultant.clients-preview{
+            .title{
+                &::after{
+                    left: 29% !important ;
+                    right: initial !important;
+                }
+            }
+            .owl-carousel{
+                .owl-item{
+                    .card{
+                        .image{
+                            left: -66px ;
+                            right: initial ;
+                        }
+                    }
+                }
+            }
+        }
+        .why-choose-us{
+            .title{
+                &::after{
+                    left: 40% !important ;
+                    right: initial !important ;  
+                }
+            }
+        }
+    }
+}
+@media(max-width:991.98px){
+    html[dir = "ltr"]{
+        .services{
+            .title{
+                &::after{
+                    right: initial ;
+                    left: 33% ;
+                }
+            }
+        }
+        .vip-consultant{
+            .title{
+                &::after{
+                    right: initial ;
+                    left: 35.7% ;
+                }
+            }
+        }
+        .vip-consultant.clients-preview{
+            .title{
+                &::after{
+                    left: 29% ;
+                    right: initial ;
+                }
+            }
+        }
+        .why-choose-us{
+            .title{
+                &::after{
+                    right: initial ;
+                    left: 39.5% ;
+                }
+            }
+        }
+        .app{
+            .show-case{
+                padding: 85px 0 0 70px ;
+            }
+        }
+    }
+}
+@media(min-width:912px) and (max-width : 913px){
+    html[dir = "ltr"]{
+        .services{
+            .title{
+                &::after{
+                    left: 31.5% !important;
+                    right: initial !important;
+                }
+            }
+        }
+        .vip-consultant{
+            .title{
+                &::after{
+                    left: 34.5% !important;
+                    right: initial !important;
+                }
+            }
+        }
+        .vip-consultant.clients-preview{
+            .title{
+                &::after{
+                    left: 27% !important ;
+                    right: initial !important ;
+                }
+            }
+        }
+        .why-choose-us{
+            .title{
+                &::after{
+                    left: 38.5% !important ;
+                    right: initial !important;
+                }
+            }
+        }
+    }
+}
+@media(min-width:820px) and (max-width : 821px){
+    html[dir = "ltr"]{
+        .services{
+            .title{
+                &::after{
+                    left: 29.5% !important;
+                    right: initial !important ;
+                }
+            }
+        }
+        .vip-consultant{
+            .title{
+                &::after{
+                    left: 32.5% ;
+                    right: initial ;
+                }
+            }
+        }
+        .vip-consultant.clients-preview{
+            .title{
+                &:after{
+                    left: 24.5% ;
+                    right: initial;
+                }
+            }
+        }
+        .why-choose-us{
+            .title{
+                &::after{
+                    left: 37% ;
+                    right: initial;
+                }
+            }
+        }
+        .footer{
+            .row{
+                .col-4{
+                    .items{
+                        .item + .item{
+                            margin-left: 25px ;
+                            margin-right: 0 ;
+                        }
+                    }
+                }
+                .col-4:not(:first-of-type){
+                    .items{
+                        margin-left: 0 ;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:768px){
+    html[dir = "ltr"]{
+        .services{
+            .title{
+                &::after{
+                    left: 30% ;
+                    right: initial ;
+                }
+            }
+        }
+        .vip-consultant{
+            .title{
+                &::after{
+                    left: 33.5% ;
+                    right: initial ;
+                }
+            }
+        }
+        .vip-consultant.clients-preview{
+            .title{
+                &::after{
+                    left: 26.2% ;
+                    right: initial ;
+                }
+            }
+        }
+        .why-choose-us{
+            .title{
+                &::after{
+                    left: 36.5% ;
+                    right: initial ;
+                }
+            }
+        }
+        .footer{
+            .row{
+                .col-4{
+                    .items{
+                        .item+.item{
+                            margin-left: 25px ;
+                            margin-right: 0 ;
+                        }
+                    }
+                }
+                .col-4:not(:first-of-type){
+                    .items{
+                        margin-left: 0 ; 
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:575.98px){
+    html[dir = "ltr"]{
+        .header{
+            .navbar{
+                .min-nav{
+                    .navbar-brand{
+                        right: -150px ;
+                        left: initial ;
+                    }
+                }
+            }
+        }
+        .header-home{
+            .navbar{
+                .min-nav{
+                    .navbar-brand{
+                        margin-left: 30px ;
+                        margin-right: 0 ;
+                    }
+                }
+            }
+        }
+        .services{
+            .title{
+                &::after{
+                    left: 24% ;
+                    right: initial ;
+                }
+            }
+        }
+        .vip-consultant{
+            .title{
+                &::after{
+                    left: 29% ;
+                    right: initial ;
+                }
+            }
+        }
+        .vip-consultant.clients-preview{
+            .title{
+                &::after{
+                    left: 21% !important ;
+                    right: initial !important ;
+                }
+            }
+            .container-fluid{
+                margin-left: 0 ;
+                
+            }
+            .owl-carousel{
+                .owl-item{
+                    .card{
+                        .image{
+                            left: -30px !important ;
+                            right: initial !important ;
+                        }
+                    }
+                }
+            }
+        }
+        .why-choose-us{
+            .title{
+                &::after{
+                    left: 33% ;
+                    right: initial ;
+                }
+            }
+        }
+        .app{
+            .show-case{
+                padding: 40px 0 0 70px ;
+            }
+        }
+    }
+}
+@media(min-width:280px) and (max-width : 415px){
+    html[dir = "ltr"]{
+        .header{
+            .navbar{
+                .min-nav{
+                    .navbar-brand{
+                        right: -120px ;
+                        left: initial ;
+                    }
+                }
+            }
+        }
+        .header-home{
+            .navbar{
+                .min-nav{
+                    .navbar-brand{
+                        margin-left: 50px ;
+                        margin-right: 0 ;
+                    }
+                }
+            }
+        }
+        .app{
+            .show-case{
+                padding: 40px 0 0 30px ;
+            }
+            .image{
+                left: 58% ;
+                right: initial ;
+            }
+        }
+        .vip-consultant.clients-preview{
+            .container-fluid{
+                .owl-dots{
+                    text-align: center !important ;
+                    margin-right: 0 !important ;
+                }
+            }
+        }
+    }
+}
+@media(min-width:280px) and (max-width : 281px){
+    html[dir = "ltr"]{
+        .header{
+            .navbar{
+                .min-nav{
+                    .navbar-brand{
+                        right: -98px ;
+                        left: initial ;
+                    }
+                    .sign{
+                        .btn + .btn{
+                            margin-left: 12px ;
+                            margin-right: 0 ;
+                        }
+                    }
+                }
+            }
+        }
+        .header-home{
+            .min-nav{
+                .sign{
+                    .dropdown{
+                        .dropdown-menu{
+                            left: -142px !important ;
+                            right: initial !important ;
+                        }
+                    }
+                }
+            }
+        }
+        .vip-consultant.clients-preview{
+            .container-fluid{
+                .owl-carousel{
+                    .owl-item{
+                        .card{
+                            .image{
+                                left: 31% !important ;
+                                right: initial !important ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer{
+            .row{
+                .col-4:not(:first-of-type){
+                    .items{
+                        padding-left: 0 ;
+                    }
+                }
+            }
+        }
+    }
+}
