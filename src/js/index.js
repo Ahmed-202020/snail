@@ -23,9 +23,12 @@ $(function(){
     $(".eye-2").on("mouseup" , function(){
         $(".pass-2").attr("type" , "password").css("padding-right" , "25px") ; 
     })
-    $('label[for = photo] input[type=file]').change(function(e){
-        $(".ph").val($(this).val().replace(/.*(\/|\\)/, ''));
-    }) ; 
+
+    $("#notifications").modal("show") ; 
+    $("#notifications .btn").on("click" , function(){
+        $("#notifications").modal("hide") ; 
+    });
+
 
 
     if( $(".modal-register .form-group").hasClass("error") ) {

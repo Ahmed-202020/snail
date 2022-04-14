@@ -1,52 +1,5 @@
 .new-orders{
     padding: 50px 70px 300px;
-    .branch{
-        @extend %branch ; 
-        margin-bottom: 130px;
-        .shape{
-            img{
-                &:nth-child(3){
-                    position: absolute ;
-                    right: 8px ;
-                    z-index: -1;
-                    transform: scaleX(1.2);
-                    -webkit-transform: scaleX(1.2);
-                    -moz-transform: scaleX(1.2);
-                    -ms-transform: scaleX(1.2);
-                    -o-transform: scaleX(1.2);
-                }
-                &:nth-child(4){
-                    position: absolute ;
-                    right: 111px ;
-                    z-index: -2;
-                    transform: scaleX(1.2);
-                    -webkit-transform: scaleX(1.2);
-                    -moz-transform: scaleX(1.2);
-                    -ms-transform: scaleX(1.2);
-                    -o-transform: scaleX(1.2);
-                }
-                &:nth-child(5){
-                    position: absolute ;
-                    right: 206px ;
-                    z-index: -3 ;
-                    transform: scaleX(2);
-                    -webkit-transform: scaleX(2);
-                    -moz-transform: scaleX(2);
-                    -ms-transform: scaleX(2);
-                    -o-transform: scaleX(2);
-                }
-            }
-            .text{
-                &:nth-of-type(2){
-                    right: 125px ;
-                }
-                &:last-child{
-                    position: absolute ;
-                    right: 230px ;
-                }
-            }
-        }
-    }
     .orders{
         display: grid ;
         grid-template-columns: repeat(auto-fill , minmax(calc(100% / 3) , 1fr ));
@@ -244,19 +197,6 @@
 }
 
 .pending-orders{
-    .branch{
-        .shape{
-            img{
-                &:nth-child(5){
-                    transform: scaleX(2.4);
-                    -webkit-transform: scaleX(2.4);
-                    -moz-transform: scaleX(2.4);
-                    -ms-transform: scaleX(2.4);
-                    -o-transform: scaleX(2.4);
-                }
-            }
-        }
-    }
 }
 
 //new-orders[ltr]

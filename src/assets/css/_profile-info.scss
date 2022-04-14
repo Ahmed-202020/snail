@@ -1,40 +1,5 @@
 .profile-info{
     padding: 50px 70px 200px ;
-    .branch{
-        @extend %branch ; 
-        margin-bottom: 125px;
-        .shape{
-            img{
-                &:nth-child(2){
-                    z-index: 5 ;
-                }
-                &:nth-child(3){
-                    position: absolute ;
-                    right: 8px ;
-                    transform: scaleX(1.2);
-                    -webkit-transform: scaleX(1.2);
-                    -moz-transform: scaleX(1.2);
-                    -ms-transform: scaleX(1.2);
-                    -o-transform: scaleX(1.2);
-                }
-                &:nth-child(4){
-                    position: absolute ;
-                    right: 104px ;
-                    z-index: -1;
-                    transform: scaleX(1.2) ;
-                    -webkit-transform: scaleX(1.2) ;
-                    -moz-transform: scaleX(1.2) ;
-                    -ms-transform: scaleX(1.2) ;
-                    -o-transform: scaleX(1.2) ;
-                }
-            }
-            .text{
-                &:last-child(){
-                    right: 130px ;
-                }   
-            }
-        }
-    }
     .show-case{
         position: relative ;
         padding: 170px 0 100px ;

@@ -1,99 +1,31 @@
-.t-c{
-    .branch{
-        @extend %branch ; 
-        margin-bottom: 100px ;
-        .shape{
-            img{
-                &:last-of-type{
-                    position: absolute ;
-                    right: 35px ;
-                    transform: scaleX(1.8);
-                    -webkit-transform: scaleX(1.8);
-                    -moz-transform: scaleX(1.8);
-                    -ms-transform: scaleX(1.8);
-                    -o-transform: scaleX(1.8);
-                    z-index: -1 ;
-                }
+.about-us.t-c{
+    .branches{
+        .branch-2{
+            margin-right: 35px ;
+            span{
+                z-index: 5 ;
+                width: 125% ;
+                left: -10% ;
             }
-            .text{
-                right: 30px ;
+            img{
+                transform: scaleX(1.8);
+                -webkit-transform: scaleX(1.8);
+                -moz-transform: scaleX(1.8);
+                -ms-transform: scaleX(1.8);
+                -o-transform: scaleX(1.8);
             }
         }
     }
 }
 
-//ltr 
-html[dir = "ltr"]{
-    .t-c{
-        .branch{
-            .shape{
-                img{
-                    &:last-of-type{
-                        transform:rotateY(180deg) scaleX(1.8) !important;
-                        -webkit-transform:rotateY(180deg) scaleX(1.8) !important;
-                        -moz-transform:rotateY(180deg) scaleX(1.8) !important;
-                        -ms-transform:rotateY(180deg) scaleX(1.8) !important;
-                        -o-transform:rotateY(180deg) scaleX(1.8) !important;
-                        left: 35px ;
-                        right: initial ;
-                    }
-                }
-                .text{
-                    left: 30px ;
-                    right: initial ;
-                }
-            }
-        }
-    }
-}
 
 @media(max-width:500px){
-    .about-us{
+    .about-us.t-c{
         padding: 50px 20px 200px ;
-        .branch{
-            .shape{
-                right: 35% !important ;
-            }
-        }
         .show-case{
             padding-inline: 10px ;
         }
     }
 }
-@media(max-width:280px){
-    .about-us{
-        .branch{
-            .shape{
-                right: 27% !important ;
-            }
-        }
-        .show-case{
-        }
-    }
-}
 
-//ltr res 
-@media(max-width:500px){
-    html[dir = "ltr"]{
-        .about-us{
-            .branch{
-                .shape{
-                    right: initial !important ;
-                    left: 35% !important;
-                }
-            }
-        }
-    }
-}
-@media(max-width:280px){
-    html[dir = "ltr"]{
-        .about-us{
-            .branch{
-                .shape{
-                    right: initial !important ;
-                    left: 27% !important;
-                }
-            }
-        }
-    }
-}
+

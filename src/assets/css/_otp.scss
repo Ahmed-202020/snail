@@ -39,7 +39,7 @@
                                     content: "";
                                     width: 10px;
                                     height: 1.5px;
-                                    background-color: $light-line ;
+                                    background-color: $active ;
                                     bottom: 35%;
                                     left: 50%;
                                     transform: translateX(-50%);
@@ -55,7 +55,7 @@
                         }
                         .buttons{
                             .sign{
-                                color: $light-line ;
+                                color: $active ;
                                 background-color: $light-bg ;
                                 background-image: none ;
                                 border: none ;
@@ -64,7 +64,7 @@
                         }
                     }
                     .resent{
-                        color: $light-line ;
+                        color: $active ;
                         box-shadow: none ;
                         margin-top: 20px;
                         margin-bottom: 50px ;

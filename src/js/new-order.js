@@ -39,7 +39,7 @@
         })
     })
 
-    $("#notifications").modal("show") ; 
-    $("#notifications .btn").on("click" , function(){
-        $("#notifications").modal("hide") ; 
-    });
+    // $("#notifications").modal("show") ; 
+    // $("#notifications .btn").on("click" , function(){
+    //     $("#notifications").modal("hide") ; 
+    // });

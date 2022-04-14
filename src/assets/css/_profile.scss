@@ -1,7 +1,7 @@
 .profile{
     padding: 50px 70px 300px ;
-    .branch{
-        @extend %branch ; 
+    .branches{
+        @extend %branches ; 
     }
     .sections{
         display: grid ;
@@ -12,85 +12,25 @@
         }
     }
 }
-.orders{
-    .branch{
-        @extend %branch ; 
-        margin-bottom: 125px;
-        .shape{
-            img{
-                &:nth-child(2){
-                    z-index: 5 ;
-                }
-                &:nth-child(3){
-                    position: absolute ;
-                    right: 8px ;
-                    transform: scaleX(1.2);
-                    -webkit-transform: scaleX(1.2);
-                    -moz-transform: scaleX(1.2);
-                    -ms-transform: scaleX(1.2);
-                    -o-transform: scaleX(1.2);
-                }
-                &:nth-child(4){
-                    position: absolute ;
-                    right: 104px ;
-                    z-index: -1;
-                    transform: scaleX(1.2) ;
-                    -webkit-transform: scaleX(1.2) ;
-                    -moz-transform: scaleX(1.2) ;
-                    -ms-transform: scaleX(1.2) ;
-                    -o-transform: scaleX(1.2) ;
-                }
-            }
-            .text{
-                &:last-child(){
-                    right: 135px ;
-                }   
-            }
+
+.profile.orders{
+    .branches{
+        .branch-1{
+            z-index: 3;
+        }
+        .branch-2{
+            z-index: 2;
+        }
+        .branch-3{
+            z-index: 1;
         }
     }
 }
 
+
 //ltr 
 html[dir = "ltr"]{
     .profile{
-        .branch{
-            .shape{
-                left: 80px ;
-                right: initial ;
-                img{
-                    &:nth-child(1){
-                        left: -52px ;
-                        right: initial ;
-                        transform: rotateY(180deg);
-                        -webkit-transform: rotateY(180deg);
-                        -moz-transform: rotateY(180deg);
-                        -ms-transform: rotateY(180deg);
-                        -o-transform: rotateY(180deg);
-                    }
-                    &:nth-child(2){
-                        left: -80px ;
-                        z-index: 1;
-                        right: initial ;
-                        transform: rotateY(180deg);
-                        -webkit-transform: rotateY(180deg);
-                        -moz-transform: rotateY(180deg);
-                        -ms-transform: rotateY(180deg);
-                        -o-transform: rotateY(180deg);
-                    }
-                    &:nth-child(3){
-                        transform: rotateY(180deg);
-                        -webkit-transform: rotateY(180deg);
-                        -moz-transform: rotateY(180deg);
-                        -ms-transform: rotateY(180deg);
-                        -o-transform: rotateY(180deg);
-                    }
-                }
-                .text{
-                    left: 30px ;
-                    right: initial ;
-                }
-            }
-        }
         .sections{
             .section{
                 .show-case{
@@ -234,37 +174,13 @@ html[dir = "ltr"]{
 @media(max-width : 500px){
     html[dir = "ltr"]{
         .profile{
-            .shape{
-                left: 45% !important ;
-                right: initial !important ;
-            }
             padding: 50px 5px 300px ;
-        }
-        .orders{
-            .shape{
-                left: 32% !important ;
-                right: initial !important ;
-            }
         }
     }
 }
 @media(max-width : 280px){
     html[dir = "ltr"]{
         .orders{
-            .shape{
-                img{
-                    &:nth-child(4){
-                        left : 70px !important ;
-                        right: initial !important ;
-                    }
-                }
-                .text{
-                    &:last-child{
-                        left: 110px !important ;
-                        right: initial !important ;
-                    }
-                }
-            }
             .sections{
                 .section{
                     .show-case{

@@ -1,26 +1,22 @@
+.header-about{
+    .navbar{
+        background-color: $light-bg !important ;
+    }
+}
 .about-us{
     padding: 50px 70px 200px;
-    .branch{
-        @extend %branch ; 
+    .branches{
+        @extend %branches ; 
     }
     .show-case{
         padding-inline: 280px ;
         text-align: center ;
         .text{
-            color: $black ;
+            color: $bg-color-1 ;
             font-size: 16pt ;
-            &:first-child{
+            &:nth-child(2){
                 margin-bottom: 40px ;
             }
-        }
-    }
-}
-
-//ltr 
-html[dir = "ltr"]{
-    .about-us{
-        .branch{
-            @extend %branch-ltr ; 
         }
     }
 }
@@ -57,11 +53,6 @@ html[dir = "ltr"]{
 @media(max-width:500px){
     .about-us{
         padding: 50px 20px 200px ;
-        .branch{
-            .shape{
-                right: 45% !important ;
-            }
-        }
         .show-case{
             padding-inline: 10px ;
         }
@@ -69,16 +60,3 @@ html[dir = "ltr"]{
 }
 
 
-//ltr res 
-@media(max-width:500px){
-    html[dir = "ltr"]{
-        .about-us{
-            .branch{
-                .shape{
-                    right: initial !important ;
-                    left: 45% !important;
-                }
-            }
-        }
-    }
-}

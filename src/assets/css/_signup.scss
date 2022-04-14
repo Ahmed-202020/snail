@@ -34,7 +34,7 @@
                                 box-shadow: 0 0 1px $min-color ;
                                 content: "" ;
                                 background-color: transparent ;
-                                border: 1px solid $min-color ;
+                                border: 1px solid $active ;
                                 border-radius: 4px ;
                                 -webkit-border-radius: 4px ;
                                 -moz-border-radius: 4px ;
@@ -56,26 +56,6 @@
                                 margin-right: auto ;
                                 margin-left: 25px ;
                                 margin-top: 4px ;
-                            }
-                            input#photo{
-                                display: none ;
-                            }
-                        }
-                        .main-sector , .sub-sector , .exp-sector{
-                            position: relative;
-                            .form-control{
-                                width: 100% ;
-                                border: 1px solid $light-line !important ;
-                                text-align: right;
-                                position: initial ;
-                                color: $light-line ;
-                                background-image: url("../icons/Icon\ ionic-md-arrow-dropdown.svg");
-                                background-repeat: no-repeat;
-                                background-position-x: 5%;
-                                background-position-y: 20px;
-                                option{
-                                    color: $min-color;
-                                }
                             }
                         }
                         .buttons{

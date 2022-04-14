@@ -8,11 +8,11 @@
 @import "./about-us" ; 
 @import "./t-c" ; 
 @import "./profile" ; 
-@import "./profile-info" ; 
-@import "./edit-profile-info" ; 
-@import "./new-orders" ; 
-@import "./new-order-info" ; 
-@import "./payments" ; 
+// @import "./profile-info" ; 
+// @import "./edit-profile-info" ; 
+// @import "./new-orders" ; 
+// @import "./new-order-info" ; 
+// @import "./payments" ; 
 
 .header{
     .navbar{
@@ -189,6 +189,11 @@
                     .dropdown-menu{
                         right: -160px ;
                     }
+                    .dropdown-item{
+                        &:last-child{
+                            color: $red ;
+                        }
+                    }
                 }
                 .dropdown-toggle{
                     &::after{
@@ -356,6 +361,9 @@
                 border-color: $min-color;
                 height: 400px !important;
                 width: 320px !important;
+                .card-body{
+                    width: 70% ;
+                }
             }
         }
     } 
@@ -370,7 +378,6 @@
         }
     }
     .container-fluid{
-        margin-right: 150px ;
         .owl-carousel{
             .owl-stage-outer{
                 height: 400px ;
@@ -431,10 +438,6 @@
                     width: 100% !important;
                 }
             }
-        }
-        .owl-dots{
-            text-align: left ;
-            margin-left: 230px ;
         }
     }
 }
@@ -515,8 +518,8 @@
     .row{
         padding: 40px 70px 200px 70px ;
         .logo{
-            width: 120px;
-            margin-bottom: 70px;
+            width: 270px;
+            margin-bottom: 30px;
             img{
                 width: 100%;
             }
@@ -524,8 +527,8 @@
         .explanation{
             .text{
                 color: $white;
-                font-size:14pt;
-                width: 275px ;
+                font-size:16pt;
+                width: 362px ;
             }
         }
         .items{
@@ -542,7 +545,7 @@
                     -ms-transition: all 300ms ease;
                     -o-transition: all 300ms ease;
                     &:hover{
-                        color: $min-color ;
+                        color: $active ;
                         filter: brightness(90%);
                         -webkit-filter: brightness(90%);
                     }
@@ -585,7 +588,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: $min-color;
+        background-color: $btn-1;
         font-size: 15pt;
         height: 40px;
         margin-bottom: 0;
@@ -602,7 +605,7 @@
         top: -34px ;
         left: 50% ;
         transform: translateX(-50%) rotate(180deg);
-        background-image: linear-gradient($min-color , $btn-2) ;
+        background-image: linear-gradient($btn-1 , $btn-2) ;
         border: 1px solid $light-line ;
         border-radius: 50% ;
         -webkit-border-radius: 50% ;
@@ -616,6 +619,11 @@
         -moz-transform: translateX(-50%) rotate(180deg);
         -ms-transform: translateX(-50%) rotate(180deg);
         -o-transform: translateX(-50%) rotate(180deg);
+        transition: all 200ms ease ;
+        -webkit-transition: all 200ms ease ;
+        -moz-transition: all 200ms ease ;
+        -ms-transition: all 200ms ease ;
+        -o-transition: all 200ms ease ;
         &::before{
             position: absolute ;
             content: url("../icons/Group\ 40954.svg");
@@ -626,6 +634,10 @@
             -moz-transform: translateX(-50%);
             -ms-transform: translateX(-50%);
             -o-transform: translateX(-50%);
+        }
+        &:hover{
+            filter: brightness(90% );
+            -webkit-filter: brightness(90% );
         }
     }
 }
@@ -647,7 +659,7 @@
             box-shadow: 0 0 2px $light-line;
             border: none !important;
             .sub{
-                color: $black;
+                color: $min-color;
                 font-size: 15pt;
                 font-weight: bold;
                 margin-bottom: 40px;
@@ -676,9 +688,9 @@
             }
             .btn:last-child{
                 margin-right: 15px;
-                background-image: linear-gradient($light-bg , $light-line) !important ;
-                box-shadow: 0 0 2px $light-line;
-                color: $black ;
+                background-image: linear-gradient($white , #fdf8f2) !important ;
+                box-shadow: 3px 3px 5px 1px $light-line;
+                color: $min-color ;
             }
         }
         .modal-open{

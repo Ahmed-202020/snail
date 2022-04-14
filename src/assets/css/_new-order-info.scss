@@ -1,68 +1,6 @@
 .new-order-info{
     position: relative ;
     padding: 50px 70px 100px;
-    .branch{
-        @extend %branch ; 
-        margin-bottom: 125px ;
-        .shape{
-            img{
-                &:nth-child(3){
-                    position: absolute ;
-                    right: 11px ;
-                    z-index: -1;
-                    transform: scaleX(1.1);
-                    -webkit-transform: scaleX(1.1);
-                    -moz-transform: scaleX(1.1);
-                    -ms-transform: scaleX(1.1);
-                    -o-transform: scaleX(1.1);
-                }
-                &:nth-child(4){
-                    position: absolute ;
-                    right: 111px ;
-                    z-index: -2;
-                    transform: scaleX(1.2);
-                    -webkit-transform: scaleX(1.2);
-                    -moz-transform: scaleX(1.2);
-                    -ms-transform: scaleX(1.2);
-                    -o-transform: scaleX(1.2);
-                }
-                &:nth-child(5){
-                    position: absolute ;
-                    right: 243px ;
-                    z-index: -3;
-                    transform: scaleX(1.8);
-                    -webkit-transform: scaleX(1.8);
-                    -moz-transform: scaleX(1.8);
-                    -ms-transform: scaleX(1.8);
-                    -o-transform: scaleX(1.8);
-                }
-                &:nth-child(6){
-                    position: absolute ;
-                    right: 390px ;
-                    z-index: -4;
-                    transform: scaleX(1.5);
-                    -webkit-transform: scaleX(1.5);
-                    -moz-transform: scaleX(1.5);
-                    -ms-transform: scaleX(1.5);
-                    -o-transform: scaleX(1.5);
-                }
-            }
-            .text{
-                &:nth-of-type(2){
-                    position: absolute;
-                    right: 127px ;
-                }
-                &:nth-of-type(3){
-                    position: absolute;
-                    right: 230px ;
-                }
-                &:nth-of-type(4){
-                    position: absolute;
-                    right: 392px ;
-                }
-            }
-        }
-    }
     .order-info{
         padding: 30px 30px 80px;
         border: 2px solid $light-line ;
