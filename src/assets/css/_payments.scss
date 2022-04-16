@@ -7,13 +7,13 @@
                 padding: 15px 50px ;
                 height: 180px ;
                 .title{
-                    margin-right: 8px ;
-                    font-size: 17pt ;
+                    margin-right: 12px ;
+                    font-size: 18pt ;
                     margin-top: 5px ;
                 }
                 .price{
                     position: absolute;
-                    color: $min-color ;
+                    color: $active ;
                     left: 3% ;
                     font-size: 24pt ;
                     bottom: 20px;
@@ -48,7 +48,7 @@
                 -o-border-radius: 8px ;
                 border: 1px solid $light-line;
                 &::placeholder{
-                    color: $light-line;
+                    color: $active ;
                 }   
             }
             .btn{
@@ -76,7 +76,7 @@
         }
         .section{
             @extend %section ; 
-            width: 38% ;
+            width: 43% ;
             margin-inline: auto ;
             margin-bottom: 80px ;
             &:hover{
@@ -93,15 +93,14 @@
                 .req-amount{
                     display: flex ;
                     align-items: baseline ;
-                    margin-bottom: 25px ;
                     .title{
                         font-size: 18pt ;
                         margin-right: 12px ;
                     }
                 }
                 .price{
-                    color: $min-color ;
-                    font-size: 20pt ;
+                    color: $active ;
+                    font-size: 25pt ;
                 }
             }
         }
@@ -113,13 +112,27 @@
             margin-inline: auto ;
             label{
                 &>span{
-                    color: $min-color ;
+                    color: $active ;
                     font-size: 14pt ;
                     margin-bottom: 10px ;
                     display: inline-block ;
                 }
                 .form-control{
                     @extend %form-control ; 
+                    &::placeholder{
+                        color: $active ;
+                    }
+                }
+                .custom-select{
+                    position: relative ;
+                    .form-control{
+                        color: $active ;
+                    }
+                    .custom-arrow{
+                        position: absolute ;
+                        left: 8% ;
+                        top: 16% ;
+                    }
                 }
             }
             label + label{
