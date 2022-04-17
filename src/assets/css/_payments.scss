@@ -123,16 +123,12 @@
                         color: $active ;
                     }
                 }
-                .custom-select{
-                    position: relative ;
-                    .form-control{
-                        color: $active ;
-                    }
-                    .custom-arrow{
-                        position: absolute ;
-                        left: 8% ;
-                        top: 16% ;
-                    }
+                select.form-control{
+                    background-image: url("../icons/Icon\ ionic-md-arrow-dropdown.svg");
+                    background-repeat: no-repeat ;
+                    background-position: 7%  center ;
+                    background-size: 17px ;
+                    color: $active ;
                 }
             }
             label + label{
@@ -146,6 +142,41 @@
                 padding-block: 8px ;
                 margin-bottom: 0 ;
                 margin-top: 70px ;
+            }
+        }
+    }
+}
+.successful-submit{
+    .modal-content{
+        display: flex ;
+        flex-direction: column ;
+        align-items: center ;
+        justify-content: center;
+        width: 50% ;
+        height: 70% ;
+        border: none ;
+        padding-block: 50px ;
+        margin-inline: auto ;
+        .image{
+            width: 150px ;
+            margin-bottom: 20px ;
+            img{
+                width: 100% ;
+            }
+        }
+        .text{
+            font-size: 18pt ;
+            color: $min-color ;
+            margin-bottom: 50px ;
+            font-weight: bold ; 
+        }
+        .button{
+            width: 60% ;
+            .btn{
+                @extend %btn-black ; 
+                background-image: linear-gradient($btn-1 , $btn-2);
+                font-size: 16pt ;
+                width: 100% ;
             }
         }
     }

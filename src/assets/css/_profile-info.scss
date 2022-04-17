@@ -1,5 +1,17 @@
 .profile-info{
     padding: 50px 70px 200px ;
+    .branches{
+        @extend %branches ; 
+        .branch-1{
+            z-index: 3 ;
+        }
+        .branch-2{
+            z-index: 2 ;
+        }
+        .branch-3{
+            z-index: 1 ;
+        }
+    }
     .show-case{
         position: relative ;
         padding: 170px 0 100px ;
@@ -24,7 +36,7 @@
             img{
                 width: 115px ;
                 margin-bottom: 15px ;
-                border: 1px solid $min-color ;
+                border: 1px solid $white ;
                 border-radius: 50% ;
                 -webkit-border-radius: 50% ;
                 -moz-border-radius: 50% ;
@@ -58,16 +70,17 @@
             width: 75% ;
             margin-inline: auto ;
             margin-bottom: 55px ;
-            color: $black ;
+            color: $min-color ;
             text-align: center;
             font-size: 16pt ;
         }
         .form-group{
-            width: 42% ;
+            width: 50% ;
             margin-inline: auto ; 
             @extend %form ; 
             select{
-                top: -4px ;
+                top: -5px ;
+                color: $active ;
             }
             label.key-country{
                 top: 152px !important ;
@@ -76,8 +89,8 @@
                 display: flex ;
                 flex-direction: column ;
                 span{
-                    color: $min-color ;
-                    font-size: 12pt;
+                    color: $active ;
+                    font-size: 14pt;
                     margin-bottom: 10px ;
                 }
             }
@@ -88,7 +101,7 @@
                     .form-control{
                         text-align: center;
                         width: 20%;
-                        padding: 8px 5px ;
+                        padding: 8px 5px 
                     }
                     input:first-child{
                         margin-left: 15px ;
@@ -99,6 +112,56 @@
                 background-color: $white ;
                 text-align: right ;
                 font-size: 14pt ;
+                color: $min-color ;
+            }
+            .clinic-photos{
+                .title{
+                    color: $active ;
+                    margin-bottom: 10px ;
+                }
+                .images{
+                    img{
+                        border-radius: 15px ;
+                        -webkit-border-radius: 15px ;
+                        -moz-border-radius: 15px ;
+                        -ms-border-radius: 15px ;
+                        -o-border-radius: 15px ;
+                        width: 100px ;
+                        margin-bottom: 15px ;
+                    }
+                    img:not(:last-child){
+                        margin-left: 15px ; 
+                    }
+                }
+            }
+            .date-clinic{
+                display: flex ;
+                align-items: center ;
+                flex-wrap: wrap ;
+                width: 140% ;
+                .date{
+                    background-color: $white ;
+                    border: 1px solid $light-bg ;
+                    padding: 10px  20px ;
+                    margin-bottom: 20px;
+                    display: inline-block ;
+                    border-radius: 8px ;
+                    -webkit-border-radius: 8px ;
+                    -moz-border-radius: 8px ;
+                    -ms-border-radius: 8px ;
+                    -o-border-radius: 8px ;
+                    min-width: 270px ;
+                    max-width: 270px ;
+                    span{
+                        color: $min-color ;
+                    }
+                    .day{
+                        margin-left: 20px ;
+                    }
+                }
+                .date:not(:last-child){
+                    margin-left: 20px ;
+                }
             }
             .buttons{
                 margin-top: 60px ;
@@ -108,6 +171,13 @@
                     font-size: 14pt ;
                 }
             }
+        }
+    }
+}
+.vip-consultant-2.clients-preview.clients-preview-2 {
+    .title{
+        &::after{
+            right: 39% !important  ;
         }
     }
 }
@@ -125,7 +195,7 @@
             .title{
                 text-align: center ;  
                 font-weight: bolder ;
-                color: $black ;
+                color: $min-color ;
                 font-size: 18pt ;
                 margin-bottom: 5px ;
             }
@@ -152,36 +222,8 @@
     }
 }
 
-//ltr 
+ltr 
 html[dir = "ltr"]{
-    .branch{
-        @extend %branch-ltr ; 
-        .shape{
-            img{
-                &:nth-child(3){
-                    left: 7px ;
-                    right: initial ;
-                }
-                &:nth-child(4){
-                    right: initial ;
-                    left: 95px ;
-                    transform: rotateY(180deg);
-                    -webkit-transform: rotateY(180deg);
-                    -moz-transform: rotateY(180deg);
-                    -ms-transform: rotateY(180deg);
-                    -o-transform: rotateY(180deg);
-                }
-            }
-            .text{
-                left: 120px ;
-                right: initial ;
-                &:nth-of-type(1){
-                    left: 27px ;
-                    right: initial ;
-                }
-            } 
-        }
-    }
     .show-case{
         .image-profile{
             .stars{

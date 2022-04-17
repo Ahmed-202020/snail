@@ -95,7 +95,7 @@ $(function(){
     $(".bank-info .form-group").on("submit" , function(e){
         e.preventDefault();
         $(".bank-info").hide() ; 
-        $("#successful-submit").modal("show") ; 
+        $(".successful-submit").modal("show") ; 
     });
     $(".online-consult .button .btn").on("click" , function(e){
         e.preventDefault();

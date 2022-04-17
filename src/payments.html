@@ -182,9 +182,7 @@
                         <input type="text" name="name" placeholder="اسم صاحب الحساب :" class="form-control" required>
                     </label>
                     <label >
-                        <span>اسم البنك :</span>
-                        <!-- <input type="text" name="name-bank" placeholder="اسم البنك :" class="form-control" required> -->
-                        <div class="custom-select">
+                            <span>اسم البنك :</span>
                             <select class="form-control">
                                 <option selected disabled value="">أسم البنك </option>
                                 <option value="">بنك مصر</option>
@@ -192,10 +190,6 @@
                                 <option value="">بنك اسكندرية</option>
                                 <option value="">بنك فيصل</option>
                             </select>
-                            <div class="custom-arrow">
-                                <img src="./assets/icons/Icon ionic-md-arrow-dropdown.svg" alt="">
-                            </div>
-                        </div>
                     </label>
                     <button class="btn" type="submit">سحب المبلغ</button>
                 </form>
@@ -217,11 +211,11 @@
         </div>
     </div>
     <!-- في حالة فشل السحب  -->
-    <div id = "failed-submit"  class="modal successful-submit fade"  data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" tabindex="-1">
+    <!-- <div id = "failed-submit"  class="modal successful-submit fade"  data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="image">
-                    <img src="./assets/icons/done-1.svg" alt="">
+                    <img src="./assets/icons/fail.svg" alt="">
                 </div>
                 <div class="text">فشل عملية السحب </div>
                 <div class="button">
@@ -229,7 +223,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>

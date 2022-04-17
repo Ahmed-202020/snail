@@ -382,38 +382,38 @@
 .pending-order-info{
     .order-info{
         position: relative ;
-        .state-order{
-            background-image: none ;
-            background-color: $white;
-            border: 1px solid $light-line ;
-            &::after{
-                position: absolute ;
-                content: "" ;
-                background-image: linear-gradient($btn-1 , $btn-2) ;
-                top: 0 ;
-                left: 0 ;
-                width: 20% ;
-                height: 101% ;
-                border-radius: 25px ;
-                -webkit-border-radius: 25px ;
-                -moz-border-radius: 25px ;
-                -ms-border-radius: 25px ;
-                -o-border-radius: 25px ;
-            }
-        }
-        .level-orders{
-            .level:not(:last-child){
-                &::after{
-                    background-image: none ;
-                    background-color: $light-line ;
-                }
-            }
-        }
-        .button{
-            .btn{
-                background-image: linear-gradient($red  , $dark-red) !important ;
-            }
-        }
+        // .state-order{
+        //     background-image: none ;
+        //     background-color: $white;
+        //     border: 1px solid $light-line ;
+        //     &::after{
+        //         position: absolute ;
+        //         content: "" ;
+        //         background-image: linear-gradient($btn-1 , $btn-2) ;
+        //         top: 0 ;
+        //         left: 0 ;
+        //         width: 20% ;
+        //         height: 101% ;
+        //         border-radius: 25px ;
+        //         -webkit-border-radius: 25px ;
+        //         -moz-border-radius: 25px ;
+        //         -ms-border-radius: 25px ;
+        //         -o-border-radius: 25px ;
+        //     }
+        // }
+        // .level-orders{
+        //     .level:not(:last-child){
+        //         &::after{
+        //             background-image: none ;
+        //             background-color: $light-line ;
+        //         }
+        //     }
+        // }
+        // .button{
+        //     .btn{
+        //         background-image: linear-gradient($red  , $dark-red) !important ;
+        //     }
+        // }
     }
 }
 .pending-order-info-2{

@@ -41,11 +41,11 @@
             img{
                 position: absolute ;
                 left: 50% ;
-                transform: translate(-50% , 100%);
-                -webkit-transform: translate(-50% , 100%);
-                -moz-transform: translate(-50% , 100%);
-                -ms-transform: translate(-50% , 100%);
-                -o-transform: translate(-50% , 100%);
+                transform: translate(-50% , 85%);
+                -webkit-transform: translate(-50% , 85%);
+                -moz-transform: translate(-50% , 85%);
+                -ms-transform: translate(-50% , 85%);
+                -o-transform: translate(-50% , 85%);
             }
             input[type="file"]{
                 display: none ;
@@ -59,6 +59,14 @@
                     background-position-x: 8%
                 }
             }
+            .label-map{
+                position: relative ;
+                a{
+                    position: absolute ;
+                    left: 7%;
+                    top: 14% ;
+                }
+            }
             textarea{
                 resize: none ;
                 height: 200px;
@@ -67,6 +75,10 @@
             .importants-sector{
                 margin-top: 20px ;
                 margin-bottom: 15px ;
+                .form-control{
+                    color: $active ;
+                    font-weight: normal ;
+                }
             }
             label.key-country{
                 top: 85px !important ;
@@ -92,6 +104,38 @@
                             left: 20px ;
                             top: 5px ;
                         }
+                    }
+                }
+            }
+            .another-image{
+                .title{
+                    color: $active ;
+                    margin-bottom: 10px ;
+                }
+                .images{
+                    display: flex ;
+                    align-items: center ;
+                    flex-wrap: wrap ;
+                    .image{
+                        background-color: $white ;
+                        border: 1px solid $light-bg ;
+                        border-radius: 15px ;
+                        -webkit-border-radius: 15px ;
+                        -moz-border-radius: 15px ;
+                        -ms-border-radius: 15px ;
+                        -o-border-radius: 15px ;
+                        width: 110px ;
+                        height: 130px ;
+                        margin-bottom: 15px ;
+                        display: flex ;
+                        align-items: center ;
+                        justify-content: center ;
+                        img{
+                            width: 40px ;
+                        }
+                    }
+                    .image:not(:last-child){
+                        margin-left: 15px ; 
                     }
                 }
             }
