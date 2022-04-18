@@ -106,28 +106,20 @@ $(function(){
         let strTime = $(".start-time input").val() ; 
         e.preventDefault() ; 
         if(strTime){
-            let input = $("<input type='time' readonly class='form-control'>") ; 
-            input.val(strTime) ; 
-            $(".selected-start-time").append(input).show() ; 
+            let input = $(".selected-start-time input") ; 
+            input.val(strTime).css("display" , "block") ; 
             $("#start-time .add-time input").val(null) ;
             $(".end-time input").removeAttr("disabled") ; 
-            $("#start-time input").attr("disabled" , "disabled") ; 
-            $(".add-btn").attr("disabled" , "disabled").css({"background-image" : "linear-gradient(#faca89 , #e2ad5b)"}) ; 
         }
     })
     $(".add-end-time").on("click"  , function(e){
         let endTime = $(".end-time input").val() ; 
         e.preventDefault() ; 
         if(endTime){
-            let input = $("<input type='time' readonly class='form-control'>") ; 
-            input.val(endTime) ; 
-            $(".selected-end-time").append(input).show() ; 
-            // $("#start-time .add-time input").val(null) ;
+            let input =$(".selected-end-time input") ; 
+            input.val(endTime).show() ; 
             $("#end-time .add-time input").val(null)  ; 
-            $(".end-time input").attr("disabled" , "disabled") ; 
-            $("#start-time input").removeAttr("disabled") ; 
             $(".add-btn").removeAttr("disabled").css({"background-image" : "linear-gradient(#da9800 , #8d6d3a)"}) ;  
-
         }
     })
     $(".add-btn").attr("disabled" , "disabled") ;
@@ -136,6 +128,8 @@ $(function(){
         let day = $(".clinic-days select option:selected").text() ; 
         let frmTime = $(".selected-start-time  input").val() ; 
         let toTime =  $(".selected-end-time  input").val() ; 
+        $(".add-btn").attr("disabled" , "disabled").css({"background-image" : "linear-gradient(#faca89 , #e2ad5b)"}) ; 
+        $(".end-time input").attr("disabled" , "disabled") ; 
         if(frmTime && toTime){
             let dates = $(".dates") ; 
             let date = $("<div class = 'date'></div>") ; 
@@ -158,8 +152,8 @@ $(function(){
             time.append(endTime) ; 
             date.append(time);
             dates.append(date) ; 
-            $(".selected-start-time input").remove() ; 
-            $(".selected-end-time input").remove() ; 
+            $(".selected-start-time input").hide() ; 
+            $(".selected-end-time input").hide() ; 
         }
     })
 

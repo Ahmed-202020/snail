@@ -226,6 +226,7 @@
                         text-align: center ;
                         width: 22% ;
                         margin-left: 15px;
+                        display: none ;
                         &::-webkit-calendar-picker-indicator{
                             display: none;
                         }
@@ -234,6 +235,8 @@
             }
             .dates{
                 @extend %clinic-date ; 
+                flex-wrap: nowrap ;
+                overflow: auto;
                 width: 150% ;
                 position: relative ;
                 right: 50% ;
@@ -244,14 +247,14 @@
                 -o-transform: translateX(50% );
                 .date{
                     position: relative ;
-                    max-width: initial ;
-                    min-width: initial ;
+                    max-width: 335px ;
+                    min-width: 335px ;
                     color: $min-color ;
                     padding-inline: 30px ;
                     img{
                         position: absolute ;
-                        left: 5px ;
-                        top: 6px ;
+                        left: 10px ;
+                        top: 7px ;
                         width: 15px ;
                         cursor: pointer ;
                     }

@@ -2194,6 +2194,7 @@ ltr html[dir="ltr"] #change-pass-prof .modal-content .show-case .out {
   text-align: center;
   width: 22%;
   margin-left: 15px;
+  display: none;
 }
 
 .edit-profile-info .show-case .form-group .clinic-date .selected-start-time input::-webkit-calendar-picker-indicator, .edit-profile-info .show-case .form-group .clinic-date .selected-end-time input::-webkit-calendar-picker-indicator {
@@ -2201,6 +2202,9 @@ ltr html[dir="ltr"] #change-pass-prof .modal-content .show-case .out {
 }
 
 .edit-profile-info .show-case .form-group .dates {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: auto;
   width: 150%;
   position: relative;
   right: 50%;
@@ -2213,16 +2217,16 @@ ltr html[dir="ltr"] #change-pass-prof .modal-content .show-case .out {
 
 .edit-profile-info .show-case .form-group .dates .date {
   position: relative;
-  max-width: initial;
-  min-width: initial;
+  max-width: 335px;
+  min-width: 335px;
   color: #635238;
   padding-inline: 30px;
 }
 
 .edit-profile-info .show-case .form-group .dates .date img {
   position: absolute;
-  left: 5px;
-  top: 6px;
+  left: 10px;
+  top: 7px;
   width: 15px;
   cursor: pointer;
 }
