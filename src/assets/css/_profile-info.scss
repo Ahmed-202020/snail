@@ -135,33 +135,7 @@
                 }
             }
             .date-clinic{
-                display: flex ;
-                align-items: center ;
-                flex-wrap: wrap ;
-                width: 140% ;
-                .date{
-                    background-color: $white ;
-                    border: 1px solid $light-bg ;
-                    padding: 10px  20px ;
-                    margin-bottom: 20px;
-                    display: inline-block ;
-                    border-radius: 8px ;
-                    -webkit-border-radius: 8px ;
-                    -moz-border-radius: 8px ;
-                    -ms-border-radius: 8px ;
-                    -o-border-radius: 8px ;
-                    min-width: 270px ;
-                    max-width: 270px ;
-                    span{
-                        color: $min-color ;
-                    }
-                    .day{
-                        margin-left: 20px ;
-                    }
-                }
-                .date:not(:last-child){
-                    margin-left: 20px ;
-                }
+                @extend %clinic-date ; 
             }
             .buttons{
                 margin-top: 60px ;

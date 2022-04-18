@@ -92,7 +92,7 @@
                     <img src="./assets/icons/Camera.svg" alt="كاميرا">
                     <input type="file" id="photo">
                 </label>
-                <form  action="./home.html"   class="form-group">
+                <form  action="./profile.html"   class="form-group">
                     <label for="key-country-1" class="key-country">
                         <img src="./assets/icons//علم-المملكة-العربية-السعودية-حاليا.svg" alt="علم">
                         <select   name="key" id="key-country-1">
@@ -137,6 +137,43 @@
                             </div>
                         </div>
                     </div>
+                    <div class="clinic-date">
+                        <button class="btn add-btn ">
+                            <img src="./assets/icons/Icon ionic-ios-add.svg" alt="">
+                            <span>اضافة ميعاد جديد</span>
+                        </button>
+                        <label class="clinic-days">
+                            <span>مواعيد العيادة :</span>
+                            <select class="form-control" name="day" id="">
+                                <option value="">السبت</option>
+                                <option value="">الأحد</option>
+                                <option value="">الأثنين</option>
+                                <option value="">الثلاثاء</option>
+                                <option value="">الأربعاء</option>
+                                <option value="">الخميس</option>
+                                <option value="">الجمعة</option>
+                            </select>
+                        </label>
+                        <label id="start-time" class="start-time">
+                            <span>من :</span>
+                            <div class="add-time">
+                                <input type="time"  class="form-control" required>
+                                <a href="#" class="btn add-start-time">اضافة</a>
+                            </div>
+                        </label>
+                        <div class="selected-start-time">
+                        </div>
+                        <label id="end-time" class="start-time end-time">
+                            <span>الي :</span>
+                            <div class="add-time">
+                                <input type="time" disabled  class="form-control" required>
+                                <a href="#" class="btn add-end-time">اضافة</a>
+                            </div>
+                        </label>
+                        <div class="selected-end-time">
+                        </div>
+                    </div>
+                    <div class="dates"></div>
                     <div class="buttons">
                         <button  class = "btn sign"  >حفظ </button>
                     </div>

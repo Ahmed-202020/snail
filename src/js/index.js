@@ -102,6 +102,72 @@ $(function(){
         $("#successful-submit").modal("show") ; 
     });
 
+    $(".add-start-time").on("click"  , function(e){
+        let strTime = $(".start-time input").val() ; 
+        e.preventDefault() ; 
+        if(strTime){
+            let input = $("<input type='time' readonly class='form-control'>") ; 
+            input.val(strTime) ; 
+            $(".selected-start-time").append(input).show() ; 
+            $("#start-time .add-time input").val(null) ;
+            $(".end-time input").removeAttr("disabled") ; 
+            $("#start-time input").attr("disabled" , "disabled") ; 
+            $(".add-btn").attr("disabled" , "disabled").css({"background-image" : "linear-gradient(#faca89 , #e2ad5b)"}) ; 
+        }
+    })
+    $(".add-end-time").on("click"  , function(e){
+        let endTime = $(".end-time input").val() ; 
+        e.preventDefault() ; 
+        if(endTime){
+            let input = $("<input type='time' readonly class='form-control'>") ; 
+            input.val(endTime) ; 
+            $(".selected-end-time").append(input).show() ; 
+            // $("#start-time .add-time input").val(null) ;
+            $("#end-time .add-time input").val(null)  ; 
+            $(".end-time input").attr("disabled" , "disabled") ; 
+            $("#start-time input").removeAttr("disabled") ; 
+            $(".add-btn").removeAttr("disabled").css({"background-image" : "linear-gradient(#da9800 , #8d6d3a)"}) ;  
+
+        }
+    })
+    $(".add-btn").attr("disabled" , "disabled") ;
+    $(".add-btn").on("click" ,  function(e){
+        e.preventDefault() ; 
+        let day = $(".clinic-days select option:selected").text() ; 
+        let frmTime = $(".selected-start-time  input").val() ; 
+        let toTime =  $(".selected-end-time  input").val() ; 
+        if(frmTime && toTime){
+            let dates = $(".dates") ; 
+            let date = $("<div class = 'date'></div>") ; 
+            let close = $("<img  src = './assets/icons/Icon ionic-ios-close-circle-outline.svg'/>") ; 
+            $(close).on("click" , function(){
+                $(this).parentsUntil(".dates").remove() ; 
+            })
+            let selectedDay = $(" <span class='day'></span>") ; 
+            selectedDay.text(day) ; 
+            let time =  $("<div class = 'time'></div>") ; 
+            let strTime = $("<input type = 'time' readonly class='from-time '/>") ; 
+            strTime.val(frmTime) ;  
+            let dot = $("<span class='dot'>:</span>") ; 
+            let endTime =  $("<input type = 'time' readonly class='from-time '/>") ; 
+            endTime.val(toTime) ; 
+            date.append(close) ; 
+            date.append(selectedDay) ; 
+            time.append(strTime) ; 
+            time.append(dot) ;
+            time.append(endTime) ; 
+            date.append(time);
+            dates.append(date) ; 
+            $(".selected-start-time input").remove() ; 
+            $(".selected-end-time input").remove() ; 
+        }
+    })
+
+
+
+
+
+
     $(".input-date").on("change" , function(){
         let element = $(".available-days .days .day") ; 
         element.val($(".input-date").val()) ; 

@@ -511,6 +511,45 @@ html[dir="ltr"] .modal-create .modal-dialog .row .col-6 .signin .form-group .mai
   color: #635238;
 }
 
+.profile-info .show-case .form-group .date-clinic, .edit-profile-info .show-case .form-group .dates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 140%;
+}
+
+.profile-info .show-case .form-group .date-clinic .date, .edit-profile-info .show-case .form-group .dates .date {
+  background-color: #ffffff;
+  border: 1px solid #fdf8f2;
+  padding: 10px  20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  min-width: 270px;
+  max-width: 270px;
+}
+
+.profile-info .show-case .form-group .date-clinic .date span, .edit-profile-info .show-case .form-group .dates .date span {
+  color: #635238;
+}
+
+.profile-info .show-case .form-group .date-clinic .date .day, .edit-profile-info .show-case .form-group .dates .date .day {
+  margin-left: 20px;
+}
+
+.profile-info .show-case .form-group .date-clinic .date:not(:last-child), .edit-profile-info .show-case .form-group .dates .date:not(:last-child) {
+  margin-left: 20px;
+}
+
 .active-lang {
   color: #faca89 !important;
   background-color: #fdf8f2 !important;
@@ -1703,45 +1742,6 @@ html[dir="ltr"] .orders .branch .shape .text:last-child {
   margin-left: 15px;
 }
 
-.profile-info .show-case .form-group .date-clinic {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 140%;
-}
-
-.profile-info .show-case .form-group .date-clinic .date {
-  background-color: #ffffff;
-  border: 1px solid #fdf8f2;
-  padding: 10px  20px;
-  margin-bottom: 20px;
-  display: inline-block;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-  min-width: 270px;
-  max-width: 270px;
-}
-
-.profile-info .show-case .form-group .date-clinic .date span {
-  color: #635238;
-}
-
-.profile-info .show-case .form-group .date-clinic .date .day {
-  margin-left: 20px;
-}
-
-.profile-info .show-case .form-group .date-clinic .date:not(:last-child) {
-  margin-left: 20px;
-}
-
 .profile-info .show-case .form-group .buttons {
   margin-top: 60px;
 }
@@ -2030,6 +2030,10 @@ ltr html[dir="ltr"] #change-pass-prof .modal-content .show-case .out {
   top: 5px;
 }
 
+.edit-profile-info .show-case .form-group .another-image {
+  margin-bottom: 20px;
+}
+
 .edit-profile-info .show-case .form-group .another-image .title {
   color: #faca89;
   margin-bottom: 10px;
@@ -2074,6 +2078,172 @@ ltr html[dir="ltr"] #change-pass-prof .modal-content .show-case .out {
 
 .edit-profile-info .show-case .form-group .another-image .images .image:not(:last-child) {
   margin-left: 15px;
+}
+
+.edit-profile-info .show-case .form-group .clinic-date {
+  background-color: #ffffff;
+  margin-bottom: 50px;
+  padding: 30px 100px 50px 30px;
+  width: 150%;
+  position: relative;
+  right: 50%;
+  transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
+  border: 1px solid #fff2e3;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.edit-profile-info .show-case .form-group .clinic-date .add-btn {
+  display: block;
+  margin-right: auto;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#faca89), to(#e2ad5b));
+  background-image: linear-gradient(#faca89, #e2ad5b);
+  color: #ffffff;
+  border: none;
+  margin-bottom: 25px;
+  font-size: 15pt;
+  padding-inline: 25px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+}
+
+.edit-profile-info .show-case .form-group .clinic-date .add-btn:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#da9800), to(#8d6d3a));
+  background-image: linear-gradient(#da9800, #8d6d3a);
+}
+
+.edit-profile-info .show-case .form-group .clinic-date .clinic-days {
+  margin-bottom: 30px;
+}
+
+.edit-profile-info .show-case .form-group .clinic-date .clinic-days select {
+  width: 92%;
+  border: 1px solid #faca89 !important;
+  position: initial;
+  background-image: url("../icons/Icon ionic-md-arrow-dropdown.svg");
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: 5% center;
+  color: #faca89;
+  font-weight: normal;
+}
+
+.edit-profile-info .show-case .form-group .clinic-date .start-time {
+  width: 88%;
+}
+
+.edit-profile-info .show-case .form-group .clinic-date .start-time .add-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.edit-profile-info .show-case .form-group .clinic-date .start-time .add-time .form-control {
+  border-color: #faca89;
+  width: 32%;
+  text-align: center;
+}
+
+.edit-profile-info .show-case .form-group .clinic-date .start-time .add-time .btn {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#faca89), to(#e2ad5b));
+  background-image: linear-gradient(#faca89, #e2ad5b);
+  color: #ffffff;
+  border: none;
+  font-size: 15pt;
+  padding-inline: 25px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  height: 40px;
+  -webkit-box-shadow: -1px 1px  5px 1px #ddd;
+          box-shadow: -1px 1px  5px 1px #ddd;
+}
+
+.edit-profile-info .show-case .form-group .clinic-date .end-time {
+  margin-top: 50px;
+}
+
+.edit-profile-info .show-case .form-group .clinic-date .selected-start-time, .edit-profile-info .show-case .form-group .clinic-date .selected-end-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.edit-profile-info .show-case .form-group .clinic-date .selected-start-time input, .edit-profile-info .show-case .form-group .clinic-date .selected-end-time input {
+  margin-top: 15px;
+  border: 1px solid #faca89;
+  text-align: center;
+  width: 22%;
+  margin-left: 15px;
+}
+
+.edit-profile-info .show-case .form-group .clinic-date .selected-start-time input::-webkit-calendar-picker-indicator, .edit-profile-info .show-case .form-group .clinic-date .selected-end-time input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.edit-profile-info .show-case .form-group .dates {
+  width: 150%;
+  position: relative;
+  right: 50%;
+  transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
+}
+
+.edit-profile-info .show-case .form-group .dates .date {
+  position: relative;
+  max-width: initial;
+  min-width: initial;
+  color: #635238;
+  padding-inline: 30px;
+}
+
+.edit-profile-info .show-case .form-group .dates .date img {
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.edit-profile-info .show-case .form-group .dates .date .time {
+  display: inline-block;
+}
+
+.edit-profile-info .show-case .form-group .dates .date .time input {
+  border: none;
+  text-align: center;
+  color: #635238;
+  outline: none;
+}
+
+.edit-profile-info .show-case .form-group .dates .date .time input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.edit-profile-info .show-case .form-group .dates .date .time .dot {
+  margin-inline: 2px;
 }
 
 html[dir="ltr"] .edit-profile-info .show-case .form-group .main-sector .form-control, html[dir="ltr"] .edit-profile-info .show-case .form-group .sub-sector .form-control, html[dir="ltr"] .edit-profile-info .show-case .form-group .exp-sector .form-control, html[dir="ltr"] .edit-profile-info .show-case .form-group .importants-sector .form-control {
