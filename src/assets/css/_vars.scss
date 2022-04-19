@@ -174,13 +174,13 @@ body{
     }
 }
 %type-consult{
-    color: $black ;
+    color: $min-color ;
     font-size: 16pt ;
     span{
         background-color: $white  ;
         display: inline-block ;
         text-align: center ;
-        border: 2px solid $light-line ;
+        border: 1px solid $light-bg ;
         padding-block: 10px ;
         border-radius:10px ;
         margin-left: 10px ;
@@ -228,6 +228,12 @@ body{
             text-align: center ;
             line-height: 48px ;
             color: $light-bg ;
+            left: 50%;
+            transform: translateX(-50%) ;
+            -webkit-transform: translateX(-50%) ;
+            -moz-transform: translateX(-50%) ;
+            -ms-transform: translateX(-50%) ;
+            -o-transform: translateX(-50%) ;
             width: 100% ;
         }
     }

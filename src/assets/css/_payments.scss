@@ -1,4 +1,19 @@
 .payments{
+    .branches{
+        .branch-3{
+            margin-right: -5px ;
+            span{
+                z-index: 25 ;
+            }
+            img{
+                transform: scaleX(1.1);
+                -webkit-transform: scaleX(1.1);
+                -moz-transform: scaleX(1.1);
+                -ms-transform: scaleX(1.1);
+                -o-transform: scaleX(1.1);
+            }
+        }
+    }
     .sections{
         .section{
             .show-case{

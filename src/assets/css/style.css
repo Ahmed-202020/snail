@@ -151,7 +151,7 @@ body input[type='password'] {
   color: #000;
 }
 
-.new-orders .orders .card .button .btn, .payments .data-bank .form-group .btn, .bank-info .modal-content .form-group .btn, .successful-submit .modal-content .button .btn, .header #slider .buttons .btn, .features .feature .show-case .btn {
+.new-orders .orders .card .button .btn, .new-order-info .order-info .buttons .btn, .payments .data-bank .form-group .btn, .bank-info .modal-content .form-group .btn, .successful-submit .modal-content .button .btn, .header #slider .buttons .btn, .features .feature .show-case .btn {
   color: #ffffff;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#8d6d3a), to(#635238));
   background-image: linear-gradient(#8d6d3a, #635238);
@@ -173,21 +173,21 @@ body input[type='password'] {
   -o-transition: all 300ms ease;
 }
 
-.new-orders .orders .card .button .btn:hover, .payments .data-bank .form-group .btn:hover, .bank-info .modal-content .form-group .btn:hover, .successful-submit .modal-content .button .btn:hover, .header #slider .buttons .btn:hover, .features .feature .show-case .btn:hover {
+.new-orders .orders .card .button .btn:hover, .new-order-info .order-info .buttons .btn:hover, .payments .data-bank .form-group .btn:hover, .bank-info .modal-content .form-group .btn:hover, .successful-submit .modal-content .button .btn:hover, .header #slider .buttons .btn:hover, .features .feature .show-case .btn:hover {
   filter: brightness(90%);
   -webkit-filter: brightness(90%);
 }
 
-.new-orders .orders .card .info .data .type-consult {
-  color: #000;
+.new-orders .orders .card .info .data .type-consult, .new-order-info .order-info .info .data .reserved-specialty .type-consult {
+  color: #635238;
   font-size: 16pt;
 }
 
-.new-orders .orders .card .info .data .type-consult span {
+.new-orders .orders .card .info .data .type-consult span, .new-order-info .order-info .info .data .reserved-specialty .type-consult span {
   background-color: #ffffff;
   display: inline-block;
   text-align: center;
-  border: 2px solid #fff2e3;
+  border: 1px solid #fdf8f2;
   padding-block: 10px;
   border-radius: 10px;
   margin-left: 10px;
@@ -198,20 +198,20 @@ body input[type='password'] {
   padding-inline: 25px;
 }
 
-.new-orders .orders .card .info .data .type-consult span + span {
+.new-orders .orders .card .info .data .type-consult span + span, .new-order-info .order-info .info .data .reserved-specialty .type-consult span + span {
   margin-top: 10px;
 }
 
-html[dir="ltr"] .new-orders .orders .card .info .data .type-consult {
+html[dir="ltr"] .new-orders .orders .card .info .data .type-consult, html[dir="ltr"] .new-order-info .order-info .info .data .reserved-specialty .type-consult {
   margin-left: 0;
 }
 
-html[dir="ltr"] .new-orders .orders .card .info .data .type-consult span {
+html[dir="ltr"] .new-orders .orders .card .info .data .type-consult span, html[dir="ltr"] .new-order-info .order-info .info .data .reserved-specialty .type-consult span {
   margin-right: 15px;
   margin-left: 0;
 }
 
-.about-us .branches, .profile .branches, .profile-info .branches, .new-orders .branches {
+.about-us .branches, .profile .branches, .profile-info .branches, .new-orders .branches, .new-order-info .branches {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -221,12 +221,12 @@ html[dir="ltr"] .new-orders .orders .card .info .data .type-consult span {
   margin-bottom: 60px;
 }
 
-.about-us .branches .branch-1, .profile .branches .branch-1, .profile-info .branches .branch-1, .new-orders .branches .branch-1 {
+.about-us .branches .branch-1, .profile .branches .branch-1, .profile-info .branches .branch-1, .new-orders .branches .branch-1, .new-order-info .branches .branch-1 {
   position: relative;
   z-index: 2;
 }
 
-.about-us .branches .branch-1 svg, .profile .branches .branch-1 svg, .profile-info .branches .branch-1 svg, .new-orders .branches .branch-1 svg {
+.about-us .branches .branch-1 svg, .profile .branches .branch-1 svg, .profile-info .branches .branch-1 svg, .new-orders .branches .branch-1 svg, .new-order-info .branches .branch-1 svg {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -237,17 +237,23 @@ html[dir="ltr"] .new-orders .orders .card .info .data .type-consult span {
   -o-transform: translate(-50%, -50%);
 }
 
-.about-us .branches .branch-2, .profile .branches .branch-2, .profile-info .branches .branch-2, .new-orders .branches .branch-2 {
+.about-us .branches .branch-2, .profile .branches .branch-2, .profile-info .branches .branch-2, .new-orders .branches .branch-2, .new-order-info .branches .branch-2 {
   position: relative;
   z-index: 1;
   margin-right: -10px;
 }
 
-.about-us .branches .branch-2 span, .profile .branches .branch-2 span, .profile-info .branches .branch-2 span, .new-orders .branches .branch-2 span {
+.about-us .branches .branch-2 span, .profile .branches .branch-2 span, .profile-info .branches .branch-2 span, .new-orders .branches .branch-2 span, .new-order-info .branches .branch-2 span {
   position: absolute;
   text-align: center;
   line-height: 48px;
   color: #fdf8f2;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
   width: 100%;
 }
 
@@ -2290,6 +2296,7 @@ html[dir="ltr"] .edit-profile-info .show-case .form-group label .importants .cus
 
 .new-orders .branches .branch-3 {
   z-index: 2;
+  margin-right: 3px;
 }
 
 .new-orders .branches .branch-3 img {
@@ -2307,7 +2314,7 @@ html[dir="ltr"] .edit-profile-info .show-case .form-group label .importants .cus
 
 .new-orders .branches .branch-4 {
   z-index: 1;
-  margin-right: 20px;
+  margin-right: 45px;
 }
 
 .new-orders .branches .branch-4 img {
@@ -2801,6 +2808,506 @@ html[dir="ltr"] .new-orders .orders .card .date {
   }
 }
 
+.new-order-info {
+  position: relative;
+  padding: 50px 70px 100px;
+}
+
+.new-order-info .branches .branch-1 {
+  z-index: 5;
+}
+
+.new-order-info .branches .branch-2 {
+  z-index: 4;
+}
+
+.new-order-info .branches .branch-3 {
+  z-index: 3;
+}
+
+.new-order-info .branches .branch-4 {
+  z-index: 2;
+  margin-right: 35px;
+}
+
+.new-order-info .branches .branch-4 span {
+  width: 150%;
+  z-index: 25;
+}
+
+.new-order-info .branches .branch-4 img {
+  transform: scaleX(2);
+  -webkit-transform: scaleX(2);
+  -moz-transform: scaleX(2);
+  -ms-transform: scaleX(2);
+  -o-transform: scaleX(2);
+}
+
+.new-order-info .branches .branch-5 {
+  z-index: 1;
+  margin-right: 75px;
+}
+
+.new-order-info .branches .branch-5 span {
+  z-index: 25;
+  width: 110%;
+}
+
+.new-order-info .branches .branch-5 img {
+  transform: scaleX(1.8);
+  -webkit-transform: scaleX(1.8);
+  -moz-transform: scaleX(1.8);
+  -ms-transform: scaleX(1.8);
+  -o-transform: scaleX(1.8);
+}
+
+.new-order-info .order-info {
+  padding: 30px 30px 80px;
+  border: 2px solid #fff2e3;
+  background-color: #fdf8f2;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.new-order-info .order-info .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.new-order-info .order-info .info .user-img img {
+  min-height: 110px;
+  max-height: 110px;
+  min-width: 110px;
+  max-width: 110px;
+  border: 4px solid #faca89;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.new-order-info .order-info .info .data {
+  margin-top: 25px;
+  margin-right: 25px;
+  width: 100%;
+}
+
+.new-order-info .order-info .info .data .name .text {
+  font-size: 22pt;
+  color: #635238;
+  font-weight: bold;
+}
+
+.new-order-info .order-info .info .data .date {
+  color: #faca89;
+  font-size: 14pt;
+  margin-bottom: 25px;
+}
+
+.new-order-info .order-info .info .data .type-of-counseling {
+  color: #faca89;
+  font-size: 16pt;
+  margin-bottom: 30px;
+}
+
+.new-order-info .order-info .info .data .type-of-counseling .text {
+  color: #635238;
+  margin-right: 15px;
+}
+
+.new-order-info .order-info .info .data .type-of-counseling > div + div {
+  margin-block: 5px;
+}
+
+.new-order-info .order-info .info .data .type-of-counseling .time-consult {
+  margin-right: 10px;
+  color: #000;
+}
+
+.new-order-info .order-info .info .data .reserved-specialty {
+  margin-bottom: 40px;
+}
+
+.new-order-info .order-info .info .data .reserved-specialty .title {
+  color: #faca89;
+  font-size: 16pt;
+  margin-bottom: 20px;
+}
+
+.new-order-info .order-info .info .data .address-consult {
+  margin-bottom: 40px;
+}
+
+.new-order-info .order-info .info .data .address-consult .title {
+  color: #faca89;
+}
+
+.new-order-info .order-info .info .data .address-consult .text {
+  color: #635238;
+}
+
+.new-order-info .order-info .info .data .animal-logs {
+  margin-bottom: 40px;
+}
+
+.new-order-info .order-info .info .data .animal-logs .title {
+  color: #faca89;
+  margin-bottom: 20px;
+}
+
+.new-order-info .order-info .info .data .animal-logs .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.new-order-info .order-info .info .data .animal-logs .images .animal {
+  width: 150px;
+  position: relative;
+}
+
+.new-order-info .order-info .info .data .animal-logs .images .animal img {
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  width: 100%;
+}
+
+.new-order-info .order-info .info .data .animal-logs .images .animal:not(:first-child) {
+  margin-right: 20px;
+}
+
+.new-order-info .order-info .info .data .animal-logs .images .animal .name {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #ffffff;
+  color: #635238;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -webkit-box-shadow: 0 3px 5px 1px #efefef;
+          box-shadow: 0 3px 5px 1px #efefef;
+}
+
+.new-order-info .order-info .info .data .details-order {
+  margin-bottom: 40px;
+}
+
+.new-order-info .order-info .info .data .details-order .title {
+  color: #faca89;
+  font-size: 16pt;
+  margin-bottom: 20px;
+}
+
+.new-order-info .order-info .info .data .details-order .text {
+  color: #635238;
+  background-color: #ffffff;
+  border: 2px solid #fff2e3;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  width: 70%;
+  padding: 40px 45px 100px;
+}
+
+.new-order-info .order-info .info .data .documents {
+  margin-bottom: 40px;
+}
+
+.new-order-info .order-info .info .data .documents .title {
+  color: #faca89;
+  font-size: 16pt;
+  margin-bottom: 20px;
+}
+
+.new-order-info .order-info .info .data .documents .image {
+  display: inline-block;
+  width: 120px;
+}
+
+.new-order-info .order-info .info .data .documents .image img {
+  width: 100%;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.new-order-info .order-info .buttons {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.new-order-info .order-info .buttons .btn {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#faca89), to(#e2ad5b));
+  background-image: linear-gradient(#faca89, #e2ad5b);
+  width: 40%;
+  margin-bottom: 0;
+}
+
+.new-order-info .order-info .buttons .btn:nth-child(2) {
+  display: block;
+  margin-inline: auto;
+  margin-top: 20px;
+  background-image: none;
+  color: #635238;
+  font-weight: bold;
+}
+
+.pending-order-info .order-info {
+  position: relative;
+}
+
+.pending-order-info .order-info .fees {
+  position: absolute;
+  left: 5%;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: rgba(250, 202, 137, 0.6);
+  color: #635238;
+  padding: 12px 35px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+html[dir="ltr"] .new-order-info .order-info .info .data {
+  margin-left: 25px;
+  margin-right: 0;
+}
+
+html[dir="ltr"] .new-order-info .order-info .info .data .type-of-counseling .text {
+  margin-right: 15px;
+  margin-left: 0;
+}
+
+html[dir="ltr"] .new-order-info .order-info .info .data .type-of-counseling .time-consult {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+html[dir="ltr"] .new-order-info .order-info .info .data s .image + {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+html[dir="ltr"] .new-order-info .order-info .info .data .write-consult {
+  margin-right: 140px;
+  margin-left: 0;
+}
+
+html[dir="ltr"] .pending-order-info .order-info .state-order::after {
+  right: 0;
+  left: initial;
+}
+
+@media (max-width: 1399.98px) {
+  .new-order-info .order-info .data .user-img {
+    position: absolute;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .new-order-info .order-info .info .data .write-consult .form-group {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .new-order-info .order-info .user-img {
+    position: absolute;
+  }
+  .new-order-info .order-info .data .name {
+    margin-right: 100px;
+  }
+  .new-order-info .order-info .data .name + .date {
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 912px) {
+  .new-order-info {
+    padding: 50px 30px 100px;
+  }
+  .new-order-info .order-info .button .btn {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .new-order-info .order-info .info .data .details-order .text {
+    width: 80%;
+  }
+  .new-order-info .order-info .info .data .write-consult {
+    margin-left: 20px;
+  }
+  .new-order-info .order-info .info .data .write-consult .form-group {
+    width: 100%;
+  }
+  .new-order-info .order-info .button .btn {
+    width: 70%;
+  }
+}
+
+@media (max-width: 500px) {
+  .new-order-info .order-info .info .data {
+    margin-right: 0;
+  }
+  .new-order-info .order-info .info .data .name {
+    text-align: center;
+  }
+  .new-order-info .order-info .info .data .name .text {
+    font-size: 18pt;
+  }
+  .new-order-info .order-info .info .data .date {
+    text-align: center;
+  }
+  .new-order-info .order-info .info .data .reserved-specialty .type-consult span:first-child {
+    margin-left: 0;
+  }
+  .new-order-info .order-info .info .data .details-order .text {
+    padding-inline: 10px;
+    font-size: 14pt;
+    width: 98%;
+  }
+  .new-order-info .order-info .info .user-img {
+    position: absolute;
+  }
+  .new-order-info .order-info .info .user-img img {
+    min-height: 90px;
+    max-height: 90px;
+    min-width: 90px;
+    max-width: 90px;
+  }
+  .new-order-info .order-info .button .btn {
+    width: 80%;
+  }
+}
+
+@media (max-width: 280px) {
+  .new-order-info {
+    padding: 50px 0 100px;
+  }
+  .new-order-info .order-info .info .data .name {
+    margin-right: 55px;
+  }
+  .new-order-info .order-info .info .data .date {
+    margin-right: 55px;
+  }
+  .new-order-info .order-info .info .data .type-of-counseling {
+    font-size: 13pt;
+  }
+  .new-order-info .order-info .info .data .reserved-specialty .type-consult span:first-child {
+    width: 130px;
+  }
+  .new-order-info .order-info .info .data .reserved-specialty .type-consult span:last-child {
+    width: 90px;
+  }
+  .new-order-info .order-info .info .data .details-order .text {
+    font-size: 11pt;
+    width: 98%;
+    height: 170px;
+  }
+  .new-order-info .order-info .info .data .documents .image {
+    width: 55px;
+    height: 90px;
+    line-height: 87px;
+  }
+  .new-order-info .order-info .info .data .documents .image img {
+    min-width: 35px;
+    max-width: 35px;
+    min-height: 35px;
+    max-height: 35px;
+  }
+  .new-order-info .order-info .info .data .write-consult {
+    margin-left: 0;
+  }
+  .new-order-info .order-info .buttons .btn {
+    width: 88%;
+  }
+}
+
+@media (max-width: 1024px) {
+  html[dir="ltr"] .new-order-info .order-info .user-img {
+    position: absolute;
+  }
+  html[dir="ltr"] .new-order-info .order-info .data .name {
+    margin-left: 100px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768.98px) {
+  html[dir="ltr"] .new-order-info .order-info .info .data .write-consult {
+    margin-right: 20px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  html[dir="ltr"] .new-order-info .branch .shape {
+    left: 60px;
+    right: initial;
+  }
+}
+
+@media (max-width: 500px) {
+  html[dir="ltr"] .new-order-info .order-info .info .data {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  html[dir="ltr"] .new-order-info .order-info .info .data .reserved-specialty .type-consult span:first-child {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 280px) {
+  html[dir="ltr"] .new-order-info .order-info .info .data .name {
+    margin-left: 55px;
+    margin-right: 0;
+  }
+  html[dir="ltr"] .new-order-info .order-info .info .data .date {
+    margin-left: 55px;
+    margin-right: 0;
+  }
+  html[dir="ltr"] .new-order-info .order-info .info .data .write-consult {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.payments .branches .branch-3 {
+  margin-right: -5px;
+}
+
+.payments .branches .branch-3 span {
+  z-index: 25;
+}
+
+.payments .branches .branch-3 img {
+  transform: scaleX(1.1);
+  -webkit-transform: scaleX(1.1);
+  -moz-transform: scaleX(1.1);
+  -ms-transform: scaleX(1.1);
+  -o-transform: scaleX(1.1);
+}
+
 .payments .sections .section .show-case {
   position: relative;
   -webkit-box-align: stretch;
@@ -3223,6 +3730,129 @@ html[dir="ltr"] .bank-info .modal-content .section .show-case .req-amount .title
   .bank-info .modal-content .title::after {
     content: initial !important;
   }
+}
+
+.animal-detail .order-info {
+  padding: 50px 30px 80px;
+}
+
+.animal-detail .order-info .animal-name {
+  text-align: center;
+  color: #635238;
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-size: 20pt;
+}
+
+.animal-detail .order-info .animal-image {
+  text-align: center;
+  width: 47%;
+  margin-inline: auto;
+  margin-bottom: 20px;
+}
+
+.animal-detail .order-info .animal-image img {
+  width: 100%;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.animal-detail .order-info .animal-details {
+  text-align: center;
+  background-color: #ffffff;
+  width: 47%;
+  border: solid 1px;
+  margin-bottom: 30px;
+  margin-inline: auto;
+  padding-block: 40px;
+  border-color: rgba(250, 202, 137, 0.5);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.animal-detail .order-info .animal-details > div:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.animal-detail .order-info .animal-details .title {
+  color: #faca89;
+}
+
+.animal-detail .order-info .animal-details .text {
+  color: #635238;
+  margin-right: 15px;
+}
+
+.animal-detail .order-info .prev-reports {
+  width: 47%;
+  margin-inline: auto;
+}
+
+.animal-detail .order-info .prev-reports > .title {
+  margin-bottom: 20px;
+}
+
+.animal-detail .order-info .prev-reports > .title .text {
+  color: #635238;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.animal-detail .order-info .prev-reports > .title .logo {
+  width: 50px;
+  display: inline-block;
+}
+
+.animal-detail .order-info .prev-reports > .title .logo img {
+  width: 100%;
+}
+
+.animal-detail .order-info .prev-reports .show-case {
+  position: relative;
+  background-color: #ffffff;
+  border: solid 1px;
+  padding: 25px 40px;
+  border-color: rgba(250, 202, 137, 0.5);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.animal-detail .order-info .prev-reports .show-case .image-clinic {
+  position: absolute;
+  left: 1%;
+  top: 7%;
+  width: 130px;
+  height: 150px;
+  border: 2px solid;
+  border-color: rgba(250, 202, 137, 0.1);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.animal-detail .order-info .prev-reports .show-case .image-clinic img {
+  width: 80%;
+  height: 85%;
 }
 
 .header .navbar {
