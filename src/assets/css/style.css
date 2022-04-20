@@ -517,6 +517,79 @@ html[dir="ltr"] .modal-create .modal-dialog .row .col-6 .signin .form-group .mai
   color: #635238;
 }
 
+.animal-detail .order-info .button, .add-report .button {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.animal-detail .order-info .button .btn, .add-report .button .btn {
+  width: 45%;
+  -webkit-box-shadow: 3px 5px 5px 1px #eee;
+          box-shadow: 3px 5px 5px 1px #eee;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#faca89), to(#e2ad5b));
+  background-image: linear-gradient(#faca89, #e2ad5b);
+  font-size: 20pt;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+}
+
+.animal-detail .order-info .button .btn:hover, .add-report .button .btn:hover {
+  filter: brightness(95%);
+  -webkit-filter: brightness(95%);
+}
+
+.add-report .reports .special-report .form-group .content .btn, .add-report .reports .special-report .descriptions .content .btn {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#faca89), to(#e2ad5b));
+  background-image: linear-gradient(#faca89, #e2ad5b);
+  color: #ffffff;
+  -webkit-box-shadow: 3px 5px 5px 1px #eee;
+          box-shadow: 3px 5px 5px 1px #eee;
+  border: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+}
+
+.add-report .reports .special-report .form-group .content .btn:hover, .add-report .reports .special-report .descriptions .content .btn:hover {
+  filter: brightness(95%);
+  -webkit-filter: brightness(95%);
+}
+
+.add-report .reports .special-report .form-group .content .form-control, .add-report .reports .special-report .descriptions .content .form-control {
+  background-image: url("../icons/Icon ionic-md-arrow-dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: 5% center;
+  background-size: 15px;
+  width: 50%;
+  margin-bottom: 15px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  box-shadow: none;
+  padding-block: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
 .profile-info .show-case .form-group .date-clinic, .edit-profile-info .show-case .form-group .dates {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -731,6 +804,19 @@ html[dir="ltr"] .modal-create .modal-dialog .row .col-6 .signin .form-group .mai
   border-color: #635238;
   height: 400px !important;
   width: 320px !important;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 10px;
 }
 
 .modal {
@@ -3814,6 +3900,7 @@ html[dir="ltr"] .bank-info .modal-content .section .show-case .req-amount .title
 }
 
 .animal-detail .order-info .prev-reports .show-case {
+  height: 300px;
   position: relative;
   background-color: #ffffff;
   border: solid 1px;
@@ -3829,9 +3916,10 @@ html[dir="ltr"] .bank-info .modal-content .section .show-case .req-amount .title
 .animal-detail .order-info .prev-reports .show-case .image-clinic {
   position: absolute;
   left: 1%;
-  top: 7%;
-  width: 130px;
-  height: 150px;
+  top: 3%;
+  width: 110px;
+  height: 120px;
+  padding: 12px;
   border: 2px solid;
   border-color: rgba(250, 202, 137, 0.1);
   border-radius: 10px;
@@ -3851,8 +3939,343 @@ html[dir="ltr"] .bank-info .modal-content .section .show-case .req-amount .title
 }
 
 .animal-detail .order-info .prev-reports .show-case .image-clinic img {
-  width: 80%;
-  height: 85%;
+  width: 100%;
+  height: 100%;
+}
+
+.animal-detail .order-info .prev-reports .show-case .date {
+  color: #635238;
+  font-size: 15pt;
+  margin-bottom: 15px;
+}
+
+.animal-detail .order-info .prev-reports .show-case .date .text {
+  margin-right: 3px;
+}
+
+.animal-detail .order-info .prev-reports .show-case .report-content .title {
+  color: #635238;
+  font-size: 15pt;
+  margin-bottom: 15px;
+}
+
+.animal-detail .order-info .prev-reports .show-case .report-content .form-control {
+  background-image: url("../icons/Icon ionic-md-arrow-dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: 5% center;
+  background-size: 15px;
+  width: 50%;
+  margin-bottom: 15px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding-block: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.animal-detail .order-info .prev-reports .show-case .report-content .form-control:focus {
+  border: 1px solid #faca89;
+}
+
+.animal-detail .order-info .prev-reports .show-case .report-content .content-select {
+  border: 1px solid #faca89;
+  width: 50%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 10px 10px 30px;
+  font-size: 12pt;
+  color: #635238;
+  display: none;
+}
+
+.animal-detail .order-info .prev-reports .show-case .name-clinic {
+  position: absolute;
+  left: 3px;
+  bottom: 4px;
+  font-size: 12pt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ffffff;
+  -webkit-box-shadow: 3px -5px 5px 1px #efefef;
+          box-shadow: 3px -5px 5px 1px #efefef;
+  width: 135px;
+  height: 40px;
+  color: #635238;
+  border-top-right-radius: 15px;
+}
+
+.animal-detail .order-info .prev-reports .show-case:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.animal-detail .order-info .prev-reports:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.animal-detail .order-info .descriptions .show-case {
+  height: 200px;
+}
+
+.animal-detail .order-info .descriptions .show-case .description .title {
+  color: #635238;
+  margin-bottom: 15px;
+}
+
+.animal-detail .order-info .descriptions .show-case .description .contents .content {
+  display: inline-block;
+  color: #635238;
+  border: 1px solid;
+  border-color: rgba(250, 202, 137, 0.5);
+  padding: 5px 30px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.animal-detail .order-info .descriptions .show-case .description .contents .content:not(:last-child) {
+  margin-left: 15px;
+}
+
+.animal-detail .order-info .vacci > .title {
+  margin-bottom: 30px;
+}
+
+.animal-detail .order-info .vacci .show-case {
+  height: 150px;
+}
+
+.animal-detail .order-info .vacci .show-case .date .text {
+  margin-right: 15px;
+}
+
+.animal-detail .order-info .vacci .show-case .name-vacci {
+  color: #635238;
+  font-size: 15pt;
+}
+
+.animal-detail .order-info .vacci .show-case .name-vacci .text {
+  margin-right: 15px;
+  border: 1px solid;
+  border-color: rgba(250, 202, 137, 0.5);
+  padding: 7px 25px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.add-report .order-info:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.add-report .reports {
+  margin-top: 50px;
+}
+
+.add-report .reports > .title {
+  background-color: #ffffff;
+  padding: 12px 30px;
+  margin-bottom: 20px;
+  color: #faca89;
+  font-size: 16pt;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.add-report .reports .special-report {
+  padding-right: 110px;
+  width: 60%;
+}
+
+.add-report .reports .special-report > .title {
+  color: #faca89;
+  font-size: 12pt;
+  margin-bottom: 15px;
+}
+
+.add-report .reports .special-report .form-group {
+  margin-bottom: 50px;
+}
+
+.add-report .reports .special-report .form-group .content .form-control {
+  border-color: rgba(250, 202, 137, 0.3);
+  width: 37%;
+  color: #635238;
+}
+
+.add-report .reports .special-report .form-group .content .btn {
+  padding: 10px 25px;
+  font-size: 15pt;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  -webkit-border-radius: 5px;
+}
+
+.add-report .reports .special-report .form-group textarea.form-control {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid;
+  border-color: rgba(250, 202, 137, 0.3);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  height: 130px;
+  padding: 30px 30px 60px;
+  font-size: 14pt;
+  color: #635238;
+  caret-color: #8d6d3a;
+}
+
+.add-report .reports .special-report .form-group textarea.form-control::-webkit-input-placeholder {
+  color: #635238;
+}
+
+.add-report .reports .special-report .form-group textarea.form-control:-ms-input-placeholder {
+  color: #635238;
+}
+
+.add-report .reports .special-report .form-group textarea.form-control::-ms-input-placeholder {
+  color: #635238;
+}
+
+.add-report .reports .special-report .form-group textarea.form-control::placeholder {
+  color: #635238;
+}
+
+.add-report .reports .special-report .descriptions > .title {
+  color: #faca89;
+  font-size: 14pt;
+  margin-bottom: 15px;
+}
+
+.add-report .reports .special-report .descriptions .content {
+  width: 60%;
+}
+
+.add-report .reports .special-report .descriptions .content .form-control {
+  width: 60%;
+  border-color: rgba(250, 202, 137, 0.3);
+  color: #635238;
+}
+
+.add-report .reports .special-report .descriptions .content .btn {
+  font-size: 16pt;
+  padding: 10px  30px;
+}
+
+.add-report .reports .special-report .descriptions .select-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.add-report .reports .special-report .descriptions .select-content span {
+  background-color: #ffffff;
+  position: relative;
+  padding: 8px 40px;
+  font-size: 14pt;
+  margin-bottom: 10px;
+  color: #635238;
+  border: 1px solid;
+  border-color: rgba(250, 202, 137, 0.5);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.add-report .reports .special-report .descriptions .select-content span img {
+  position: absolute;
+  width: 15px;
+  left: 7px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.add-report .reports .special-report .descriptions .select-content span div {
+  display: inline;
+}
+
+.add-report .reports .special-report .descriptions .select-content span:not(:last-child) {
+  margin-left: 15px;
+}
+
+.add-report .recorded-reports .report {
+  padding-right: 110px;
+  width: 60%;
+}
+
+.add-report .recorded-reports .report .title {
+  margin-bottom: 15px;
+}
+
+.add-report .recorded-reports .report .title span {
+  color: #faca89;
+  margin-left: 10px;
+}
+
+.add-report .recorded-reports .report .title img {
+  cursor: pointer;
+}
+
+.add-report .recorded-reports .report .title img:not(:last-child) {
+  margin-left: 10px;
+}
+
+.add-report .recorded-reports .report .special-record .selected-content {
+  width: 40%;
+  border: 1px solid;
+  border-color: rgba(250, 202, 137, 0.5);
+  background-color: #ffffff;
+  font-size: 14pt;
+  padding: 10px 0.75rem;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.add-report .recorded-reports .report .special-record .text-content {
+  background-color: #ffffff;
+  padding: 30px 30px 60px;
+  color: #635238;
+  font-size: 14pt;
+  border: 1px solid;
+  border-color: #faca894d;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 .header .navbar {

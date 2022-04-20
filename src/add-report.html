@@ -48,7 +48,7 @@
                 </div>
             </nav>
         </div>
-        <section class="new-order-info animal-detail">
+        <section class="new-order-info animal-detail add-report">
             <div class="branches">
                 <div class="branch-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 117.692 117.694">
@@ -111,112 +111,56 @@
                         <span class="text">كجم 20</span>
                     </div>
                 </div>
-                <div class="prev-reports">
-                    <div class="title">
-                        <span class="logo">
-                            <img src="./assets/icons/Untitled-1.svg" alt="شعار">
-                        </span>
-                        <span class="text">التقارير السابقة</span>
-                    </div>
-                    <div class="show-case">
-                        <div class="image-clinic">
-                            <img src="./assets/img/download (1).png" alt="صورة عيادة">
-                        </div>
-                        <div class="date">
-                            <span class="title">تاريخ الاستشارة :</span>
-                            <span class="text">15/3/2022</span>
-                        </div>
-                        <div class="report-content">
-                            <div class="title">محتوي التقرير :</div>
-                            <select id = "sl-1" name="" class="form-control" id="">
-                                <option selected disabled value="">نوع التشخيص</option>
-                                <option value="">عين</option>
-                                <option value="">بطن </option>
-                                <option value="">قدم</option>
-                                <option value="">ظهر</option>
-                            </select>
-                            <div data-select = "1"  class="content-select">حساسية بالعين</div>
-                        </div>
-                        <div class="name-clinic">في بيتس كلينيك</div>
-                    </div>
-                    <div class="show-case">
-                        <div class="image-clinic">
-                            <img src="./assets/img/download (2).png" alt="صورة عيادة">
-                        </div>
-                        <div class="date">
-                            <span class="title">تاريخ الاستشارة :</span>
-                            <span class="text">15/3/2022</span>
-                        </div>
-                        <div class="report-content">
-                            <div class="title">محتوي التقرير :</div>
-                            <select id = "sl-2" name="" class="form-control" id="">
-                                <option selected disabled value="">نوع التشخيص</option>
-                                <option value="">عين</option>
-                                <option value="">بطن </option>
-                                <option value="">قدم</option>
-                                <option value="">ظهر</option>
-                            </select>
-                            <div data-select = "2" class="content-select">حساسية بالعين</div>
-                        </div>
-                        <div class="name-clinic">عيادة فيتولوجي</div>
-                    </div>
-                </div>
-                <div class="prev-reports descriptions">
-                    <div class="title">
-                        <span class="logo">
-                            <img src="./assets/icons/Untitled-1.svg" alt="شعار">
-                        </span>
-                        <span class="text">الوصفات</span>
-                    </div>
-                    <div class="show-case">
-                        <div class="image-clinic">
-                            <img src="./assets/img/download (1).png" alt="صورة عيادة">
-                        </div>
-                        <div class="date">
-                            <span class="title">تاريخ الاستشارة :</span>
-                            <span class="text">15/3/2022</span>
-                        </div>
-                        <div class="description">
-                            <div class="title">الوصفات :</div>
-                            <div class="contents">
-                                <div class="content">دواء</div>
-                                <div class="content">دواء</div>
+                <div class="reports">
+                    <div class="title">التقارير :</div>
+                    <div class="special-report">
+                        <div class="title">التخصص الخاص بالتقرير :</div>
+                        <form action="" class="form-group">
+                            <div class="content">
+                                <select  class="form-control" name="" id="">
+                                    <option value="">عين</option>
+                                    <option value="">بطن</option>
+                                    <option value="">ظهر</option>
+                                    <option value="">قدم</option>
+                                </select>
+                                <button disabled  class="btn">+اضافة تقرير جديد</button>
                             </div>
-                        </div>
-                        <div class="name-clinic">في بيتس كلينيك</div>
-                    </div>
-                </div>
-                <div class="prev-reports vacci">
-                    <div class="title">
-                        <span class="logo">
-                            <img src="./assets/icons/Untitled-1.svg" alt="شعار">
-                        </span>
-                        <span class="text">دفتر التطعيمات</span>
-                    </div>
-                    <div class="show-case">
-                        <div class="date">
-                            <span class="title">تاريخ التطعيم :</span>
-                            <span class="text">15/3/2022</span>
-                        </div>
-                        <div class="name-vacci">
-                            <span class="title">اسم التطعيم :</span>
-                            <span class="text">تطعيم</span>
-                        </div>
-                    </div>
-                    <div class="show-case">
-                        <div class="date">
-                            <span class="title">تاريخ التطعيم :</span>
-                            <span class="text">15/3/2022</span>
-                        </div>
-                        <div class="name-vacci">
-                            <span class="title">اسم التطعيم :</span>
-                            <span class="text">تطعيم</span>
+                            <textarea placeholder="اكتب تقرير" class="form-control" name="" id="" cols="30" rows="10" required></textarea>
+                        </form>
+                        <div class="descriptions">
+                            <div class="title">الوصفات :</div>
+                            <div class="content">
+                                <select class="form-control" name="" id="">
+                                    <option value="">دواء</option>
+                                    <option value="">2دواء</option>
+                                    <option value="">3دواء</option>
+                                    <option value="">4دواء</option>
+                                </select>
+                                <button id="med-btn"  class="btn">اضافة</button>
+                            </div>
+                            <div class="select-content"></div>
                         </div>
                     </div>
                 </div>
-                <div class="button">
-                    <a id="back_btn" href="#" class="btn">حسنا</a>
+            </div>
+            <div class="order-info">
+                <div class="reports recorded-reports">
+                    <div class="title">التقارير :</div>
+                    <div class="report">
+                        <div class="title">
+                            <span>التقرير الأول</span>
+                            <img src="./assets/icons/Edit.svg" alt="تعديل">
+                            <img src="./assets/icons/delete.svg" alt="حذف">
+                        </div>
+                        <div class="special-record">
+                            <div class="selected-content">عين</div>
+                            <div class="text-content">موقع استشارات بيطرية يهدف الي توصيل العملاء بالعيادات لبيطرية وتقديم العيادات لخدمتها المختلفة</div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="button">
+                <a href="./prev-order-info.html" class="btn">تم</a>
             </div>
         </section>
         <footer class="footer">

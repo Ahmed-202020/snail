@@ -157,6 +157,38 @@ $(function(){
         }
     })
 
+    $(".report-content #sl-1").on( "change" , function(){
+        $(".report-content [data-select = '1']").show() ; 
+    })
+    $(".report-content #sl-2").on( "change" , function(){
+        $(".report-content [data-select = '2']").show() ; 
+    })
+
+    $("#back_btn").on("click" , function (){
+        window.history.back();
+    });
+
+    $("#med-btn").on("click" , function(){
+        let contents =  $(".descriptions .select-content") ; 
+        let selectedText =  $(".descriptions select option:selected").text()  ; 
+        let content = $("<span></span>") ; 
+        let img = $("<img src='./assets/icons/Icon ionic-ios-close-circle-outline.svg' alt='حذف'>") ; 
+        let text = $("<div></div>") ; 
+        content.append(img) ;
+        text.text(selectedText) ;  
+        content.append(text) ; 
+        contents.append(content) ; 
+        $(img).on("click" , function(){
+            $(this).parentsUntil(".select-content").remove() ; 
+        })
+    }) ; 
+
+$(".special-report .btn").on("click" , function(e){
+    e.preventDefault() ; 
+}) ; 
+
+
+
 
 
 
