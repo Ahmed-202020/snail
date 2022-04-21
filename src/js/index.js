@@ -103,58 +103,71 @@ $(function(){
     });
 
     $(".add-start-time").on("click"  , function(e){
-        let strTime = $(".start-time input").val() ; 
+        let strTime = $(".start-time input") ; 
         e.preventDefault() ; 
-        if(strTime){
-            let input = $(".selected-start-time input") ; 
-            input.val(strTime).css("display" , "block") ; 
+        if(strTime.val()){
+            let input = $(" <input type='time' readonly class='form-control'>") ; 
+            let selectedStr = $(".selected-start-time ") ; 
+            input.val(strTime.val()) ;
+            selectedStr.append(input) ; 
             $("#start-time .add-time input").val(null) ;
-            $(".end-time input").removeAttr("disabled") ; 
+            $("#end-time input").removeAttr("disabled") ; 
+            $("#start-time input").attr("disabled" , "disabled") ; 
+            $(".add-btn").attr("disabled" , "disabled").css({"background-image" : "linear-gradient(#faca89 , #da9800)"}) ; 
         }
-    })
+    });
+
     $(".add-end-time").on("click"  , function(e){
-        let endTime = $(".end-time input").val() ; 
+        let endTime = $(".end-time input"); 
         e.preventDefault() ; 
-        if(endTime){
-            let input =$(".selected-end-time input") ; 
-            input.val(endTime).show() ; 
+        if(endTime.val()){
+            let input = $(" <input type='time' readonly class='form-control'>") ; 
+            let selectedEnd = $(".selected-end-time ") ; 
+            input.val(endTime.val()) ;
+            selectedEnd.append(input) ; 
             $("#end-time .add-time input").val(null)  ; 
+            $("#start-time input").removeAttr("disabled") ; 
+            $("#end-time input").attr("disabled" , "disabled") ; 
             $(".add-btn").removeAttr("disabled").css({"background-image" : "linear-gradient(#da9800 , #8d6d3a)"}) ;  
         }
-    })
-    $(".add-btn").attr("disabled" , "disabled") ;
+    });
+
+    $(".add-btn").attr("disabled" , "disabled") ; 
     $(".add-btn").on("click" ,  function(e){
         e.preventDefault() ; 
-        let day = $(".clinic-days select option:selected").text() ; 
-        let frmTime = $(".selected-start-time  input").val() ; 
-        let toTime =  $(".selected-end-time  input").val() ; 
-        $(".add-btn").attr("disabled" , "disabled").css({"background-image" : "linear-gradient(#faca89 , #e2ad5b)"}) ; 
-        $(".end-time input").attr("disabled" , "disabled") ; 
-        if(frmTime && toTime){
+        let frmTime= $(".selected-start-time  input") ; 
+        let toTime=  $(".selected-end-time  input") ; 
+        if(frmTime.val() && toTime.val()){
             let dates = $(".dates") ; 
             let date = $("<div class = 'date'></div>") ; 
             let close = $("<img  src = './assets/icons/Icon ionic-ios-close-circle-outline.svg'/>") ; 
             $(close).on("click" , function(){
                 $(this).parentsUntil(".dates").remove() ; 
-            })
+            });
+            let day = $(".clinic-days select option:selected").text() ; 
             let selectedDay = $(" <span class='day'></span>") ; 
             selectedDay.text(day) ; 
-            let time =  $("<div class = 'time'></div>") ; 
-            let strTime = $("<input type = 'time' readonly class='from-time '/>") ; 
-            strTime.val(frmTime) ;  
-            let dot = $("<span class='dot'>:</span>") ; 
-            let endTime =  $("<input type = 'time' readonly class='from-time '/>") ; 
-            endTime.val(toTime) ; 
-            date.append(close) ; 
             date.append(selectedDay) ; 
-            time.append(strTime) ; 
-            time.append(dot) ;
-            time.append(endTime) ; 
-            date.append(time);
+            let times = $("<span class = 'times'></span>") ; 
+            let time = $("<span class = 'time'></span>") ;
+            for(let z = 0 ; z<times.length ; z++){
+                for(let x = 0 ; x<frmTime.length ; x++){
+                    time.append(frmTime[x]) ; 
+                }
+                for(let y = 0 ; y<toTime.length ; y++){
+                    time.append(toTime[y])
+                }
+                times.append(time) ; 
+                date.append(times[z]) ; 
+            }
+            // let dot = $("<span class = 'dot'>:</span>") ;
+            // time.append(dot) ;
+
+            date.append(close) ; 
             dates.append(date) ; 
-            $(".selected-start-time input").hide() ; 
-            $(".selected-end-time input").hide() ; 
         }
+        $(".add-btn").attr("disabled" , "disabled").css({"background-image" : "linear-gradient(#faca89 , #e2ad5b)"}) ; 
+        $(".end-time input").attr("disabled" , "disabled") ; 
     })
 
     $(".report-content #sl-1").on( "change" , function(){

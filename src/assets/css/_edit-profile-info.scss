@@ -226,7 +226,6 @@
                         text-align: center ;
                         width: 22% ;
                         margin-left: 15px;
-                        display: none ;
                         &::-webkit-calendar-picker-indicator{
                             display: none;
                         }
@@ -235,8 +234,7 @@
             }
             .dates{
                 @extend %clinic-date ; 
-                flex-wrap: nowrap ;
-                overflow: auto;
+                flex-wrap: wrap ;
                 width: 150% ;
                 position: relative ;
                 right: 50% ;
@@ -246,32 +244,38 @@
                 -ms-transform: translateX(50% );
                 -o-transform: translateX(50% );
                 .date{
+                    display: flex ;
+                    align-items: baseline ;
                     position: relative ;
-                    max-width: 335px ;
-                    min-width: 335px ;
+                    max-width: 100% ;
+                    min-width: 100% ;
                     color: $min-color ;
                     padding-inline: 30px ;
+                    .time{
+                        display: flex ;
+                        align-items: baseline ;
+                        input{
+                            padding-inline: 5px ;
+                        }
+                    }
                     img{
                         position: absolute ;
-                        left: 10px ;
-                        top: 7px ;
+                        left: 3% ;
+                        top: 15%  ;
                         width: 15px ;
                         cursor: pointer ;
                     }
-                    .time{
-                        display: inline-block ;
-                        input{
-                            border: none ;
-                            text-align: center ;
-                            color: $min-color ;
-                            outline: none ;
-                            &::-webkit-calendar-picker-indicator{
-                                display: none;
-                            }
+                    input{
+                        border: none ;
+                        text-align: center ;
+                        color: $min-color ;
+                        outline: none ;
+                        &::-webkit-calendar-picker-indicator{
+                            display: none;
                         }
-                        .dot{
-                            margin-inline: 2px ;
-                        }
+                    }
+                    .dot{
+                        margin-inline: 2px ;
                     }
                 }
             }
