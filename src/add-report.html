@@ -123,7 +123,7 @@
                                     <option value="">ظهر</option>
                                     <option value="">قدم</option>
                                 </select>
-                                <button disabled  class="btn">+اضافة تقرير جديد</button>
+                                <button id="new-report" disabled  class="btn">+اضافة تقرير جديد</button>
                             </div>
                             <textarea placeholder="اكتب تقرير" class="form-control" name="" id="" cols="30" rows="10" required></textarea>
                         </form>
@@ -146,17 +146,6 @@
             <div class="order-info">
                 <div class="reports recorded-reports">
                     <div class="title">التقارير :</div>
-                    <div class="report">
-                        <div class="title">
-                            <span>التقرير الأول</span>
-                            <img src="./assets/icons/Edit.svg" alt="تعديل">
-                            <img src="./assets/icons/delete.svg" alt="حذف">
-                        </div>
-                        <div class="special-record">
-                            <div class="selected-content">عين</div>
-                            <div class="text-content">موقع استشارات بيطرية يهدف الي توصيل العملاء بالعيادات لبيطرية وتقديم العيادات لخدمتها المختلفة</div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="button">
@@ -209,6 +198,31 @@
             </p>
         </footer>
     </body>
+    <div class="modal fade" id="edit-report" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close">
+                    <img src="./assets/icons/Icon ionic-ios-close-circle-outline.svg" alt="اغلاق">
+                </div>
+                <div class="title">تعديل التقرير</div>
+                <div class="show-case">
+                    <div class="title">التخصص الخاص بالتقرير</div>
+                    <form class="form-group">
+                        <select name="" id="" class="form-control">
+                            <option value="">عين</option>
+                            <option value="">بطن</option>
+                            <option value="">ظهر</option>
+                            <option value="">قدم</option>
+                        </select>
+                        <textarea  class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                        <div class="button">
+                            <button class="btn">حفظ</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>

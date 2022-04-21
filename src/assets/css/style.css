@@ -548,7 +548,7 @@ html[dir="ltr"] .modal-create .modal-dialog .row .col-6 .signin .form-group .mai
   -webkit-filter: brightness(95%);
 }
 
-.add-report .reports .special-report .form-group .content .btn, .add-report .reports .special-report .descriptions .content .btn {
+.add-report .reports .special-report .form-group .content .btn, .add-report .reports .special-report .descriptions .content .btn, #edit-report .modal-dialog .modal-content .show-case .form-group .button {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#faca89), to(#e2ad5b));
   background-image: linear-gradient(#faca89, #e2ad5b);
   color: #ffffff;
@@ -567,12 +567,12 @@ html[dir="ltr"] .modal-create .modal-dialog .row .col-6 .signin .form-group .mai
   -o-transition: all 300ms ease;
 }
 
-.add-report .reports .special-report .form-group .content .btn:hover, .add-report .reports .special-report .descriptions .content .btn:hover {
+.add-report .reports .special-report .form-group .content .btn:hover, .add-report .reports .special-report .descriptions .content .btn:hover, #edit-report .modal-dialog .modal-content .show-case .form-group .button:hover {
   filter: brightness(95%);
   -webkit-filter: brightness(95%);
 }
 
-.add-report .reports .special-report .form-group .content .form-control, .add-report .reports .special-report .descriptions .content .form-control {
+.add-report .reports .special-report .form-group .content .form-control, .add-report .reports .special-report .descriptions .content .form-control, #edit-report .modal-dialog .modal-content .show-case .form-group select {
   background-image: url("../icons/Icon ionic-md-arrow-dropdown.svg");
   background-repeat: no-repeat;
   background-position: 5% center;
@@ -627,6 +627,23 @@ html[dir="ltr"] .modal-create .modal-dialog .row .col-6 .signin .form-group .mai
 
 .profile-info .show-case .form-group .date-clinic .date:not(:last-child), .edit-profile-info .show-case .form-group .dates .date:not(:last-child) {
   margin-left: 20px;
+}
+
+#edit-report .modal-dialog .modal-content .show-case .form-group textarea {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid;
+  border-color: rgba(250, 202, 137, 0.3);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  height: 130px;
+  padding: 30px 30px 60px;
+  font-size: 14pt;
+  color: #635238;
+  caret-color: #faca89;
 }
 
 .active-lang {
@@ -4276,6 +4293,77 @@ html[dir="ltr"] .bank-info .modal-content .section .show-case .req-amount .title
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+}
+
+.add-report .recorded-reports .report:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+#edit-report .modal-dialog {
+  max-width: 90% !important;
+  margin: 80px  auto  28px;
+}
+
+#edit-report .modal-dialog .modal-content {
+  border: none;
+}
+
+#edit-report .modal-dialog .modal-content > .title {
+  text-align: center;
+  color: #635238;
+  font-weight: bold;
+  font-size: 17pt;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+#edit-report .modal-dialog .modal-content .close {
+  position: absolute;
+  right: 2%;
+  top: 3%;
+  cursor: pointer;
+}
+
+#edit-report .modal-dialog .modal-content .show-case {
+  border: 2px solid #fff2e3;
+  background-color: #fdf8f2;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-inline: auto;
+  width: 70%;
+  padding: 50px 80px 120px;
+  margin-bottom: 150px;
+}
+
+#edit-report .modal-dialog .modal-content .show-case .title {
+  color: #faca89;
+  font-size: 12pt;
+  margin-bottom: 20px;
+}
+
+#edit-report .modal-dialog .modal-content .show-case .form-group select {
+  width: 33%;
+  color: #635238;
+  border-color: #faca894d;
+}
+
+#edit-report .modal-dialog .modal-content .show-case .form-group .button {
+  margin-top: 80px;
+  text-align: center;
+  width: 65%;
+  margin-inline: auto;
+}
+
+#edit-report .modal-dialog .modal-content .show-case .form-group .button .btn {
+  color: #ffffff;
+  font-size: 18pt;
+  width: 100%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .header .navbar {

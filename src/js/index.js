@@ -183,9 +183,79 @@ $(function(){
         })
     }) ; 
 
-$(".special-report .btn").on("click" , function(e){
-    e.preventDefault() ; 
-}) ; 
+    $(".special-report .form-group textarea").on("input" , function(){
+        if(! $(this).val().length==0){
+            $("#new-report").removeAttr("disabled") ; 
+        }else{
+            $("#new-report").attr("disabled" , "disabled") ; 
+        }
+    })
+    $("#new-report").on("click" , function(e){
+        e.preventDefault() ; 
+        let reports = $(".recorded-reports") ; 
+        let report = $("<div class= 'report'></div>") ; 
+        for(let i = 0 ; i<report.length ; i++){
+            let title = $("<div class= 'title'></div>") ; 
+            let text = $("<span></span>") ; 
+            text.text(`التقرير ${i+1}`) ;
+            title.append(text) ; 
+            let edit = $('<img id = "edit" src="./assets/icons/Edit.svg" data-bs-toggle="modal" data-bs-target="#edit-report" alt="تعديل">') ;
+            title.append(edit) ; 
+            let rem = $(' <img id = "rem" src="./assets/icons/delete.svg" alt="حذف">') ;
+            title.append(rem) ; 
+            report.append(title[i]) ;
+            let specialRecord = $("<div class= 'special-record'></div>") ; 
+            let selectContent = $(".special-report .form-group .content select option:selected").text() ; 
+            let selectedContent = $("<div class= 'selected-content'></div>");
+            selectedContent.text(selectContent) ; 
+            specialRecord.append(selectedContent) ; 
+            let textarea = $(".special-report .form-group textarea").val() ;
+            let textContent = $('<div class="text-content"></div>') ; 
+            textContent.text(textarea) ; 
+            specialRecord.append(textContent) ;
+            report.append(specialRecord) ; 
+            reports.append(report[i])
+        }
+        $(".recorded-reports .report .title #rem ").on("click" , function(){
+            $(this).parentsUntil(".recorded-reports").remove() ; 
+        })
+        $(".recorded-reports #edit" ).on("click" , function(){
+            // console.log("yes") ; 
+            // $(".modal#edit-report .modal-content .form-group  select option:selected").text(null) ; 
+            // $(".modal#edit-report .modal-content .form-group  select option:selected").text($(".recorded-reports .report .special-record .selected-content").text()) ; 
+            // $(".modal#edit-report .modal-content .form-group  textarea").val().remove() ; 
+            // $(".modal#edit-report .modal-content .form-group  textarea" ).val($(".recorded-reports .report .special-record .text-content").text()) ; 
+            // $(".modal#edit-report .modal-content .form-group  textarea").val($(".recorded-reports").find(".report").this(".special-record .text-content").text())  
+            // $(".modal#edit-report .modal-content .form-group  textarea").val($(".special-report .form-group textarea").val()) ; 
+        })
+    
+        $(".special-report .form-group textarea").val(null) ; 
+        $(".special-report .descriptions .select-content span").remove() ; 
+        $(".special-report .form-group .content select option:first").attr("selected" , "selected") ; 
+        $(".special-report .descriptions .content select option:first").attr("selected" , "selected") ; 
+        $(this).attr("disabled" , "disabled") ; 
+
+    });
+
+
+    $("#edit-report .close").on("click" , function(){
+        $("#edit-report").modal("hide") ; 
+    })
+    $(".modal#edit-report .btn").on("click" , function(e){
+        e.preventDefault() ; 
+        $("#edit-report").modal("hide") ; 
+    })
+
+
+
+
+
+
+
+
+
+
+
 
 
 
