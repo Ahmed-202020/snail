@@ -758,7 +758,7 @@ html[dir = "ltr"]{
     .vip-consultant{
         &>.title{
             &::after{
-                left: 40% ;
+                left: 42% ;
                 right: initial ;
             }
         }
@@ -794,6 +794,14 @@ html[dir = "ltr"]{
                 text-align: right ;
                 margin-right: 230px ;
                 margin-left: 0 ;
+            }
+        }
+    }
+    .vip-consultant-2.clients-preview{
+        .title{
+            &::after{
+                left: 34.5% ;
+                right: initial ;
             }
         }
     }
@@ -853,7 +861,7 @@ html[dir = "ltr"]{
     .vip-consultant{
         .title{
             &::after{
-                right: 39.5% ;
+                right: 41.5% ;
             }
         }
         .owl-carousel{
@@ -869,6 +877,13 @@ html[dir = "ltr"]{
         .title{
             &::after{
                 right: 35% ;
+            }
+        }
+    }
+    .vip-consultant-2.clients-preview{
+        .title{
+            &::after{
+                right: 33% ;
             }
         }
     }

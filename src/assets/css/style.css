@@ -2249,64 +2249,113 @@ ltr html[dir="ltr"] #change-pass-prof .modal-content .show-case .out {
   font-weight: normal;
 }
 
-.edit-profile-info .show-case .form-group .clinic-date .start-time {
-  width: 88%;
-}
-
-.edit-profile-info .show-case .form-group .clinic-date .start-time .add-time {
+.edit-profile-info .show-case .form-group .clinic-date .select-time .inputs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
-.edit-profile-info .show-case .form-group .clinic-date .start-time .add-time .form-control {
-  border-color: #faca89;
-  width: 32%;
-  text-align: center;
+.edit-profile-info .show-case .form-group .clinic-date .select-time .inputs label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-left: 30px;
 }
 
-.edit-profile-info .show-case .form-group .clinic-date .start-time .add-time .btn {
+.edit-profile-info .show-case .form-group .clinic-date .select-time .inputs label .form-control {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.edit-profile-info .show-case .form-group .clinic-date .select-time .inputs label span {
+  margin-bottom: 0;
+  margin-left: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16pt;
+}
+
+.edit-profile-info .show-case .form-group .clinic-date .select-time .add-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.edit-profile-info .show-case .form-group .clinic-date .select-time .add-time .btn {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#faca89), to(#e2ad5b));
   background-image: linear-gradient(#faca89, #e2ad5b);
   color: #ffffff;
   border: none;
-  font-size: 15pt;
+  font-size: 18pt;
+  width: 60%;
+  margin-top: 20px;
+  margin-bottom: 30px;
   padding-inline: 25px;
   -webkit-box-shadow: none;
           box-shadow: none;
-  height: 40px;
   -webkit-box-shadow: -1px 1px  5px 1px #ddd;
           box-shadow: -1px 1px  5px 1px #ddd;
 }
 
-.edit-profile-info .show-case .form-group .clinic-date .end-time {
-  margin-top: 50px;
-}
-
-.edit-profile-info .show-case .form-group .clinic-date .selected-start-time, .edit-profile-info .show-case .form-group .clinic-date .selected-end-time {
+.edit-profile-info .show-case .form-group .clinic-date .selected-time .time {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-.edit-profile-info .show-case .form-group .clinic-date .selected-start-time input, .edit-profile-info .show-case .form-group .clinic-date .selected-end-time input {
+.edit-profile-info .show-case .form-group .clinic-date .selected-time .time input {
   margin-top: 15px;
   border: 1px solid #faca89;
   text-align: center;
   width: 22%;
-  margin-left: 15px;
 }
 
-.edit-profile-info .show-case .form-group .clinic-date .selected-start-time input::-webkit-calendar-picker-indicator, .edit-profile-info .show-case .form-group .clinic-date .selected-end-time input::-webkit-calendar-picker-indicator {
+.edit-profile-info .show-case .form-group .clinic-date .selected-time .time input::-webkit-calendar-picker-indicator {
   display: none;
+}
+
+.edit-profile-info .show-case .form-group .clinic-date .selected-time .time .frm-text, .edit-profile-info .show-case .form-group .clinic-date .selected-time .time .to-text {
+  display: none;
+}
+
+.edit-profile-info .show-case .form-group .clinic-date .selected-time .time .end {
+  margin-left: 10px;
+}
+
+.edit-profile-info .show-case .form-group .clinic-date .selected-time .time .dot {
+  margin-inline: 10px;
 }
 
 .edit-profile-info .show-case .form-group .dates {
@@ -2329,14 +2378,14 @@ ltr html[dir="ltr"] #change-pass-prof .modal-content .show-case .out {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  position: relative;
   max-width: 100%;
   min-width: 100%;
   color: #635238;
   padding-inline: 30px;
+  overflow-x: auto;
 }
 
-.edit-profile-info .show-case .form-group .dates .date .time {
+.edit-profile-info .show-case .form-group .dates .date .times {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2345,19 +2394,33 @@ ltr html[dir="ltr"] #change-pass-prof .modal-content .show-case .out {
           align-items: baseline;
 }
 
-.edit-profile-info .show-case .form-group .dates .date .time input {
-  padding-inline: 5px;
+.edit-profile-info .show-case .form-group .dates .date .times .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.edit-profile-info .show-case .form-group .dates .date .times .time .dot {
+  display: none;
+}
+
+.edit-profile-info .show-case .form-group .dates .date .times .time:not(:first-child) {
+  margin-right: 20px;
 }
 
 .edit-profile-info .show-case .form-group .dates .date img {
   position: absolute;
-  left: 3%;
-  top: 15%;
+  left: 2%;
+  top: 7%;
   width: 15px;
   cursor: pointer;
 }
 
 .edit-profile-info .show-case .form-group .dates .date input {
+  padding-inline: 7px;
   border: none;
   text-align: center;
   color: #635238;
@@ -5221,7 +5284,7 @@ html[dir="ltr"] .services .title::after {
 }
 
 html[dir="ltr"] .vip-consultant > .title::after {
-  left: 40%;
+  left: 42%;
   right: initial;
 }
 
@@ -5251,6 +5314,11 @@ html[dir="ltr"] .vip-consultant.clients-preview .container-fluid .owl-dots {
   text-align: right;
   margin-right: 230px;
   margin-left: 0;
+}
+
+html[dir="ltr"] .vip-consultant-2.clients-preview .title::after {
+  left: 34.5%;
+  right: initial;
 }
 
 html[dir="ltr"] .why-choose-us .title::after {
@@ -5284,7 +5352,7 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     right: 38.5%;
   }
   .vip-consultant .title::after {
-    right: 39.5%;
+    right: 41.5%;
   }
   .vip-consultant .owl-carousel .center .card {
     left: -16px;
@@ -5292,6 +5360,9 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   }
   .vip-consultant.clients-preview .title::after {
     right: 35%;
+  }
+  .vip-consultant-2.clients-preview .title::after {
+    right: 33%;
   }
   .why-choose-us .title::after {
     right: 42.7%;

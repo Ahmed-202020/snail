@@ -102,32 +102,30 @@ $(function(){
         $("#successful-submit").modal("show") ; 
     });
 
-    $(".add-start-time").on("click"  , function(e){
-        let strTime = $(".start-time input") ; 
+    let fromTime = $("#select-time .inputs .from-time input") ; 
+    let toTime = $("#select-time .inputs .to-time input") ; 
+    let selectedTime = $(".selected-time ") ;
+    $("#select-time .inputs input").on("change" , function(){
+        $(".add-time-btn").removeAttr("disabled") ; 
+    })
+    $(".add-time-btn").on("click"  , function(e){
         e.preventDefault() ; 
-        if(strTime.val()){
-            let input = $(" <input type='time' readonly class='form-control'>") ; 
-            let selectedStr = $(".selected-start-time ") ; 
-            input.val(strTime.val()) ;
-            selectedStr.append(input) ; 
-            $("#start-time .add-time input").val(null) ;
-            $("#end-time input").removeAttr("disabled") ; 
-            $("#start-time input").attr("disabled" , "disabled") ; 
-            $(".add-btn").attr("disabled" , "disabled").css({"background-image" : "linear-gradient(#faca89 , #da9800)"}) ; 
-        }
-    });
-
-    $(".add-end-time").on("click"  , function(e){
-        let endTime = $(".end-time input"); 
-        e.preventDefault() ; 
-        if(endTime.val()){
-            let input = $(" <input type='time' readonly class='form-control'>") ; 
-            let selectedEnd = $(".selected-end-time ") ; 
-            input.val(endTime.val()) ;
-            selectedEnd.append(input) ; 
-            $("#end-time .add-time input").val(null)  ; 
-            $("#start-time input").removeAttr("disabled") ; 
-            $("#end-time input").attr("disabled" , "disabled") ; 
+        if(fromTime.val()&&toTime.val()){
+            let inputFrm = $(" <input type='time' name = 'from[]' readonly class='form-control start'>") ; 
+            let inputTo = $(" <input type='time' name = 'to[]' readonly class='form-control end'>") ; 
+            let dot = $("<span class = 'dot'>:</span>") ; 
+            let time = $("<div class = 'time'></div>") ; 
+            inputFrm.val(fromTime.val() ) ; 
+            inputTo.val(toTime.val()) ; 
+            time.append($("<span class = 'frm-text'>من</span>")) ;
+            time.append(inputFrm) ; 
+            time.append(dot) ; 
+            time.append($("<span class = 'to-text'>الي</span>")) ;
+            time.append(inputTo) ; 
+            selectedTime.append(time) ; 
+            $(fromTime).val(null) ;
+            $(toTime).val(null) ;
+            $(this).attr("disabled" , "disabled") ;
             $(".add-btn").removeAttr("disabled").css({"background-image" : "linear-gradient(#da9800 , #8d6d3a)"}) ;  
         }
     });
@@ -135,9 +133,6 @@ $(function(){
     $(".add-btn").attr("disabled" , "disabled") ; 
     $(".add-btn").on("click" ,  function(e){
         e.preventDefault() ; 
-        let frmTime= $(".selected-start-time  input") ; 
-        let toTime=  $(".selected-end-time  input") ; 
-        if(frmTime.val() && toTime.val()){
             let dates = $(".dates") ; 
             let date = $("<div class = 'date'></div>") ; 
             let close = $("<img  src = './assets/icons/Icon ionic-ios-close-circle-outline.svg'/>") ; 
@@ -148,24 +143,13 @@ $(function(){
             let selectedDay = $(" <span class='day'></span>") ; 
             selectedDay.text(day) ; 
             date.append(selectedDay) ; 
-            let times = $("<span class = 'times'></span>") ; 
-            let time = $("<span class = 'time'></span>") ;
-            for(let z = 0 ; z<times.length ; z++){
-                for(let x = 0 ; x<frmTime.length ; x++){
-                    time.append(frmTime[x]) ; 
-                }
-                for(let y = 0 ; y<toTime.length ; y++){
-                    time.append(toTime[y])
-                }
-                times.append(time) ; 
-                date.append(times[z]) ; 
-            }
-            // let dot = $("<span class = 'dot'>:</span>") ;
-            // time.append(dot) ;
-
+            let times = $("<span class = 'times'></span>") ;
+            $(".selected-time input").attr("name" , " ") ; 
+            times.append($(".selected-time .time" )) ; 
+            date.append( times) ; 
             date.append(close) ; 
             dates.append(date) ; 
-        }
+            $(".selected-time .dot").remove() ; 
         $(".add-btn").attr("disabled" , "disabled").css({"background-image" : "linear-gradient(#faca89 , #e2ad5b)"}) ; 
         $(".end-time input").attr("disabled" , "disabled") ; 
     })
@@ -207,47 +191,35 @@ $(function(){
         e.preventDefault() ; 
         let reports = $(".recorded-reports") ; 
         let report = $("<div class= 'report'></div>") ; 
-        for(let i = 0 ; i<report.length ; i++){
-            let title = $("<div class= 'title'></div>") ; 
-            let text = $("<span></span>") ; 
-            text.text(`التقرير ${i+1}`) ;
-            title.append(text) ; 
-            let edit = $('<img id = "edit" src="./assets/icons/Edit.svg" data-bs-toggle="modal" data-bs-target="#edit-report" alt="تعديل">') ;
-            title.append(edit) ; 
-            let rem = $(' <img id = "rem" src="./assets/icons/delete.svg" alt="حذف">') ;
-            title.append(rem) ; 
-            report.append(title[i]) ;
-            let specialRecord = $("<div class= 'special-record'></div>") ; 
-            let selectContent = $(".special-report .form-group .content select option:selected").text() ; 
-            let selectedContent = $("<div class= 'selected-content'></div>");
-            selectedContent.text(selectContent) ; 
-            specialRecord.append(selectedContent) ; 
-            let textarea = $(".special-report .form-group textarea").val() ;
-            let textContent = $('<div class="text-content"></div>') ; 
-            textContent.text(textarea) ; 
-            specialRecord.append(textContent) ;
-            report.append(specialRecord) ; 
-            reports.append(report[i])
-        }
+        console.log(report) ;
+        let title = $("<div class= 'title'></div>") ; 
+        let text = $("<span></span>") ; 
+        text.text(`التقرير الاول`) ;
+        title.append(text) ; 
+        let edit = $('<img id = "edit" src="./assets/icons/Edit.svg" data-bs-toggle="modal" data-bs-target="#edit-report" alt="تعديل">') ;
+        title.append(edit) ; 
+        let rem = $(' <img id = "rem" src="./assets/icons/delete.svg" alt="حذف">') ;
+        title.append(rem) ; 
+        report.append(title) ;
+        let specialRecord = $("<div class= 'special-record'></div>") ; 
+        let selectContent = $(".special-report .form-group .content select option:selected").text() ; 
+        let selectedContent = $("<div class= 'selected-content'></div>");
+        selectedContent.text(selectContent) ; 
+        specialRecord.append(selectedContent) ; 
+        let textarea = $(".special-report .form-group textarea").val() ;
+        let textContent = $('<div class="text-content"></div>') ; 
+        textContent.text(textarea) ; 
+        specialRecord.append(textContent) ;
+        report.append(specialRecord) ; 
+        reports.append(report);
         $(".recorded-reports .report .title #rem ").on("click" , function(){
             $(this).parentsUntil(".recorded-reports").remove() ; 
         })
-        $(".recorded-reports #edit" ).on("click" , function(){
-            // console.log("yes") ; 
-            // $(".modal#edit-report .modal-content .form-group  select option:selected").text(null) ; 
-            // $(".modal#edit-report .modal-content .form-group  select option:selected").text($(".recorded-reports .report .special-record .selected-content").text()) ; 
-            // $(".modal#edit-report .modal-content .form-group  textarea").val().remove() ; 
-            // $(".modal#edit-report .modal-content .form-group  textarea" ).val($(".recorded-reports .report .special-record .text-content").text()) ; 
-            // $(".modal#edit-report .modal-content .form-group  textarea").val($(".recorded-reports").find(".report").this(".special-record .text-content").text())  
-            // $(".modal#edit-report .modal-content .form-group  textarea").val($(".special-report .form-group textarea").val()) ; 
-        })
-    
         $(".special-report .form-group textarea").val(null) ; 
         $(".special-report .descriptions .select-content span").remove() ; 
         $(".special-report .form-group .content select option:first").attr("selected" , "selected") ; 
         $(".special-report .descriptions .content select option:first").attr("selected" , "selected") ; 
         $(this).attr("disabled" , "disabled") ; 
-
     });
 
 
@@ -259,67 +231,5 @@ $(function(){
         $("#edit-report").modal("hide") ; 
     })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    $(".input-date").on("change" , function(){
-        let element = $(".available-days .days .day") ; 
-        element.val($(".input-date").val()) ; 
-        $(element).css("display" , "flow-root") ;
-        $(".available-time>.date input").removeAttr("disabled") ; 
-    });
-
-    $(".add-date .btn-time").on("click" , function(e){
-        e.preventDefault() ;
-        if( ( $(".available-time .date input").val() ) ){
-            let element = $("<input type = 'time' readonly class = 'date' />")  ; 
-            $(element).val($(".available-time .date input").val()) ; 
-            $(".decided-date").append(element) ; 
-        }
-        if( ( $(".available-days .days .day").val() )&& ( $(".available-time .decided-date .date").val() ) ){
-            $(".add-date-btn").removeAttr("disabled").css("opacity" , "1") ; 
-        }
-    })
-
-    $(".online-consult .form-group").on("submit" , function(e){
-        e.preventDefault() ; 
-        let element = $("<div class = 'decided-day'></div>") ; 
-        let titleElement = $("<span class='title'>تاريخ الاستشارة :</span>") ; 
-        let dayElement = $("<span class='day'></span>")
-        dayElement.text($(".available-days .days .day").val()) ; 
-        let timeElement = $("<span class='time-element'></span>") ; 
-        let date = $(".decided-date .date"); 
-        for(var i = 0 ; i < date.length ; i++){
-            console.log(date[i]) ; 
-            timeElement.append(date[i]) ; 
-        }
-        element.append(titleElement) ; 
-        element.append(dayElement) ; 
-        element.append(timeElement) ; 
-        $(".available-days .days .day").text("") ; 
-        $(".available-time .date input").val("") ; 
-        $(".add-date-btn").attr("disabled" , "disabled").css("opacity" , "0.7") ; 
-        $(".available-time>.date input").attr("disabled" , "disabled") ; 
-        $(".result").append(element).css("display" , "block") ; 
-        $(this).closest(".form-group").find("input[type=text]").val("") ; 
-        $(".input-date").removeAttr("disabled");
-        $(".available-days .days .day").hide();
-        $(".decided-date .date").hide() ;
-    })
 });
 

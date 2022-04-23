@@ -154,22 +154,22 @@
                                 <option value="">الجمعة</option>
                             </select>
                         </label>
-                        <label id="start-time" class="start-time">
-                            <span>من :</span>
-                            <div class="add-time">
-                                <input type="time"  class="form-control" required>
-                                <a href="#" class="btn add-start-time">اضافة</a>
+                        <div id="select-time" class="select-time">
+                            <div class="inputs">
+                                <label class="from-time" for="">
+                                    <span>من :</span>
+                                    <input type="time" name = ""  class="form-control" required>
+                                </label>
+                                <label class="to-time" for="">
+                                    <span>الي :</span>
+                                    <input type="time" name = ""  class="form-control" required>
+                                </label>
                             </div>
-                        </label>
-                        <div class="selected-start-time"></div>
-                        <label id="end-time" class="start-time end-time">
-                            <span>الي :</span>
                             <div class="add-time">
-                                <input type="time" disabled  class="form-control" required>
-                                <a href="#" class="btn add-end-time">اضافة</a>
+                                <button disabled class="btn add-time-btn">اضافة</button>
                             </div>
-                        </label>
-                        <div class="selected-end-time"></div>
+                        </div>
+                        <div class="selected-time"></div>
                     </div>
                     <div class="dates"></div>
                     <div class="buttons">
