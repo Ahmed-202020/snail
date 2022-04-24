@@ -867,8 +867,8 @@ html[dir = "ltr"]{
         .owl-carousel{
             .center{
                 .card{
-                    left: -16px;
-                    width: 300px !important; 
+                    left: -22px ;
+                    width: 300px !important ; 
                 }
             }
         }
@@ -884,6 +884,18 @@ html[dir = "ltr"]{
         .title{
             &::after{
                 right: 33% ;
+            }
+        }
+        .card{
+            .image{
+                right: -60px !important ;
+                img{
+                    min-height: 110px ;
+                    max-height: 110px ;
+                }
+            }
+            .card-body{
+                padding-inline: 60px !important ;
             }
         }
     }
@@ -906,13 +918,14 @@ html[dir = "ltr"]{
     .vip-consultant{
         .title{
             &::after{
-                right: 38.7% ;
+                right: 41% ;
             }
         }
         .owl-carousel{
             .center{
                 .card{
-                    width: 276px !important; 
+                    width: 280px !important; 
+                    left: -15px ;
                 }
             }
         }
@@ -921,6 +934,13 @@ html[dir = "ltr"]{
         .title{
             &::after{
                 right: 33.5% ;
+            }
+        }
+    }
+    .vip-consultant-2.clients-preview{
+        .title{
+            &::after{
+                right: 31.5% ;
             }
         }
     }
@@ -943,14 +963,25 @@ html[dir = "ltr"]{
     .vip-consultant{
         .title{
             &::after{
-                right: 38.2% ;
+                right: 40% ;
             }
         }
         .owl-carousel{
+            .card{
+                width: 220px !important ;
+                .card-body{
+                    width: 70%  !important ;
+                }
+            }
             .center{
                 .card{
-                    left: -16px;
+                    left: -20px;
                     width: 260px !important; 
+                    .card-body{
+                        top: -125px ;
+                        height: 30px ;
+                        text-align: center ;
+                    }
                 }
             }
         }
@@ -959,6 +990,13 @@ html[dir = "ltr"]{
         .title{
             &::after{
                 right: 32.8% ;
+            }
+        }
+    }
+    .vip-consultant-2.clients-preview{
+        .title{
+            &::after{
+                right: 30% ;
             }
         }
     }
@@ -1032,22 +1070,39 @@ html[dir = "ltr"]{
     .vip-consultant{
         .title{
             &::after{
-                right: 36% !important;
+                right: 38% !important;
             }
         }
         .owl-carousel{
             .owl-item{
                 .card{
+                    width: 200px !important ;
                     .card-body{
+                        top: -80px ;
                         .title{
-                            font-size: 20pt ;
+                            font-size: 12pt ;
+                        }
+                        .stars{
+                            width: 10% ;
                         }
                     }
                 }
             }
             .center{
                 .card{
-                    width: 225px !important; 
+                    width: 220px !important; 
+                    height: 330px !important ;
+                    left: -9px ;
+                    .card-body{
+                        top: -108px ;
+                        .title{
+                            font-size: 12pt ;
+                        }
+                        .stars{
+                            width: 15% ;
+                        }
+                        // width: 60%;
+                    }
                 }
             }
         }
@@ -1072,6 +1127,27 @@ html[dir = "ltr"]{
             }
         }
     }
+    .vip-consultant-2.clients-preview{
+        .title{
+            &::after{
+                right: 27% !important ;
+            }
+        }
+        .card{
+            .image{
+                img{
+                    min-height: 90px ;
+                    max-height: 90px ;
+                }
+            }
+            .card-body{
+                padding-inline: 40px !important ;
+                .text{
+                    font-size: 12pt !important ;
+                }
+            }
+        }
+    }
     .why-choose-us{
         .title{
             &::after{
@@ -1086,6 +1162,11 @@ html[dir = "ltr"]{
         .row{
             .logo{
                 margin-bottom: 40px ;
+            }
+            .explanation{
+                .text{
+                    width: 300px ;
+                }
             }
             .items{
                 .item{
@@ -1110,7 +1191,7 @@ html[dir = "ltr"]{
             .min-nav{
                 .navbar-brand{
                     img{
-                        width: 30% ;
+                        width: 45% ;
                     }
                 }
                 .sign{
@@ -1168,13 +1249,14 @@ html[dir = "ltr"]{
     .vip-consultant{
         .title{
             &::after{
-                right: 35.7% ;
+                right: 38% ;
             }
         }
         .owl-carousel{
             .center{
                 .card{
-                    width: 353px !important; 
+                    width: 274px !important ;
+                    left: -17px ; 
                 }
             }
         }
@@ -1183,6 +1265,13 @@ html[dir = "ltr"]{
         .title{
             &::after{
                 right: 29% ;
+            }
+        }
+    }
+    .vip-consultant-2.clients-preview{
+        .title{
+            &::after{
+                right: 27% ;
             }
         }
     }
@@ -1205,6 +1294,12 @@ html[dir = "ltr"]{
         .row{
             .logo{
                 margin-bottom: 40px ;
+            }
+            .explanation{
+                .text{
+                    font-size: 15pt;
+                    width: 290px;
+                }
             }
             .items{
                 .item{
@@ -1230,11 +1325,6 @@ html[dir = "ltr"]{
     .header{
         .navbar{
             .min-nav{
-                .navbar-brand{
-                    img{
-                        width: 28% ;
-                    }
-                }
                 .sign{
                     .btn{
                         padding: 5px ;
@@ -1255,13 +1345,13 @@ html[dir = "ltr"]{
     .vip-consultant{
         .title{
             &::after{
-                right: 34.5% !important;
+                right: 36.5% !important;
             }
         }
         .owl-carousel{
             .center{
                 .card{
-                    width: 327px !important; 
+                    width: 270px !important; 
                 }
             }
         }
@@ -1270,6 +1360,13 @@ html[dir = "ltr"]{
         .title{
             &::after{
                 right: 27% !important ;
+            }
+        }
+    }
+    .vip-consultant-2.clients-preview{
+        .title{
+            &::after{
+                right: 25% ;
             }
         }
     }
@@ -1360,13 +1457,17 @@ html[dir = "ltr"]{
     .vip-consultant{
         .title{
             &::after{
-                right: 32.5% ;
+                right: 35% ;
             }
         }
         .owl-carousel{
             .center{
                 .card{
-                    width: 295px !important;
+                    width: 295px !important ;
+                    left: -34px ;
+                    .card-body{
+                        top: -100px ;
+                    }
                 }
             }
         }
@@ -1375,6 +1476,13 @@ html[dir = "ltr"]{
         .title{
             &:after{
                 right: 24.5% ;
+            }
+        }
+    }
+    .vip-consultant-2.clients-preview{
+        .title{
+            &:after{
+                right: 22% ;
             }
         }
     }
@@ -1456,6 +1564,11 @@ html[dir = "ltr"]{
         .navbar{
             .min-nav{
                 padding: 10px 35px 20px !important;
+                .navbar-brand{
+                    img{
+                        width: 50% ;
+                    }
+                }
                 .sign{
                     .btn{
                         font-size: 11pt ;
@@ -1510,14 +1623,18 @@ html[dir = "ltr"]{
             &::after{
                 width: 13px ;
                 height: 13px;
-                right: 33.5% ;
+                right: 36% ;
                 top: 38% ;
             }
         }
         .owl-carousel{
             .center{
                 .card{
-                    width: 278px !important; 
+                    width: 278px !important ;
+                    left: -30px ; 
+                    .card-body{
+                        top: -120px ;
+                    }
                 }
             }
         }
@@ -1527,6 +1644,11 @@ html[dir = "ltr"]{
             &::after{
                 right: 26.2% ;
             }
+        }
+    }
+    .vip-consultant-2.clients-preview{
+        .title{
+            font-size: 18pt ;
         }
     }
     .why-choose-us{
@@ -1548,6 +1670,9 @@ html[dir = "ltr"]{
             img{
                 width: 160px ;
             }
+        }
+        .image{
+            bottom: 100px ;
         }
     }
     .footer{
@@ -1615,9 +1740,6 @@ html[dir = "ltr"]{
                     position: relative ;
                     top: -50px ;
                     left: -150px ;
-                    img{
-                        width: 19% ;
-                    }
                 }
                 .lang{
                     .dropdown{
@@ -1666,9 +1788,6 @@ html[dir = "ltr"]{
                 .navbar-brand{
                     position: initial ;
                     margin-right: 30px ;
-                    img{
-                        width: 40% ;
-                    }
                 }
             }
         }
@@ -1679,6 +1798,7 @@ html[dir = "ltr"]{
             font-size: 20pt ;
             margin-bottom: 70px ;
             &::after{
+                display: none ;
                 right: 24% ;
             }
         }
@@ -1710,6 +1830,7 @@ html[dir = "ltr"]{
         .title{
             font-size: 20pt ;
             &::after{
+                display: none;
                 right: 29% ;
             }
         }
@@ -1718,6 +1839,10 @@ html[dir = "ltr"]{
                 .card{
                     left: 0 !important ;
                     width: 575px !important;
+                    .card-body{
+                        top: -100px ;
+                        height: 100% ;
+                    }
                 }
             }
         }
@@ -1726,6 +1851,7 @@ html[dir = "ltr"]{
         .title{
             font-size: 20pt ;
             &::after{
+                display: none ;
                 right: 21% !important ;
             }
         }
@@ -1750,11 +1876,19 @@ html[dir = "ltr"]{
             }
         }
     }
+    .vip-consultant-2.clients-preview{
+        .title{
+            &::after{
+                display: none ;
+            }
+        }
+    }
     .why-choose-us{
         .title{
             font-size: 20pt ;
             &::after{
                 right: 33% ;
+                display: none ;
             }
         }
         .show-case{
@@ -1762,6 +1896,11 @@ html[dir = "ltr"]{
         }
     }
     .app{
+        margin-bottom: 0 ;
+        .image{
+            right: 60% ;
+            bottom: 80px ;
+        }
         .title{
             font-size: 18pt ;
         }
@@ -1775,6 +1914,11 @@ html[dir = "ltr"]{
     .footer{
         .row{
             padding: 40px 30px 200px 30px ;
+        }
+    }
+    #notifications{
+        .modal-dialog{
+            max-width: 90% !important ;
         }
     }
 }
@@ -1864,6 +2008,9 @@ html[dir = "ltr"]{
         }
     }
     .app{
+        .image{
+            bottom: 50px ;
+        }
         .show-case{
             padding: 40px 30px 0 0;
             .title{
@@ -1906,6 +2053,14 @@ html[dir = "ltr"]{
                         }
                     }
                 }
+            }
+        }
+    }
+    #notifications{
+        .modal-dialog{
+            max-width: 100% !important ;
+            .modal-content{
+                padding: 50px 25px 0 0;
             }
         }
     }
@@ -2083,10 +2238,37 @@ html[dir = "ltr"]{
             }
         }
     }
+    .vip-consultant-2.clients-preview{
+        .owl-carousel{
+            .owl-item{
+                .card{
+                    .card-body{
+                        .text{
+                            font-size: 11pt !important ;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .why-choose-us{
         padding: 150px 10px ;
+        .show-case{
+            .card{
+                .card-body{
+                    .text{
+                        width: initial  ;
+                    }
+                }
+            }
+        }
     }
     .app{
+        padding-bottom: 40px ;
+        .image{
+            right: 65% ;
+            bottom: 27px ;
+        }
         .show-case{
             .title{
                 font-size: 11pt ;
@@ -2131,6 +2313,16 @@ html[dir = "ltr"]{
             }
         }
     }
+    #notifications{
+        .modal-dialog{
+            margin-left: 8px ;
+            .modal-content{
+                .sub{
+                    font-size: 14pt ;
+                }
+            }
+        }
+    }
 }
 
 //responsive-design(ltr) 
@@ -2147,7 +2339,7 @@ html[dir = "ltr"]{
         .vip-consultant{
             .title{
                 &::after{
-                    left: 39.5% ;
+                    left: 41.5% ;
                     right: initial;
                 }
             }
@@ -2157,6 +2349,14 @@ html[dir = "ltr"]{
                 &::after{
                     left: 35% ;
                     right: initial ;
+                }
+            }
+        }
+        .vip-consultant-2.clients-preview{
+            .title{
+                &::after{
+                    right:initial ;
+                    left: 33% ;
                 }
             }
         }
@@ -2184,7 +2384,7 @@ html[dir = "ltr"]{
             .title{
                 &::after{
                     right: initial ;
-                    left: 38.7% ;
+                    left: 41% ;
                 }
             }
         }
@@ -2193,6 +2393,14 @@ html[dir = "ltr"]{
                 &::after{
                     right: initial ;
                     left: 33.5% ;
+                }
+            }
+        }
+        .vip-consultant-2.clients-preview{
+            .title{
+                &::after{
+                    left: 31.5% ;
+                    right: initial ;
                 }
             }
         }
@@ -2219,7 +2427,7 @@ html[dir = "ltr"]{
         .vip-consultant{
             .title{
                 &::after{
-                    left: 38.2% ;
+                    left: 40% ;
                     right: initial ;
                 }
             }
@@ -2229,6 +2437,14 @@ html[dir = "ltr"]{
                 &::after{
                     right: initial ;
                     left: 32.8% ;
+                }
+            }
+        }
+        .vip-consultant-2.clients-preview{
+            .title{
+                &::after{
+                    right: initial ;
+                    left: 30% ;
                 }
             }
         }
@@ -2255,7 +2471,7 @@ html[dir = "ltr"]{
         .vip-consultant{
             .title{
                 &::after{
-                    left: 36% !important;
+                    left: 38% !important;
                     right: initial !important;
                 }
             }
@@ -2275,6 +2491,14 @@ html[dir = "ltr"]{
                             right: initial ;
                         }
                     }
+                }
+            }
+        }
+        .vip-consultant-2.clients-preview{
+            .title{
+                &::after{
+                    left: 27% !important ;
+                    right: initial !important ;
                 }
             }
         }
@@ -2302,7 +2526,7 @@ html[dir = "ltr"]{
             .title{
                 &::after{
                     right: initial ;
-                    left: 35.7% ;
+                    left: 38% ;
                 }
             }
         }
@@ -2310,6 +2534,14 @@ html[dir = "ltr"]{
             .title{
                 &::after{
                     left: 29% ;
+                    right: initial ;
+                }
+            }
+        }
+        .vip-consultant-2.clients-preview{
+            .title{
+                &::after{
+                    left: 27% ;
                     right: initial ;
                 }
             }
@@ -2342,7 +2574,7 @@ html[dir = "ltr"]{
         .vip-consultant{
             .title{
                 &::after{
-                    left: 34.5% !important;
+                    left: 36.5% !important;
                     right: initial !important;
                 }
             }
@@ -2352,6 +2584,14 @@ html[dir = "ltr"]{
                 &::after{
                     left: 27% !important ;
                     right: initial !important ;
+                }
+            }
+        }
+        .vip-consultant-2.clients-preview{
+            .title{
+                &::after{
+                    right: initial  ;
+                    left: 25% ;
                 }
             }
         }
@@ -2378,7 +2618,7 @@ html[dir = "ltr"]{
         .vip-consultant{
             .title{
                 &::after{
-                    left: 32.5% ;
+                    left: 35% ;
                     right: initial ;
                 }
             }
@@ -2388,6 +2628,14 @@ html[dir = "ltr"]{
                 &:after{
                     left: 24.5% ;
                     right: initial;
+                }
+            }
+        }
+        .vip-consultant-2.clients-preview{
+            .title{
+                &:after{
+                    right: initial  ;
+                    left: 22% ;
                 }
             }
         }
@@ -2431,7 +2679,7 @@ html[dir = "ltr"]{
         .vip-consultant{
             .title{
                 &::after{
-                    left: 33.5% ;
+                    left: 36% ;
                     right: initial ;
                 }
             }

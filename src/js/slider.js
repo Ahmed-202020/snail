@@ -9,7 +9,7 @@ function consultant_slider(){
             items: 5,
             smartSpeed: 1000,
             dots: true,
-            autoplay: true,
+            // autoplay: true ,
             center: true,
             autoplayTimeout: 2000,
             dotsEach: true,

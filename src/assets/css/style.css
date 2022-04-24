@@ -5355,7 +5355,7 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     right: 41.5%;
   }
   .vip-consultant .owl-carousel .center .card {
-    left: -16px;
+    left: -22px;
     width: 300px !important;
   }
   .vip-consultant.clients-preview .title::after {
@@ -5363,6 +5363,16 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   }
   .vip-consultant-2.clients-preview .title::after {
     right: 33%;
+  }
+  .vip-consultant-2.clients-preview .card .image {
+    right: -60px !important;
+  }
+  .vip-consultant-2.clients-preview .card .image img {
+    min-height: 110px;
+    max-height: 110px;
+  }
+  .vip-consultant-2.clients-preview .card .card-body {
+    padding-inline: 60px !important;
   }
   .why-choose-us .title::after {
     right: 42.7%;
@@ -5374,13 +5384,17 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     right: 37.2%;
   }
   .vip-consultant .title::after {
-    right: 38.7%;
+    right: 41%;
   }
   .vip-consultant .owl-carousel .center .card {
-    width: 276px !important;
+    width: 280px !important;
+    left: -15px;
   }
   .vip-consultant.clients-preview .title::after {
     right: 33.5%;
+  }
+  .vip-consultant-2.clients-preview .title::after {
+    right: 31.5%;
   }
   .why-choose-us .title::after {
     right: 41.8%;
@@ -5392,14 +5406,28 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     right: 36.2%;
   }
   .vip-consultant .title::after {
-    right: 38.2%;
+    right: 40%;
+  }
+  .vip-consultant .owl-carousel .card {
+    width: 220px !important;
+  }
+  .vip-consultant .owl-carousel .card .card-body {
+    width: 70%  !important;
   }
   .vip-consultant .owl-carousel .center .card {
-    left: -16px;
+    left: -20px;
     width: 260px !important;
+  }
+  .vip-consultant .owl-carousel .center .card .card-body {
+    top: -125px;
+    height: 30px;
+    text-align: center;
   }
   .vip-consultant.clients-preview .title::after {
     right: 32.8%;
+  }
+  .vip-consultant-2.clients-preview .title::after {
+    right: 30%;
   }
   .why-choose-us .title::after {
     right: 41.7%;
@@ -5432,13 +5460,33 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     font-size: 20pt;
   }
   .vip-consultant .title::after {
-    right: 36% !important;
+    right: 38% !important;
+  }
+  .vip-consultant .owl-carousel .owl-item .card {
+    width: 200px !important;
+  }
+  .vip-consultant .owl-carousel .owl-item .card .card-body {
+    top: -80px;
   }
   .vip-consultant .owl-carousel .owl-item .card .card-body .title {
-    font-size: 20pt;
+    font-size: 12pt;
+  }
+  .vip-consultant .owl-carousel .owl-item .card .card-body .stars {
+    width: 10%;
   }
   .vip-consultant .owl-carousel .center .card {
-    width: 225px !important;
+    width: 220px !important;
+    height: 330px !important;
+    left: -9px;
+  }
+  .vip-consultant .owl-carousel .center .card .card-body {
+    top: -108px;
+  }
+  .vip-consultant .owl-carousel .center .card .card-body .title {
+    font-size: 12pt;
+  }
+  .vip-consultant .owl-carousel .center .card .card-body .stars {
+    width: 15%;
   }
   .vip-consultant.clients-preview .title::after {
     right: 29% !important;
@@ -5450,6 +5498,19 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     min-height: 100px;
     max-height: 100px;
   }
+  .vip-consultant-2.clients-preview .title::after {
+    right: 27% !important;
+  }
+  .vip-consultant-2.clients-preview .card .image img {
+    min-height: 90px;
+    max-height: 90px;
+  }
+  .vip-consultant-2.clients-preview .card .card-body {
+    padding-inline: 40px !important;
+  }
+  .vip-consultant-2.clients-preview .card .card-body .text {
+    font-size: 12pt !important;
+  }
   .why-choose-us .title::after {
     right: 40% !important;
   }
@@ -5459,6 +5520,9 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   }
   .footer .row .logo {
     margin-bottom: 40px;
+  }
+  .footer .row .explanation .text {
+    width: 300px;
   }
   .footer .row .items .item .link {
     font-size: 15pt;
@@ -5470,7 +5534,7 @@ html[dir="ltr"] .footer .row .contact .custom-items {
 
 @media (max-width: 991.98px) {
   .header .navbar .min-nav .navbar-brand img {
-    width: 30%;
+    width: 45%;
   }
   .header .navbar .min-nav .sign .btn {
     font-size: 13pt;
@@ -5498,13 +5562,17 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     font-size: 20pt;
   }
   .vip-consultant .title::after {
-    right: 35.7%;
+    right: 38%;
   }
   .vip-consultant .owl-carousel .center .card {
-    width: 353px !important;
+    width: 274px !important;
+    left: -17px;
   }
   .vip-consultant.clients-preview .title::after {
     right: 29%;
+  }
+  .vip-consultant-2.clients-preview .title::after {
+    right: 27%;
   }
   .why-choose-us .title::after {
     right: 39.5%;
@@ -5519,6 +5587,10 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   .footer .row .logo {
     margin-bottom: 40px;
   }
+  .footer .row .explanation .text {
+    font-size: 15pt;
+    width: 290px;
+  }
   .footer .row .items .item .link {
     font-size: 15pt;
   }
@@ -5531,9 +5603,6 @@ html[dir="ltr"] .footer .row .contact .custom-items {
 }
 
 @media (min-width: 912px) and (max-width: 913px) {
-  .header .navbar .min-nav .navbar-brand img {
-    width: 28%;
-  }
   .header .navbar .min-nav .sign .btn {
     padding: 5px;
     height: 37px;
@@ -5543,13 +5612,16 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     right: 31.5% !important;
   }
   .vip-consultant .title::after {
-    right: 34.5% !important;
+    right: 36.5% !important;
   }
   .vip-consultant .owl-carousel .center .card {
-    width: 327px !important;
+    width: 270px !important;
   }
   .vip-consultant.clients-preview .title::after {
     right: 27% !important;
+  }
+  .vip-consultant-2.clients-preview .title::after {
+    right: 25%;
   }
   .why-choose-us .title::after {
     right: 38.5% !important;
@@ -5600,13 +5672,20 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     width: 50%;
   }
   .vip-consultant .title::after {
-    right: 32.5%;
+    right: 35%;
   }
   .vip-consultant .owl-carousel .center .card {
     width: 295px !important;
+    left: -34px;
+  }
+  .vip-consultant .owl-carousel .center .card .card-body {
+    top: -100px;
   }
   .vip-consultant.clients-preview .title:after {
     right: 24.5%;
+  }
+  .vip-consultant-2.clients-preview .title:after {
+    right: 22%;
   }
   .why-choose-us .title::after {
     right: 37%;
@@ -5676,6 +5755,9 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   .header .navbar .min-nav {
     padding: 10px 35px 20px !important;
   }
+  .header .navbar .min-nav .navbar-brand img {
+    width: 50%;
+  }
   .header .navbar .min-nav .sign .btn {
     font-size: 11pt;
     padding: 5px;
@@ -5716,14 +5798,21 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   .vip-consultant .title::after {
     width: 13px;
     height: 13px;
-    right: 33.5%;
+    right: 36%;
     top: 38%;
   }
   .vip-consultant .owl-carousel .center .card {
     width: 278px !important;
+    left: -30px;
+  }
+  .vip-consultant .owl-carousel .center .card .card-body {
+    top: -120px;
   }
   .vip-consultant.clients-preview .title::after {
     right: 26.2%;
+  }
+  .vip-consultant-2.clients-preview .title {
+    font-size: 18pt;
   }
   .why-choose-us .title {
     font-size: 22pt;
@@ -5739,6 +5828,9 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   }
   .app .show-case img {
     width: 160px;
+  }
+  .app .image {
+    bottom: 100px;
   }
   .footer .icon {
     width: 60px;
@@ -5804,9 +5896,6 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     top: -50px;
     left: -150px;
   }
-  .header .navbar .min-nav .navbar-brand img {
-    width: 19%;
-  }
   .header .navbar .min-nav .lang .dropdown .text-lang {
     font-size: 18pt;
   }
@@ -5838,9 +5927,6 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     position: initial;
     margin-right: 30px;
   }
-  .header-home .navbar .min-nav .navbar-brand img {
-    width: 40%;
-  }
   .services {
     padding: 100px 70px 120px;
   }
@@ -5849,6 +5935,7 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     margin-bottom: 70px;
   }
   .services .title::after {
+    display: none;
     right: 24%;
   }
   .services .show-case {
@@ -5873,16 +5960,22 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     font-size: 20pt;
   }
   .vip-consultant .title::after {
+    display: none;
     right: 29%;
   }
   .vip-consultant .owl-carousel .center .card {
     left: 0 !important;
     width: 575px !important;
   }
+  .vip-consultant .owl-carousel .center .card .card-body {
+    top: -100px;
+    height: 100%;
+  }
   .vip-consultant.clients-preview .title {
     font-size: 20pt;
   }
   .vip-consultant.clients-preview .title::after {
+    display: none;
     right: 21% !important;
   }
   .vip-consultant.clients-preview .container-fluid {
@@ -5899,15 +5992,26 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     min-height: 100px;
     max-height: 100px;
   }
+  .vip-consultant-2.clients-preview .title::after {
+    display: none;
+  }
   .why-choose-us .title {
     font-size: 20pt;
   }
   .why-choose-us .title::after {
     right: 33%;
+    display: none;
   }
   .why-choose-us .show-case {
     -ms-grid-columns: (minmax(calc(100% / 2), 1fr))[auto-fill] !important;
         grid-template-columns: repeat(auto-fill, minmax(calc(100% / 2), 1fr)) !important;
+  }
+  .app {
+    margin-bottom: 0;
+  }
+  .app .image {
+    right: 60%;
+    bottom: 80px;
   }
   .app .title {
     font-size: 18pt;
@@ -5920,6 +6024,9 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   }
   .footer .row {
     padding: 40px 30px 200px 30px;
+  }
+  #notifications .modal-dialog {
+    max-width: 90% !important;
   }
 }
 
@@ -5970,6 +6077,9 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   .why-choose-us .title::after {
     content: initial;
   }
+  .app .image {
+    bottom: 50px;
+  }
   .app .show-case {
     padding: 40px 30px 0 0;
   }
@@ -5997,6 +6107,12 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   }
   .footer .row .col-4:not(:first-of-type) .contact .custom-item span {
     font-size: 10pt;
+  }
+  #notifications .modal-dialog {
+    max-width: 100% !important;
+  }
+  #notifications .modal-dialog .modal-content {
+    padding: 50px 25px 0 0;
   }
 }
 
@@ -6095,8 +6211,21 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     top: 85%;
     right: 31%  !important;
   }
+  .vip-consultant-2.clients-preview .owl-carousel .owl-item .card .card-body .text {
+    font-size: 11pt !important;
+  }
   .why-choose-us {
     padding: 150px 10px;
+  }
+  .why-choose-us .show-case .card .card-body .text {
+    width: initial;
+  }
+  .app {
+    padding-bottom: 40px;
+  }
+  .app .image {
+    right: 65%;
+    bottom: 27px;
   }
   .app .show-case .title {
     font-size: 11pt;
@@ -6131,6 +6260,12 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   .footer .copyright .copy {
     font-size: 10pt;
   }
+  #notifications .modal-dialog {
+    margin-left: 8px;
+  }
+  #notifications .modal-dialog .modal-content .sub {
+    font-size: 14pt;
+  }
 }
 
 @media (max-width: 1399.98px) {
@@ -6139,12 +6274,16 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     right: initial;
   }
   html[dir="ltr"] .vip-consultant .title::after {
-    left: 39.5%;
+    left: 41.5%;
     right: initial;
   }
   html[dir="ltr"] .vip-consultant.clients-preview .title::after {
     left: 35%;
     right: initial;
+  }
+  html[dir="ltr"] .vip-consultant-2.clients-preview .title::after {
+    right: initial;
+    left: 33%;
   }
   html[dir="ltr"] .why-choose-us .title::after {
     left: 42.7%;
@@ -6159,11 +6298,15 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   }
   html[dir="ltr"] .vip-consultant .title::after {
     right: initial;
-    left: 38.7%;
+    left: 41%;
   }
   html[dir="ltr"] .vip-consultant.clients-preview .title::after {
     right: initial;
     left: 33.5%;
+  }
+  html[dir="ltr"] .vip-consultant-2.clients-preview .title::after {
+    left: 31.5%;
+    right: initial;
   }
   html[dir="ltr"] .why-choose-us .title::after {
     right: initial;
@@ -6177,12 +6320,16 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     left: 36.2%;
   }
   html[dir="ltr"] .vip-consultant .title::after {
-    left: 38.2%;
+    left: 40%;
     right: initial;
   }
   html[dir="ltr"] .vip-consultant.clients-preview .title::after {
     right: initial;
     left: 32.8%;
+  }
+  html[dir="ltr"] .vip-consultant-2.clients-preview .title::after {
+    right: initial;
+    left: 30%;
   }
   html[dir="ltr"] .why-choose-us .title::after {
     left: 41.7%;
@@ -6196,7 +6343,7 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     right: initial !important;
   }
   html[dir="ltr"] .vip-consultant .title::after {
-    left: 36% !important;
+    left: 38% !important;
     right: initial !important;
   }
   html[dir="ltr"] .vip-consultant.clients-preview .title::after {
@@ -6206,6 +6353,10 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   html[dir="ltr"] .vip-consultant.clients-preview .owl-carousel .owl-item .card .image {
     left: -66px;
     right: initial;
+  }
+  html[dir="ltr"] .vip-consultant-2.clients-preview .title::after {
+    left: 27% !important;
+    right: initial !important;
   }
   html[dir="ltr"] .why-choose-us .title::after {
     left: 40% !important;
@@ -6220,10 +6371,14 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   }
   html[dir="ltr"] .vip-consultant .title::after {
     right: initial;
-    left: 35.7%;
+    left: 38%;
   }
   html[dir="ltr"] .vip-consultant.clients-preview .title::after {
     left: 29%;
+    right: initial;
+  }
+  html[dir="ltr"] .vip-consultant-2.clients-preview .title::after {
+    left: 27%;
     right: initial;
   }
   html[dir="ltr"] .why-choose-us .title::after {
@@ -6241,12 +6396,16 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     right: initial !important;
   }
   html[dir="ltr"] .vip-consultant .title::after {
-    left: 34.5% !important;
+    left: 36.5% !important;
     right: initial !important;
   }
   html[dir="ltr"] .vip-consultant.clients-preview .title::after {
     left: 27% !important;
     right: initial !important;
+  }
+  html[dir="ltr"] .vip-consultant-2.clients-preview .title::after {
+    right: initial;
+    left: 25%;
   }
   html[dir="ltr"] .why-choose-us .title::after {
     left: 38.5% !important;
@@ -6260,12 +6419,16 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     right: initial !important;
   }
   html[dir="ltr"] .vip-consultant .title::after {
-    left: 32.5%;
+    left: 35%;
     right: initial;
   }
   html[dir="ltr"] .vip-consultant.clients-preview .title:after {
     left: 24.5%;
     right: initial;
+  }
+  html[dir="ltr"] .vip-consultant-2.clients-preview .title:after {
+    right: initial;
+    left: 22%;
   }
   html[dir="ltr"] .why-choose-us .title::after {
     left: 37%;
@@ -6286,7 +6449,7 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     right: initial;
   }
   html[dir="ltr"] .vip-consultant .title::after {
-    left: 33.5%;
+    left: 36%;
     right: initial;
   }
   html[dir="ltr"] .vip-consultant.clients-preview .title::after {
