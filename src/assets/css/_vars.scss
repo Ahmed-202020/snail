@@ -238,6 +238,24 @@ body{
         }
     }
 }
+%branches-ltr{
+    .branch-1 , .branch-2 , .branch-3 , .branch-4 , .branch-5 ,  .branch-6{
+        img{
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            -ms-transform: rotateY(180deg);
+            -o-transform: rotateY(180deg);
+        }
+        span , svg{
+            z-index: 25 ;
+        }
+    }
+    .branch-2{
+        margin-left: -10px !important ;
+        margin-right: 0 !important ;
+    }
+}
 %form{
     position: relative;
     width: 95% ;

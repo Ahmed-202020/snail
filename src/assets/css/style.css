@@ -257,6 +257,23 @@ html[dir="ltr"] .new-orders .orders .card .info .data .type-consult span, html[d
   width: 100%;
 }
 
+html[dir="ltr"] .branches .branch-1 img, html[dir="ltr"] .branches .branch-2 img, html[dir="ltr"] .branches .branch-3 img, html[dir="ltr"] .branches .branch-4 img, html[dir="ltr"] .branches .branch-5 img, html[dir="ltr"] .branches .branch-6 img {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+}
+
+html[dir="ltr"] .branches .branch-1 span, html[dir="ltr"] .branches .branch-1 svg, html[dir="ltr"] .branches .branch-2 span, html[dir="ltr"] .branches .branch-2 svg, html[dir="ltr"] .branches .branch-3 span, html[dir="ltr"] .branches .branch-3 svg, html[dir="ltr"] .branches .branch-4 span, html[dir="ltr"] .branches .branch-4 svg, html[dir="ltr"] .branches .branch-5 span, html[dir="ltr"] .branches .branch-5 svg, html[dir="ltr"] .branches .branch-6 span, html[dir="ltr"] .branches .branch-6 svg {
+  z-index: 25;
+}
+
+html[dir="ltr"] .branches .branch-2 {
+  margin-left: -10px !important;
+  margin-right: 0 !important;
+}
+
 .modal .modal-dialog .row .col-6 .signin .form-group, .profile-info .show-case .form-group, #change-pass-prof .modal-content .show-case .form-group {
   position: relative;
   width: 95%;
@@ -407,27 +424,27 @@ html[dir="ltr"] .new-orders .orders .card .info .data .type-consult span, html[d
   margin-top: 15px;
 }
 
-ltr html[dir="ltr"] .show-case .form-group label.key-country, ltr html[dir="ltr"] #change-pass-prof .modal-content .show-case .form-group label.key-country {
+html[dir="ltr"] .show-case .form-group label.key-country, html[dir="ltr"] #change-pass-prof .modal-content .show-case .form-group label.key-country {
   left: 22px;
   right: initial;
 }
 
-ltr html[dir="ltr"] .show-case .form-group select, ltr html[dir="ltr"] #change-pass-prof .modal-content .show-case .form-group select {
+html[dir="ltr"] .show-case .form-group select, html[dir="ltr"] #change-pass-prof .modal-content .show-case .form-group select {
   left: 27px;
   right: initial;
 }
 
-ltr html[dir="ltr"] .show-case .form-group .form-control.select, ltr html[dir="ltr"] #change-pass-prof .modal-content .show-case .form-group .form-control.select {
+html[dir="ltr"] .show-case .form-group .form-control.select, html[dir="ltr"] #change-pass-prof .modal-content .show-case .form-group .form-control.select {
   padding-left: 110px;
   padding-right: 0;
 }
 
-ltr html[dir="ltr"] .show-case .form-group .eye, ltr html[dir="ltr"] #change-pass-prof .modal-content .show-case .form-group .eye {
+html[dir="ltr"] .show-case .form-group .eye, html[dir="ltr"] #change-pass-prof .modal-content .show-case .form-group .eye {
   right: 7%;
   left: initial;
 }
 
-ltr html[dir="ltr"] .show-case .form-group .forget, ltr html[dir="ltr"] #change-pass-prof .modal-content .show-case .form-group .forget {
+html[dir="ltr"] .show-case .form-group .forget, html[dir="ltr"] #change-pass-prof .modal-content .show-case .form-group .forget {
   text-align: right;
 }
 
@@ -1539,7 +1556,6 @@ html[dir="ltr"] .errors .show-case .alert {
 .about-us.t-c .branches .branch-2 span {
   z-index: 5;
   width: 125%;
-  left: -10%;
 }
 
 .about-us.t-c .branches .branch-2 img {
@@ -1550,12 +1566,31 @@ html[dir="ltr"] .errors .show-case .alert {
   -o-transform: scaleX(1.8);
 }
 
+html[dir="ltr"] .about-us.t-c .branches .branch-2 {
+  margin-left: 35px !important;
+  margin-right: 0 !important;
+}
+
+html[dir="ltr"] .about-us.t-c .branches .branch-2 img {
+  transform: scaleX(1.8) rotateY(180deg);
+  -webkit-transform: scaleX(1.8) rotateY(180deg);
+  -moz-transform: scaleX(1.8) rotateY(180deg);
+  -ms-transform: scaleX(1.8) rotateY(180deg);
+  -o-transform: scaleX(1.8) rotateY(180deg);
+}
+
 @media (max-width: 500px) {
   .about-us.t-c {
     padding: 50px 20px 200px;
   }
   .about-us.t-c .show-case {
     padding-inline: 10px;
+  }
+}
+
+@media (max-width: 280px) {
+  .about-us.t-c .branches {
+    display: none;
   }
 }
 
@@ -1659,11 +1694,8 @@ html[dir="ltr"] .orders .branch .shape .text:last-child {
   .profile .sections .section .show-case {
     padding-inline: 15px;
   }
-  .orders .shape img:nth-child(4) {
-    right: 70px !important;
-  }
-  .orders .shape .text:last-child {
-    right: 122px !important;
+  .orders .branches {
+    display: none;
   }
   .orders .sections .section .show-case {
     padding: 35px 5px !important;
@@ -1911,24 +1943,45 @@ html[dir="ltr"] .orders .branch .shape .text:last-child {
   margin-top: 80px;
 }
 
-ltr html[dir="ltr"] .show-case .image-profile .stars {
+html[dir="ltr"] .show-case .image-profile .stars {
   left: -5%;
 }
 
-ltr html[dir="ltr"] .show-case .image-profile .stars img + img {
+html[dir="ltr"] .show-case .image-profile .stars img + img {
   margin-left: 3px;
   margin-right: 0;
 }
 
-ltr html[dir="ltr"] .show-case .form-group label .importants input:first-child {
+html[dir="ltr"] .show-case .form-group label .importants input:first-child {
   margin-right: 15px;
+  margin-left: 0;
 }
 
-ltr html[dir="ltr"] .show-case .form-group .form-control {
+html[dir="ltr"] .show-case .form-group .form-control {
   text-align: left;
 }
 
-ltr html[dir="ltr"] #change-pass-prof .modal-content .show-case .out {
+html[dir="ltr"] .show-case .form-group .clinic-photos .images img:not(:last-child) {
+  margin-right: 15px;
+  margin-left: 0;
+}
+
+html[dir="ltr"] .show-case .form-group .date-clinic .date .day {
+  margin-right: 20px;
+  margin-left: 0;
+}
+
+html[dir="ltr"] .show-case .form-group .date-clinic .date:not(:last-child) {
+  margin-right: 20px;
+  margin-left: 0;
+}
+
+html[dir="ltr"] .vip-consultant-2.clients-preview.clients-preview-2 .title::after {
+  right: initial !important;
+  left: 39% !important;
+}
+
+html[dir="ltr"] #change-pass-prof .modal-content .show-case .out {
   left: 30px;
   right: initial;
 }
@@ -2006,8 +2059,28 @@ ltr html[dir="ltr"] #change-pass-prof .modal-content .show-case .out {
 }
 
 @media (max-width: 280px) {
-  .profile-info .branch .shape {
-    right: 70px;
+  .profile-info .branches {
+    display: none;
+  }
+  .profile-info .show-case {
+    margin-top: 40px;
+  }
+  .profile-info .show-case .form-group .date-clinic {
+    width: 100%;
+  }
+  .profile-info .show-case .form-group .date-clinic .date {
+    width: 100%;
+    min-width: initial;
+    max-width: initial;
+  }
+  .profile-info .show-case .form-group .date-clinic .date:not(:last-child) {
+    margin-left: 0;
+  }
+  .profile-info .show-case .form-group .date-clinic .date .day {
+    font-size: 12pt;
+  }
+  .profile-info .show-case .form-group .date-clinic .date span {
+    font-size: 12pt;
   }
   .profile-info .show-case .form-group label .importants .form-control {
     width: 30%;
@@ -2015,9 +2088,8 @@ ltr html[dir="ltr"] #change-pass-prof .modal-content .show-case .out {
 }
 
 @media (max-width: 280px) {
-  html[dir="ltr"] .profile-info .branch .shape {
-    left: 70px;
-    right: initial;
+  html[dir="ltr"] .profile-info .show-case .form-group .date:not(:last-child) {
+    margin-right: 0;
   }
 }
 
@@ -2440,20 +2512,156 @@ html[dir="ltr"] .edit-profile-info .show-case .form-group .main-sector .form-con
   background-position-x: 92%;
 }
 
+html[dir="ltr"] .edit-profile-info .show-case .form-group .label-map a {
+  right: 7%;
+  left: initial;
+}
+
 html[dir="ltr"] .edit-profile-info .show-case .form-group label .importants .custom-input .close {
   left: initial;
   right: 7px;
 }
 
+html[dir="ltr"] .edit-profile-info .show-case .form-group .another-image .images .image:not(:last-child) {
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+html[dir="ltr"] .edit-profile-info .show-case .form-group .clinic-date {
+  padding: 30px 30px 50px 100px;
+  right: 100%;
+}
+
+html[dir="ltr"] .edit-profile-info .show-case .form-group .clinic-date .clinic-days select {
+  background-position: 95% center;
+}
+
+html[dir="ltr"] .edit-profile-info .show-case .form-group .clinic-date .add-btn {
+  margin-left: auto;
+  margin-right: initial;
+}
+
+html[dir="ltr"] .edit-profile-info .show-case .form-group .clinic-date .select-time .inputs label {
+  margin-right: 30px;
+  margin-left: 0;
+}
+
+html[dir="ltr"] .edit-profile-info .show-case .form-group .clinic-date .select-time .inputs label span {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+html[dir="ltr"] .edit-profile-info .show-case .form-group .clinic-date .selected-time .time .end {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+html[dir="ltr"] .edit-profile-info .show-case .form-group .dates {
+  right: 100%;
+}
+
+html[dir="ltr"] .edit-profile-info .show-case .form-group .dates .date .day {
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+html[dir="ltr"] .edit-profile-info .show-case .form-group .dates .date .times .time:not(:first-child) {
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+html[dir="ltr"] .edit-profile-info .show-case .form-group .dates .date img {
+  left: initial;
+  right: 2%;
+}
+
+@media (max-width: 1399.98px) {
+  .edit-profile-info .show-case .form-group .clinic-date .selected-time .time input {
+    width: 30%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .edit-profile-info .show-case {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 912px) {
+  .edit-profile-info .show-case .form-group .clinic-date {
+    padding: 30px 50px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .edit-profile-info .show-case .form-group .clinic-date {
+    padding: 30px 25px 30px !important;
+  }
+}
+
 @media (max-width: 575.98px) {
+  .edit-profile-info {
+    padding: 50px 10px 200px;
+  }
   .edit-profile-info .show-case .form-group label .importants .custom-input {
+    width: 42%;
+  }
+  .edit-profile-info .show-case .form-group .clinic-date {
+    padding: 30px 10px 200px !important;
+    width: 160%;
+  }
+}
+
+@media (max-width: 500px) {
+  .edit-profile-info .show-case .form-group .clinic-date {
+    width: 100%;
+    right: 50%;
+  }
+  .edit-profile-info .show-case .form-group .clinic-date .select-time .inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .edit-profile-info .show-case .form-group .clinic-date .select-time .inputs label {
+    margin-left: 0;
+  }
+  .edit-profile-info .show-case .form-group .clinic-date .select-time .inputs label:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .edit-profile-info .show-case .form-group .clinic-date .selected-time .time input {
     width: 42%;
   }
 }
 
 @media (max-width: 280px) {
+  .edit-profile-info .show-case .form-group .clinic-date .selected-time .time input {
+    width: 70%;
+  }
   .edit-profile-info .show-case .form-group label .importants .custom-input {
     width: 48%;
+  }
+}
+
+@media (max-width: 912px) {
+  html[dir="ltr"] .edit-profile-info .show-case .form-group .clinic-date {
+    padding: 30px 50px 30px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  html[dir="ltr"] .edit-profile-info .show-case .form-group .clinic-date {
+    right: 110%;
+  }
+}
+
+@media (max-width: 500px) {
+  html[dir="ltr"] .edit-profile-info .show-case .form-group .clinic-date {
+    width: 100%;
+    right: 50%;
+  }
+  html[dir="ltr"] .edit-profile-info .show-case .form-group .clinic-date .select-time .inputs label {
+    margin-right: 0;
   }
 }
 
@@ -2760,6 +2968,32 @@ html[dir="ltr"] .edit-profile-info .show-case .form-group label .importants .cus
   -o-transform: scaleX(1.9);
 }
 
+html[dir="ltr"] .new-orders .branches .branch-3 {
+  margin-left: 3px !important;
+  margin-right: 0 !important;
+}
+
+html[dir="ltr"] .new-orders .branches .branch-3 img {
+  transform: rotateY(180deg) scaleX(1.3);
+  -webkit-transform: rotateY(180deg) scaleX(1.3);
+  -moz-transform: rotateY(180deg) scaleX(1.3);
+  -ms-transform: rotateY(180deg) scaleX(1.3);
+  -o-transform: rotateY(180deg) scaleX(1.3);
+}
+
+html[dir="ltr"] .new-orders .branches .branch-4 {
+  margin-left: 45px !important;
+  margin-right: 0 !important;
+}
+
+html[dir="ltr"] .new-orders .branches .branch-4 img {
+  transform: rotateY(180deg) scaleX(1.8);
+  -webkit-transform: rotateY(180deg) scaleX(1.8);
+  -moz-transform: rotateY(180deg) scaleX(1.8);
+  -ms-transform: rotateY(180deg) scaleX(1.8);
+  -o-transform: rotateY(180deg) scaleX(1.8);
+}
+
 html[dir="ltr"] .new-orders .orders .card .info .data {
   margin-left: 135px;
   margin-right: 0;
@@ -2841,23 +3075,8 @@ html[dir="ltr"] .new-orders .orders .card .date {
 }
 
 @media (max-width: 500px) {
-  .new-orders .branch .shape img:nth-child(3) {
-    right: -7px;
-  }
-  .new-orders .branch .shape img:nth-child(4) {
-    right: 67px;
-  }
-  .new-orders .branch .shape img:nth-child(5) {
-    right: 115px;
-  }
-  .new-orders .branch .shape .text {
-    font-size: 15px;
-  }
-  .new-orders .branch .shape .text:nth-of-type(2) {
-    right: 105px;
-  }
-  .new-orders .branch .shape .text:last-child {
-    right: 175px;
+  .new-orders .branches {
+    display: none;
   }
   .new-orders .orders {
     padding: 50px 10px 0;
@@ -2878,6 +3097,9 @@ html[dir="ltr"] .new-orders .orders .card .date {
     font-size: 15pt;
     margin-right: 80px;
   }
+  .new-orders .orders .card .info .data .rating .main-rate {
+    margin-right: 80px;
+  }
   .new-orders .orders .card .info .data .type-consult span {
     font-size: 14pt;
   }
@@ -2892,6 +3114,12 @@ html[dir="ltr"] .new-orders .orders .card .date {
   .new-orders .orders .card .date {
     left: 15px;
     font-size: 10pt;
+  }
+  .new-orders .simple-pagination {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .new-orders .light-theme .active {
     width: 70px;
@@ -2910,7 +3138,13 @@ html[dir="ltr"] .new-orders .orders .card .date {
     padding-block: 20px;
   }
   .new-orders .orders .card .info .data .name {
-    margin-top: 10px;
+    margin-top: 40px;
+  }
+  .new-orders .orders .card .info .data .name .text {
+    margin-right: 50px;
+  }
+  .new-orders .orders .card .info .data .rating .main-rate {
+    margin-right: 50px;
   }
   .new-orders .orders .card .info .data .type-consult span {
     padding-inline: 8px;
@@ -2937,32 +3171,16 @@ html[dir="ltr"] .new-orders .orders .card .date {
 }
 
 @media (max-width: 500px) {
-  html[dir="ltr"] .new-orders .branch .shape img:nth-child(3) {
-    left: -7px;
-    right: initial;
-  }
-  html[dir="ltr"] .new-orders .branch .shape img:nth-child(4) {
-    left: 67px;
-    right: initial;
-  }
-  html[dir="ltr"] .new-orders .branch .shape img:nth-child(5) {
-    left: 115px;
-    right: initial;
-  }
-  html[dir="ltr"] .new-orders .branch .shape .text:nth-of-type(2) {
-    left: 105px;
-    right: initial;
-  }
-  html[dir="ltr"] .new-orders .branch .shape .text:last-child {
-    left: 175px;
-    right: initial;
-  }
   html[dir="ltr"] .new-orders .orders .card .info .data {
     margin-left: 15px;
     margin-right: 0;
   }
   html[dir="ltr"] .new-orders .orders .card .info .data .name .text {
     margin-left: 80px;
+    margin-right: 0;
+  }
+  html[dir="ltr"] .new-orders .orders .card .info .data .rating .main-rate {
+    margin-left: 65px;
     margin-right: 0;
   }
   html[dir="ltr"] .new-orders .orders .card .button {
@@ -2976,6 +3194,10 @@ html[dir="ltr"] .new-orders .orders .card .date {
 }
 
 @media (max-width: 280px) {
+  html[dir="ltr"] .new-orders .orders .card .info .data .name .text {
+    margin-left: 50px;
+    margin-right: 0;
+  }
   html[dir="ltr"] .new-orders .orders .card .info .data .rating .text {
     margin-left: 0;
   }
@@ -3265,6 +3487,32 @@ html[dir="ltr"] .new-orders .orders .card .date {
   -o-border-radius: 10px;
 }
 
+html[dir="ltr"] .new-order-info .branches .branch-4 {
+  margin-left: 35px !important;
+  margin-right: 0 !important;
+}
+
+html[dir="ltr"] .new-order-info .branches .branch-4 img {
+  transform: scaleX(2) rotateY(180deg);
+  -webkit-transform: scaleX(2) rotateY(180deg);
+  -moz-transform: scaleX(2) rotateY(180deg);
+  -ms-transform: scaleX(2) rotateY(180deg);
+  -o-transform: scaleX(2) rotateY(180deg);
+}
+
+html[dir="ltr"] .new-order-info .branches .branch-5 {
+  margin-left: 75px !important;
+  margin-right: 0 !important;
+}
+
+html[dir="ltr"] .new-order-info .branches .branch-5 img {
+  transform: scaleX(1.8) rotateY(180deg);
+  -webkit-transform: scaleX(1.8) rotateY(180deg);
+  -moz-transform: scaleX(1.8) rotateY(180deg);
+  -ms-transform: scaleX(1.8) rotateY(180deg);
+  -o-transform: scaleX(1.8) rotateY(180deg);
+}
+
 html[dir="ltr"] .new-order-info .order-info .info .data {
   margin-left: 25px;
   margin-right: 0;
@@ -3280,9 +3528,14 @@ html[dir="ltr"] .new-order-info .order-info .info .data .type-of-counseling .tim
   margin-right: 0;
 }
 
-html[dir="ltr"] .new-order-info .order-info .info .data s .image + {
-  margin-left: 20px;
+html[dir="ltr"] .new-order-info .order-info .info .data .animal-logs .images .animal:not(:first-child) {
   margin-right: 0;
+  margin-left: 20px;
+}
+
+html[dir="ltr"] .new-order-info .order-info .info .data .animal-logs .images .animal .name {
+  left: 0;
+  right: initial;
 }
 
 html[dir="ltr"] .new-order-info .order-info .info .data .write-consult {
@@ -3290,8 +3543,8 @@ html[dir="ltr"] .new-order-info .order-info .info .data .write-consult {
   margin-left: 0;
 }
 
-html[dir="ltr"] .pending-order-info .order-info .state-order::after {
-  right: 0;
+html[dir="ltr"] .pending-order-info .order-info .fees {
+  right: 5%;
   left: initial;
 }
 
@@ -3316,6 +3569,9 @@ html[dir="ltr"] .pending-order-info .order-info .state-order::after {
   }
   .new-order-info .order-info .data .name + .date {
     margin-right: 100px;
+  }
+  .new-order-info .order-info .data .animal-logs .images .animal .name {
+    margin-right: 0;
   }
 }
 
@@ -3343,26 +3599,69 @@ html[dir="ltr"] .pending-order-info .order-info .state-order::after {
   }
 }
 
+@media (max-width: 575.98px) {
+  .new-order-info {
+    padding: 50px 10px 100px;
+  }
+  .new-order-info .branches {
+    display: none;
+  }
+  .new-order-info .buttons .btn {
+    width: 60% !important;
+  }
+  .pending-order-info .order-info .fees {
+    padding: 12px 26px;
+  }
+}
+
 @media (max-width: 500px) {
   .new-order-info .order-info .info .data {
     margin-right: 0;
   }
+  .new-order-info .order-info .info .data .address-consult {
+    font-size: 12pt;
+  }
+  .new-order-info .order-info .info .data .reserved-specialty .title {
+    font-size: 12pt;
+  }
+  .new-order-info .order-info .info .data .type-of-counseling {
+    font-size: 10pt;
+  }
   .new-order-info .order-info .info .data .name {
     text-align: center;
+    margin-right: 10px;
   }
   .new-order-info .order-info .info .data .name .text {
-    font-size: 18pt;
+    font-size: 16pt;
   }
   .new-order-info .order-info .info .data .date {
     text-align: center;
+    font-size: 12pt;
+  }
+  .new-order-info .order-info .info .data .name + .date {
+    margin-right: -25px;
   }
   .new-order-info .order-info .info .data .reserved-specialty .type-consult span:first-child {
     margin-left: 0;
   }
+  .new-order-info .order-info .info .data .animal-logs .title {
+    font-size: 12pt;
+  }
+  .new-order-info .order-info .info .data .animal-logs .images .animal .name {
+    width: 55px;
+    font-size: 18pt;
+    font-size: 14pt;
+  }
+  .new-order-info .order-info .info .data .details-order .title {
+    font-size: 12pt;
+  }
   .new-order-info .order-info .info .data .details-order .text {
     padding-inline: 10px;
-    font-size: 14pt;
+    font-size: 12pt;
     width: 98%;
+  }
+  .new-order-info .order-info .info .data .documents .title {
+    font-size: 12pt;
   }
   .new-order-info .order-info .info .user-img {
     position: absolute;
@@ -3376,6 +3675,27 @@ html[dir="ltr"] .pending-order-info .order-info .state-order::after {
   .new-order-info .order-info .button .btn {
     width: 80%;
   }
+  .new-order-info .buttons .btn {
+    width: 90% !important;
+  }
+  .pending-order-info .order-info .fees {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+    left: initial;
+  }
+  .pending-order-info .order-info .buttons .btn {
+    font-size: 15pt;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 361px) {
+  .new-order-info .order-info .info .data .name {
+    margin-right: 60px;
+  }
+  .new-order-info .order-info .info .data .date {
+    margin-right: 25px !important;
+  }
 }
 
 @media (max-width: 280px) {
@@ -3383,10 +3703,10 @@ html[dir="ltr"] .pending-order-info .order-info .state-order::after {
     padding: 50px 0 100px;
   }
   .new-order-info .order-info .info .data .name {
-    margin-right: 55px;
+    margin-right: 90px;
   }
   .new-order-info .order-info .info .data .date {
-    margin-right: 55px;
+    margin-right: 50px !important;
   }
   .new-order-info .order-info .info .data .type-of-counseling {
     font-size: 13pt;
@@ -3396,6 +3716,11 @@ html[dir="ltr"] .pending-order-info .order-info .state-order::after {
   }
   .new-order-info .order-info .info .data .reserved-specialty .type-consult span:last-child {
     width: 90px;
+  }
+  .new-order-info .order-info .info .data .animal-logs .images .animal .name {
+    width: 35px;
+    height: 22px;
+    font-size: 10pt;
   }
   .new-order-info .order-info .info .data .details-order .text {
     font-size: 11pt;
@@ -3408,10 +3733,10 @@ html[dir="ltr"] .pending-order-info .order-info .state-order::after {
     line-height: 87px;
   }
   .new-order-info .order-info .info .data .documents .image img {
-    min-width: 35px;
-    max-width: 35px;
-    min-height: 35px;
-    max-height: 35px;
+    min-width: 80px;
+    max-width: 80px;
+    min-height: 80px;
+    max-height: 80px;
   }
   .new-order-info .order-info .info .data .write-consult {
     margin-left: 0;
@@ -3428,6 +3753,9 @@ html[dir="ltr"] .pending-order-info .order-info .state-order::after {
   html[dir="ltr"] .new-order-info .order-info .data .name {
     margin-left: 100px;
     margin-right: 0;
+  }
+  html[dir="ltr"] .new-order-info .order-info .data .animal-logs .images .animal .name {
+    margin-left: 0;
   }
 }
 
@@ -3450,6 +3778,14 @@ html[dir="ltr"] .pending-order-info .order-info .state-order::after {
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
+  html[dir="ltr"] .new-order-info .order-info .info .data .name {
+    margin-left: 60px;
+    margin-right: 0;
+  }
+  html[dir="ltr"] .new-order-info .order-info .info .data .date {
+    margin-left: 25px !important;
+    margin-right: 0 !important;
+  }
   html[dir="ltr"] .new-order-info .order-info .info .data .reserved-specialty .type-consult span:first-child {
     margin-right: 0 !important;
     margin-left: 0 !important;
@@ -3458,12 +3794,12 @@ html[dir="ltr"] .pending-order-info .order-info .state-order::after {
 
 @media (max-width: 280px) {
   html[dir="ltr"] .new-order-info .order-info .info .data .name {
-    margin-left: 55px;
+    margin-left: 90px;
     margin-right: 0;
   }
   html[dir="ltr"] .new-order-info .order-info .info .data .date {
-    margin-left: 55px;
-    margin-right: 0;
+    margin-left: 50px !important;
+    margin-right: 0 !important;
   }
   html[dir="ltr"] .new-order-info .order-info .info .data .write-consult {
     margin-left: 0;
@@ -3734,9 +4070,17 @@ html[dir="ltr"] .pending-order-info .order-info .state-order::after {
   width: 100%;
 }
 
-html[dir="ltr"] .payments .branch .shape .text:last-child {
-  left: 112px;
-  right: initial;
+html[dir="ltr"] .payments .branches .branch-3 {
+  margin-left: -5px !important;
+  margin-right: 0  !important;
+}
+
+html[dir="ltr"] .payments .branches .branch-3 img {
+  transform: rotateY(180deg) scaleX(1.1);
+  -webkit-transform: rotateY(180deg) scaleX(1.1);
+  -moz-transform: rotateY(180deg) scaleX(1.1);
+  -ms-transform: rotateY(180deg) scaleX(1.1);
+  -o-transform: rotateY(180deg) scaleX(1.1);
 }
 
 html[dir="ltr"] .payments .sections .section .show-case .title {
@@ -3757,6 +4101,10 @@ html[dir="ltr"] .bank-info .modal-content > .title:after {
 html[dir="ltr"] .bank-info .modal-content .section .show-case .req-amount .title {
   margin-right: 0;
   margin-left: 12px;
+}
+
+html[dir="ltr"] .bank-info .modal-content .form-group label select.form-control {
+  background-position: 93%  center;
 }
 
 @media (max-width: 1399.98px) {
@@ -3796,6 +4144,9 @@ html[dir="ltr"] .bank-info .modal-content .section .show-case .req-amount .title
   .bank-info .modal-content .section {
     width: 60%;
   }
+  #successful-submit .modal-dialog {
+    max-width: 100% !important;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -3807,6 +4158,9 @@ html[dir="ltr"] .bank-info .modal-content .section .show-case .req-amount .title
   }
   .bank-info .modal-content .form-group {
     width: 50%;
+  }
+  #successful-submit .modal-dialog .modal-content {
+    width: 70% !important;
   }
 }
 
@@ -3856,6 +4210,9 @@ html[dir="ltr"] .bank-info .modal-content .section .show-case .req-amount .title
   .bank-info .modal-content .section .show-case .req-amount .title {
     font-size: 15pt;
   }
+  #successful-submit .modal-dialog .modal-content {
+    width: 95% !important;
+  }
 }
 
 @media (max-width: 280px) {
@@ -3867,6 +4224,9 @@ html[dir="ltr"] .bank-info .modal-content .section .show-case .req-amount .title
   }
   .payments .data-bank .form-group {
     width: 100%;
+  }
+  .bank-info .modal-content .section .show-case {
+    padding-inline: 5px;
   }
 }
 
@@ -5893,8 +6253,11 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   }
   .header .navbar .min-nav .navbar-brand {
     position: relative;
-    top: -50px;
+    top: -60px;
     left: -150px;
+  }
+  .header .navbar .min-nav .navbar-brand img {
+    width: 25%;
   }
   .header .navbar .min-nav .lang .dropdown .text-lang {
     font-size: 18pt;
@@ -5926,6 +6289,9 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   .header-home .navbar .min-nav .navbar-brand {
     position: initial;
     margin-right: 30px;
+  }
+  .header-home .navbar .min-nav .navbar-brand img {
+    width: 90%;
   }
   .services {
     padding: 100px 70px 120px;
@@ -6033,6 +6399,10 @@ html[dir="ltr"] .footer .row .contact .custom-items {
 @media (min-width: 280px) and (max-width: 415px) {
   .header .navbar .min-nav .navbar-brand {
     left: -120px;
+    top: -50px;
+  }
+  .header .navbar .min-nav .navbar-brand img {
+    width: 30%;
   }
   .header .navbar .min-nav .sign .btn {
     font-size: 14pt;
@@ -6053,10 +6423,16 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     display: none;
   }
   .header-home .navbar .min-nav .navbar-brand {
-    margin-right: 50px;
+    margin-right: 10px;
   }
   .header-home .navbar .min-nav .navbar-brand img {
     width: 93% !important;
+  }
+  .header-home .navbar .min-nav .lang .dropdown .text-lang {
+    font-size: 14pt;
+  }
+  .header-home .navbar .min-nav .lang.sign .dropdown .nav-link {
+    width: 55%;
   }
   .services {
     padding: 100px 20px 50px;
@@ -6116,15 +6492,15 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   }
 }
 
-@media (min-width: 412px) and (max-width: 413px) {
-  .vip-consultant .owl-carousel .center .card {
-    width: 412px !important;
-  }
-}
-
 @media (min-width: 414px) and (max-width: 415px) {
   .vip-consultant .owl-carousel .center .card {
     width: 414px !important;
+  }
+}
+
+@media (min-width: 412px) and (max-width: 413px) {
+  .vip-consultant .owl-carousel .center .card {
+    width: 412px !important;
   }
 }
 
@@ -6157,11 +6533,11 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     padding: 10px 15px 20px !important;
   }
   .header .navbar .min-nav .navbar-brand {
-    left: -98px;
+    left: -80px;
     top: -46px;
   }
   .header .navbar .min-nav .navbar-brand img {
-    width: 25%;
+    width: 35%;
   }
   .header .navbar .min-nav .sign .btn {
     font-size: 10pt;
@@ -6512,7 +6888,7 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     left: initial;
   }
   html[dir="ltr"] .header-home .navbar .min-nav .navbar-brand {
-    margin-left: 50px;
+    margin-left: 10px;
     margin-right: 0;
   }
   html[dir="ltr"] .app .show-case {
@@ -6530,7 +6906,7 @@ html[dir="ltr"] .footer .row .contact .custom-items {
 
 @media (min-width: 280px) and (max-width: 281px) {
   html[dir="ltr"] .header .navbar .min-nav .navbar-brand {
-    right: -98px;
+    right: -80px;
     left: initial;
   }
   html[dir="ltr"] .header .navbar .min-nav .sign .btn + .btn {

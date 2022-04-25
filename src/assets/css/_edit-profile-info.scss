@@ -330,6 +330,12 @@ html[dir = "ltr"]{
                         background-position-x: 92%
                     }
                 }
+                .label-map{
+                    a{
+                        right: 7% ;
+                        left: initial ;
+                    }
+                }
                 label{
                     .importants{
                         .custom-input{
@@ -340,19 +346,162 @@ html[dir = "ltr"]{
                         }
                     }
                 }
+                .another-image{
+                    .images{
+                        .image:not(:last-child){
+                            margin-left: 0 ; 
+                            margin-right: 15px ;
+                        }
+                    }
+                }
+                .clinic-date{
+                    padding: 30px 30px 50px 100px ;
+                    right: 100% ;
+                    .clinic-days{
+                        select{
+                            background-position: 95% center ;
+                        }
+                    }
+                    .add-btn{
+                        margin-left: auto ;
+                        margin-right: initial ;
+                    }
+                    .select-time{
+                        .inputs{
+                            label{
+                                margin-right: 30px ;
+                                margin-left: 0 ;
+                                span{
+                                    margin-right: 10px ;
+                                    margin-left: 0 ;
+                                }
+                            }
+                        }
+                    }
+                    .selected-time{
+                        .time{
+                            .end{
+                                margin-right: 10px ;
+                                margin-left: 0 ;
+                            }
+                        }
+                    }
+                }
+                .dates{
+                    right: 100% ;
+                    .date{
+                        .day{
+                            margin-left: 0 ;
+                            margin-right: 20px ;
+                        }
+                        .times{
+                            .time{
+                                &:not(:first-child){
+                                    margin-right: 0 ;
+                                    margin-left: 20px ;
+                                }
+                            }
+                        }
+                        img{
+                            left: initial ;
+                            right: 2% ;
+                        }
+                    }
+                }
             }
         }
     }
 }
 
+@media(max-width:1399.98px){
+    .edit-profile-info{
+        .show-case{
+            .form-group{
+                .clinic-date{
+                    .selected-time{
+                        .time{
+                            input{
+                                width: 30% ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:991.98px){
+    .edit-profile-info{
+        .show-case{
+            margin-top: 100px ;
+        }
+    }
+}
+@media(max-width:912px){
+    .edit-profile-info{
+        .show-case{
+            .form-group{
+                .clinic-date{
+                    padding: 30px 50px 30px ;
+                }
+            }
+        }
+    }
+}
+@media(max-width:768px){
+    .edit-profile-info{
+        .show-case{
+            .form-group{
+                .clinic-date{
+                    padding: 30px 25px 30px !important ;
+                }
+            }
+        }
+    }
+}
 @media(max-width:575.98px){
     .edit-profile-info{
+        padding: 50px 10px 200px ;
         .show-case{
             .form-group{
                 label{
                     .importants{
                         .custom-input{
                             width: 42% ;
+                        }
+                    }
+                }
+                .clinic-date{
+                    padding: 30px 10px 200px !important ;
+                    width: 160% ;
+                }
+            }
+        }
+    }
+}
+@media(max-width:500px){
+    .edit-profile-info{
+        .show-case{
+            .form-group{
+                .clinic-date{
+                    width: 100% ;
+                    right: 50% ;
+                    .select-time{
+                        .inputs{
+                            flex-direction: column ;
+                            label{
+                                margin-left: 0 ;
+                                &:not(:last-child){
+                                    margin-bottom: 20px ;
+                                }
+                            }
+                        }
+                    }
+                    .selected-time{
+                        .time{
+                            input{
+                                width: 42% ;
+                            }
                         }
                     }
                 }
@@ -364,10 +513,69 @@ html[dir = "ltr"]{
     .edit-profile-info{
         .show-case{
             .form-group{
+                .clinic-date{
+                    .selected-time{
+                        .time{
+                            input{
+                                width: 70% ;
+                            }
+                        }
+                    }
+                }
                 label{
                     .importants{
                         .custom-input{
                             width: 48% ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// res ltr
+
+@media(max-width:912px){
+    html[dir = "ltr"]{
+        .edit-profile-info{
+            .show-case{
+                .form-group{
+                    .clinic-date{
+                        padding: 30px 50px 30px ;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:575.98px){
+    html[dir = "ltr"]{
+        .edit-profile-info{
+            .show-case{
+                .form-group{
+                    .clinic-date{
+                        right: 110% ;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:500px){
+    html[dir = "ltr"]{
+        .edit-profile-info{
+            .show-case{
+                .form-group{
+                    .clinic-date{
+                        width: 100% ;
+                        right: 50% ;
+                        .select-time{
+                            .inputs{
+                                label{
+                                    margin-right: 0 ;
+                                }
+                            }
                         }
                     }
                 }

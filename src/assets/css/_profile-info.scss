@@ -196,8 +196,11 @@
     }
 }
 
-ltr 
+//ltr 
 html[dir = "ltr"]{
+    .branches{
+        @extend %branches-ltr ; 
+    }
     .show-case{
         .image-profile{
             .stars{
@@ -213,6 +216,7 @@ html[dir = "ltr"]{
                 .importants{
                     input:first-child{
                         margin-right: 15px ;
+                        margin-left: 0 ; 
                     }
                 }
             }
@@ -220,8 +224,36 @@ html[dir = "ltr"]{
             .form-control{
                 text-align: left ;
             }
+            .clinic-photos{
+                .images{
+                    img:not(:last-child){
+                        margin-right: 15px ;
+                        margin-left: 0 ;
+                    }
+                }
+            }
+            .date-clinic{
+                .date{
+                    .day{
+                        margin-right: 20px ;
+                        margin-left: 0 ;
+                    }
+                }
+                .date:not(:last-child){
+                    margin-right: 20px ;
+                    margin-left: 0 ;
+                }
+            }
         }
     }
+    .vip-consultant-2.clients-preview.clients-preview-2 {
+        .title{
+            &::after{
+                right: initial !important ;
+                left: 39% !important  ;
+            }
+        }
+    }    
     #change-pass-prof{
         .modal-content{
             .show-case{
@@ -236,6 +268,7 @@ html[dir = "ltr"]{
         }
     }
 }
+
 
 //responsive(rtl)
 @media(max-width: 1199.98px){
@@ -343,13 +376,29 @@ html[dir = "ltr"]{
 }
 @media(max-width: 280px){
     .profile-info{
-        .branch{
-            .shape{
-                right: 70px ;
-            }
+        .branches{
+            display: none ;
         }
         .show-case{
+            margin-top: 40px ;
             .form-group{
+                .date-clinic{
+                    width: 100% ;
+                    .date{
+                        width: 100% ;
+                        min-width: initial ;
+                        max-width: initial ;
+                        &:not(:last-child){
+                            margin-left: 0 ;
+                        }
+                        .day{
+                            font-size: 12pt ;
+                        }
+                        span{
+                            font-size: 12pt ;
+                        }
+                    }
+                }
                 label{
                     .importants{
                         .form-control{
@@ -362,14 +411,17 @@ html[dir = "ltr"]{
     }
 }
 
-//responsive(ltr)
+//ltr
 @media(max-width: 280px){
     html[dir = "ltr"]{
         .profile-info{
-            .branch{
-                .shape{
-                    left: 70px ;
-                    right: initial ;
+            .show-case{
+                .form-group{
+                    .date{
+                        &:not(:last-child){
+                            margin-right: 0 ;
+                        }
+                    }
                 }
             }
         }

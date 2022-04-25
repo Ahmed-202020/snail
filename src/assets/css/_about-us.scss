@@ -21,6 +21,15 @@
     }
 }
 
+//ltr 
+html[dir = "ltr"]{
+    .about-us{
+        .branches{
+            @extend %branches-ltr ; 
+        }
+    }
+}
+
 @media(max-width:1199.98px){
     .about-us{
         .show-case{

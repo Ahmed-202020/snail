@@ -259,6 +259,31 @@
 //new-orders[ltr]
 html[dir = "ltr"]{
     .new-orders{
+        .branches{
+            @extend %branches-ltr ; 
+            .branch-3{
+                margin-left: 3px !important ;
+                margin-right: 0 !important ;
+                img{
+                    transform: rotateY(180deg) scaleX(1.3);
+                    -webkit-transform: rotateY(180deg) scaleX(1.3);
+                    -moz-transform: rotateY(180deg) scaleX(1.3);
+                    -ms-transform: rotateY(180deg) scaleX(1.3);
+                    -o-transform: rotateY(180deg) scaleX(1.3);
+                }
+            }
+            .branch-4{
+                margin-left: 45px !important ;
+                margin-right: 0 !important;
+                img{
+                    transform: rotateY(180deg) scaleX(1.8);
+                    -webkit-transform: rotateY(180deg) scaleX(1.8);
+                    -moz-transform: rotateY(180deg) scaleX(1.8);
+                    -ms-transform: rotateY(180deg) scaleX(1.8);
+                    -o-transform: rotateY(180deg) scaleX(1.8);
+                }
+            }
+        }
         .orders{
             .card{
                 .info{
@@ -374,29 +399,8 @@ html[dir = "ltr"]{
 }
 @media(max-width:500px){
     .new-orders{
-        .branch{
-            .shape{
-                img{
-                    &:nth-child(3){
-                        right: -7px ;
-                    }
-                    &:nth-child(4){
-                        right: 67px ;
-                    }
-                    &:nth-child(5){
-                        right: 115px ;
-                    }
-                }
-                .text{
-                    font-size: 15px ;
-                    &:nth-of-type(2){
-                        right: 105px ;
-                    }
-                    &:last-child{
-                        right: 175px ;
-                    }
-                }
-            }
+        .branches{
+            display: none ;
         }
         .orders{
             padding: 50px 10px 0 ;
@@ -416,6 +420,11 @@ html[dir = "ltr"]{
                         .name{
                             .text{
                                 font-size: 15pt ;
+                                margin-right: 80px ;
+                            }
+                        }
+                        .rating{
+                            .main-rate{
                                 margin-right: 80px ;
                             }
                         }
@@ -440,6 +449,10 @@ html[dir = "ltr"]{
                 }
             }
         }
+        .simple-pagination{
+            width: 100% ;
+            justify-content: center ;
+        }
         .light-theme{
             .active{
                 width: 70px ;
@@ -460,7 +473,15 @@ html[dir = "ltr"]{
                 .info{
                     .data{
                         .name{
-                            margin-top: 10px ;
+                            margin-top: 40px ;
+                            .text{
+                                margin-right: 50px ; 
+                            }
+                        }
+                        .rating{
+                            .main-rate{
+                                margin-right: 50px ;
+                            }
                         }
                         .type-consult{
                             span{
@@ -511,34 +532,6 @@ html[dir = "ltr"]{
 @media(max-width:500px){
     html[dir = "ltr"]{
         .new-orders{
-            .branch{
-                .shape{
-                    img{
-                        &:nth-child(3){
-                            left: -7px ;
-                            right: initial ;
-                        }
-                        &:nth-child(4){
-                            left: 67px ;
-                            right: initial ;
-                        }
-                        &:nth-child(5){
-                            left: 115px ;
-                            right: initial ; 
-                        }
-                    }
-                    .text{
-                        &:nth-of-type(2){
-                            left: 105px ;
-                            right: initial ;
-                        }
-                        &:last-child{
-                            left: 175px ;
-                            right: initial ;
-                        }
-                    }
-                }
-            }
             .orders{
                 .card{
                     .info{
@@ -548,6 +541,12 @@ html[dir = "ltr"]{
                             .name{
                                 .text{
                                     margin-left: 80px ;
+                                    margin-right: 0 ;
+                                }
+                            }
+                            .rating{
+                                .main-rate{
+                                    margin-left: 65px ;
                                     margin-right: 0 ;
                                 }
                             }
@@ -573,6 +572,12 @@ html[dir = "ltr"]{
                 .card{
                     .info{
                         .data{
+                            .name{
+                                .text{
+                                    margin-left: 50px ;
+                                    margin-right: 0 ;
+                                }
+                            }
                             .rating{
                                 .text{
                                     margin-left: 0 ;

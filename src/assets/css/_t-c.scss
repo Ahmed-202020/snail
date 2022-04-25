@@ -5,7 +5,6 @@
             span{
                 z-index: 5 ;
                 width: 125% ;
-                left: -10% ;
             }
             img{
                 transform: scaleX(1.8);
@@ -18,12 +17,36 @@
     }
 }
 
-
+//ltr 
+html[dir = "ltr"]{
+    .about-us.t-c{
+        .branches{
+            .branch-2{
+                margin-left: 35px !important ;
+                margin-right: 0 !important ;
+                img{
+                    transform: scaleX(1.8) rotateY(180deg);
+                    -webkit-transform: scaleX(1.8) rotateY(180deg);
+                    -moz-transform: scaleX(1.8) rotateY(180deg);
+                    -ms-transform: scaleX(1.8) rotateY(180deg);
+                    -o-transform: scaleX(1.8) rotateY(180deg);
+                }
+            }
+        }
+    }
+}
 @media(max-width:500px){
     .about-us.t-c{
         padding: 50px 20px 200px ;
         .show-case{
             padding-inline: 10px ;
+        }
+    }
+}
+@media(max-width:280px){
+    .about-us.t-c{
+        .branches{
+            display: none ;
         }
     }
 }

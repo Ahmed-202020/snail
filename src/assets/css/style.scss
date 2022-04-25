@@ -1738,8 +1738,11 @@ html[dir = "ltr"]{
                 display: block ;
                 .navbar-brand{
                     position: relative ;
-                    top: -50px ;
+                    top: -60px ;
                     left: -150px ;
+                    img{
+                        width: 25% ;
+                    }
                 }
                 .lang{
                     .dropdown{
@@ -1788,6 +1791,9 @@ html[dir = "ltr"]{
                 .navbar-brand{
                     position: initial ;
                     margin-right: 30px ;
+                    img{
+                        width: 90% ;
+                    }
                 }
             }
         }
@@ -1928,6 +1934,10 @@ html[dir = "ltr"]{
             .min-nav{
                 .navbar-brand{
                     left: -120px ;
+                    top: -50px ;
+                    img{
+                        width: 30% ;
+                    }
                 }
                 .sign{
                     .btn{
@@ -1966,9 +1976,23 @@ html[dir = "ltr"]{
         .navbar{
             .min-nav{
                 .navbar-brand{
-                    margin-right: 50px ;
+                    margin-right: 10px ;
                     img{
                         width: 93% !important;
+                    }
+                }
+                .lang{
+                    .dropdown{
+                        .text-lang{
+                            font-size: 14pt ;
+                        }
+                    }
+                }
+                .lang.sign{
+                    .dropdown{
+                        .nav-link{
+                            width: 55% ;
+                        }
                     }
                 }
             }
@@ -2065,23 +2089,23 @@ html[dir = "ltr"]{
         }
     }
 }
-@media(min-width:412px) and (max-width : 413px){
-    .vip-consultant{
-        .owl-carousel{
-            .center{
-                .card{
-                    width: 412px !important;
-                }
-            }
-        }
-    }
-}
 @media(min-width:414px) and (max-width : 415px){
     .vip-consultant{
         .owl-carousel{
             .center{
                 .card{
                     width: 414px !important;
+                }
+            }
+        }
+    }
+}
+@media(min-width:412px) and (max-width : 413px){
+    .vip-consultant{
+        .owl-carousel{
+            .center{
+                .card{
+                    width: 412px !important;
                 }
             }
         }
@@ -2137,10 +2161,10 @@ html[dir = "ltr"]{
             .min-nav{
                 padding: 10px 15px 20px !important;
                 .navbar-brand{
-                    left: -98px;
+                    left: -80px;
                     top: -46px ;
                     img{
-                        width: 25% ;
+                        width:35% ;
                     }
                 }
                 .sign{
@@ -2810,7 +2834,7 @@ html[dir = "ltr"]{
             .navbar{
                 .min-nav{
                     .navbar-brand{
-                        margin-left: 50px ;
+                        margin-left: 10px ;
                         margin-right: 0 ;
                     }
                 }
@@ -2841,7 +2865,7 @@ html[dir = "ltr"]{
             .navbar{
                 .min-nav{
                     .navbar-brand{
-                        right: -98px ;
+                        right: -80px ;
                         left: initial ;
                     }
                     .sign{

@@ -31,6 +31,9 @@
 //ltr 
 html[dir = "ltr"]{
     .profile{
+        .branches{
+            @extend %branches-ltr ;
+        }
         .sections{
             .section{
                 .show-case{
@@ -144,17 +147,8 @@ html[dir = "ltr"]{
         }
     }
     .orders{
-        .shape{
-            img{
-                &:nth-child(4){
-                    right: 70px !important ;
-                }
-            }
-            .text{
-                &:last-child{
-                    right: 122px !important ;
-                }
-            }
+        .branches{
+            display: none ;
         }
         .sections{
             .section{

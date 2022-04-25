@@ -198,55 +198,6 @@
                         }
                     }
                 }
-                // .write-consult{
-                //     display: flex ;
-                //     flex-direction: column ;
-                //     align-items: center;
-                //     margin-left: 140px ;
-                //     margin-top: 80px ;
-                //     .title{
-                //         text-align: center ;
-                //         color: $min-color ;
-                //         font-size: 18pt ;
-                //         margin-bottom: 20px ;
-                //     }
-                //     .form-group{
-                //         width: 60% ;
-                //         .form-control{
-                //             resize: none ;
-                //             border: 1px solid $light-line ;
-                //             padding: 20px 20px;
-                //             height: 200px ;
-                //             border-radius: 10px ;
-                //             -webkit-border-radius: 10px ;
-                //             -moz-border-radius: 10px ;
-                //             -ms-border-radius: 10px ;
-                //             -o-border-radius: 10px ;
-                //             margin-bottom: 50px ;
-                //             &:focus{
-                //                 box-shadow: none ;
-                //             }
-                //             &::placeholder{
-                //                 color: $light-line;
-                //             }
-                //         }
-                //         .button{
-                //             display: flex ;
-                //             flex-direction: column ;
-                //             .btn{
-                //                 width: 100% ;
-                //                 background-image: linear-gradient($btn-1 , $btn-2) !important;
-                //             }
-                //             .btn:nth-child(2){
-                //                 margin-top: 25px ;
-                //                 background-image: none !important;
-                //                 background-color: $light-line ;
-                //                 border: 1px solid $light-line;
-                //                 color: $hint;
-                //             }
-                //         }
-                //     }
-                // }
             }
         }
         .buttons{
@@ -271,7 +222,6 @@
     }
 }
 
-
 .pending-order-info{
     .order-info{
         position: relative ;
@@ -295,6 +245,31 @@
 //ltr 
 html[dir = "ltr"]{
     .new-order-info{
+        .branches{
+            @extend %branches-ltr ; 
+            .branch-4{
+                margin-left: 35px !important ;
+                margin-right: 0 !important ;
+                img{
+                    transform: scaleX(2) rotateY(180deg);
+                    -webkit-transform: scaleX(2) rotateY(180deg);
+                    -moz-transform: scaleX(2) rotateY(180deg);
+                    -ms-transform: scaleX(2) rotateY(180deg);
+                    -o-transform: scaleX(2) rotateY(180deg);
+                }
+            }
+            .branch-5{
+                margin-left: 75px !important ;
+                margin-right: 0 !important ;
+                img{
+                    transform: scaleX(1.8) rotateY(180deg) ;
+                    -webkit-transform: scaleX(1.8) rotateY(180deg) ;
+                    -moz-transform: scaleX(1.8) rotateY(180deg) ;
+                    -ms-transform: scaleX(1.8) rotateY(180deg) ;
+                    -o-transform: scaleX(1.8) rotateY(180deg) ;
+                }
+            }
+        }
         .order-info{
             .info{
                 .data{
@@ -315,11 +290,17 @@ html[dir = "ltr"]{
                             @extend %type-consult-ltr ;  
                         }
                     }
-                    s{
-                        .image{
-                             + {
-                                margin-left: 20px ;
-                                margin-right: 0 ;
+                    .animal-logs{
+                        .images{
+                            .animal{
+                                &:not(:first-child){
+                                    margin-right: 0 ;
+                                    margin-left: 20px ;
+                                }
+                                .name{
+                                    left: 0 ;
+                                    right: initial ;
+                                }
                             }
                         }
                     }
@@ -333,11 +314,9 @@ html[dir = "ltr"]{
     }
     .pending-order-info{
         .order-info{
-            .state-order{
-                &::after{
-                    right: 0 ;
-                    left: initial ;
-                }
+            .fees{
+                right: 5% ;
+                left: initial ;
             }
         }
     }
@@ -355,7 +334,6 @@ html[dir = "ltr"]{
         }
     }
 }
-
 @media(max-width:1199.98px){
     .new-order-info{
         .order-info{
@@ -384,14 +362,18 @@ html[dir = "ltr"]{
                 .name + .date{
                     margin-right: 100px ;
                 }
+                .animal-logs{
+                    .images{
+                        .animal{
+                            .name{
+                                margin-right: 0 ;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
-    // .successful-submit{
-    //     .modal-content{
-    //         width: 80% ;
-    //     }
-    // }
 }
 @media(max-width:912px){
     .new-order-info{
@@ -432,6 +414,24 @@ html[dir = "ltr"]{
     }
 }
 @media(max-width:575.98px){
+    .new-order-info{
+        padding: 50px 10px 100px ;
+        .branches{
+            display: none ;
+        }
+        .buttons{
+            .btn{
+                width: 60% !important ;
+            }
+        }
+    }
+    .pending-order-info{
+        .order-info{
+            .fees{
+                padding: 12px 26px ;
+            }
+        }
+    }
 }
 @media(max-width:500px){
     .new-order-info{
@@ -439,14 +439,30 @@ html[dir = "ltr"]{
             .info{
                 .data{
                     margin-right: 0 ;
+                    .address-consult{
+                        font-size: 12pt ;
+                    }
+                    .reserved-specialty{
+                        .title{
+                            font-size: 12pt ;
+                        }
+                    }
+                    .type-of-counseling{
+                        font-size: 10pt ;
+                    }
                     .name{
                         text-align: center ;
+                        margin-right: 10px ;
                         .text{
-                            font-size: 18pt ;
+                            font-size: 16pt ;
                         }
                     }
                     .date{
                         text-align: center ;
+                        font-size: 12pt ;
+                    }
+                    .name + .date{
+                        margin-right: -25px ;
                     }
                     .reserved-specialty{
                         .type-consult{
@@ -457,11 +473,33 @@ html[dir = "ltr"]{
                             }
                         }
                     }
+                    .animal-logs{
+                        .title{
+                            font-size: 12pt ;
+                        }
+                        .images{
+                            .animal{
+                                .name{
+                                    width: 55px ;
+                                    font-size: 18pt ;
+                                    font-size: 14pt ;
+                                }
+                            }
+                        }
+                    }
                     .details-order{
+                        .title{
+                            font-size: 12pt ;
+                        }
                         .text{
                             padding-inline: 10px ;
-                            font-size: 14pt ;
+                            font-size: 12pt ;
                             width: 98% ;
+                        }
+                    }
+                    .documents{
+                        .title{
+                            font-size: 12pt ;
                         }
                     }
                 }
@@ -481,12 +519,43 @@ html[dir = "ltr"]{
                 }
             }
         }
+        .buttons{
+            .btn{
+                width: 90% !important ;
+            }
+        }
     }
-    // .successful-submit{
-    //     .modal-content{
-    //         width: 100% ;
-    //     }
-    // }
+    .pending-order-info{
+        .order-info{
+            .fees{
+                position: relative ;
+                text-align: center ;
+                margin-bottom: 50px ;
+                left: initial ;
+            }
+            .buttons{
+                .btn{
+                    font-size: 15pt ;
+                }
+            }
+        }
+    }
+}
+@media(min-width : 360px) and (max-width : 361px){
+    .new-order-info{
+        .order-info{
+            .info{
+                .data{
+                    .name{
+                        margin-right: 60px ;
+                    }
+                    .date{
+                        margin-right: 25px !important ;
+                    }
+                }
+            }
+        }
+    }
 }
 @media(max-width:280px){
     .new-order-info{
@@ -495,10 +564,10 @@ html[dir = "ltr"]{
             .info{
                 .data{
                     .name{
-                        margin-right: 55px ;
+                        margin-right: 90px ;
                     }
                     .date{
-                        margin-right: 55px ;
+                        margin-right: 50px !important ;
                     }
                     .type-of-counseling{
                         font-size: 13pt ;
@@ -511,6 +580,17 @@ html[dir = "ltr"]{
                                 }
                                 &:last-child{
                                     width: 90px ;
+                                }
+                            }
+                        }
+                    }
+                    .animal-logs{
+                        .images{
+                            .animal{
+                                .name{
+                                    width: 35px ;
+                                    height: 22px ;
+                                    font-size: 10pt ;
                                 }
                             }
                         }
@@ -528,10 +608,10 @@ html[dir = "ltr"]{
                             height: 90px ;
                             line-height: 87px ;
                             img{
-                                min-width: 35px;
-                                max-width: 35px;
-                                min-height: 35px;
-                                max-height: 35px;
+                                min-width: 80px;
+                                max-width: 80px;
+                                min-height: 80px;
+                                max-height: 80px;
                             }
                         }
                     }
@@ -551,20 +631,7 @@ html[dir = "ltr"]{
 
 
 //responsive[ltr]
-@media(min-width:1399px) and (max-width:1400px){
-    html[dir = "ltr"]{
-        
-    }
-}
-@media(max-width:1399px){
-    html[dir = "ltr"]{
-    }
-}
-@media(max-width:1280px){
-    html[dir = "ltr"]{
-    
-    }
-}
+
 @media(max-width:1024px){
     html[dir = "ltr"]{
         .new-order-info{
@@ -577,13 +644,18 @@ html[dir = "ltr"]{
                         margin-left: 100px ;
                         margin-right: 0 ;
                     }
+                    .animal-logs{
+                        .images{
+                            .animal{
+                                .name{
+                                    margin-left: 0 ;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
-    }
-}
-@media(max-width:991.98px){
-    html[dir = "ltr"]{
     }
 }
 @media(max-width:768.98px){
@@ -622,6 +694,14 @@ html[dir = "ltr"]{
                     .data{
                         margin-left: 0 !important ;
                         margin-right: 0 !important ;
+                        .name{
+                            margin-left: 60px ;
+                            margin-right: 0 ;
+                        }
+                        .date{
+                            margin-left: 25px !important ;
+                            margin-right: 0 !important ;
+                        }
                         .reserved-specialty{
                             .type-consult{
                                 span{
@@ -645,12 +725,12 @@ html[dir = "ltr"]{
                 .info{
                     .data{
                         .name{
-                            margin-left: 55px ;
+                            margin-left: 90px ;
                             margin-right: 0 ;
                         }
                         .date{
-                            margin-left: 55px ;
-                            margin-right: 0 ;
+                            margin-left: 50px !important ;
+                            margin-right: 0 !important ;
                         }
                         .write-consult{
                             margin-left: 0 ;
