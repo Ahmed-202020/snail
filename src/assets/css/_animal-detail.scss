@@ -229,3 +229,212 @@
         }
     }
 }
+
+//ltr
+
+html[dir ="ltr"]{
+    .order-info{
+        .animal-details{
+            .text{
+                margin-left: 15px ;
+                margin-right: 0 ;
+            }
+        }
+        .prev-reports{
+            .show-case{
+                .image-clinic{
+                    right: 1% ;
+                    left: initial ;
+                }
+                .date{
+                    .text{
+                        margin-left: 3px ;
+                        margin-right: 0 ;
+                    }
+                }
+                .report-content{
+                    .form-control{
+                        background-position: 95% center ;
+                    }
+                }
+                .name-clinic{
+                    right: 3px ;
+                    left: initial ;
+                }
+            }
+        }
+        .descriptions{
+            .show-case{
+                .description{
+                    .contents{
+                        .content{
+                            &:not(:last-child){
+                                margin-left: 0 ;
+                                margin-right: 15px ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .vacci{
+            .show-case{
+                .date{
+                    .text{
+                        margin-left: 15px ;
+                        margin-right: 0 ;
+                    }
+                }
+                .name-vacci{
+                    .text{
+                        margin-left: 15px ;
+                        margin-right: 0 ;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//res(rtl)
+
+@media(max-width:1024px){
+    .animal-detail{
+        .order-info{
+            .animal-image{
+                width: 60% ;
+            }
+            .animal-details , .prev-reports{
+                width: 61% ;
+            }
+        }
+    }
+}
+@media(max-width:768px){
+    .animal-detail{
+        .order-info{
+            .animal-image{
+                width: 70% ;
+            }
+            .animal-details , .prev-reports{
+                width: 71% ;
+            }
+        }
+    }
+}
+@media(max-width:575.98px){
+    .animal-detail{
+        .order-info{
+            .animal-image{
+                width: 90% ;
+            }
+            .animal-details , .prev-reports{
+                width: 91% ;
+            }
+        }
+    }
+}
+@media(max-width:500px){
+    .animal-detail{
+        .order-info{
+            padding: 50px 5px 80px ;
+            .animal-image{
+                width: 96% ;
+            }
+            .animal-details , .prev-reports{
+                width: 95% ;
+                .show-case{
+                    padding: 25px 10px ;
+                }
+            }
+            .prev-reports{
+                .show-case{
+                    .image-clinic{
+                        width: 80px ;
+                        height: 90px ;
+                    }
+                    .date{
+                        font-size: 12pt ;
+                    }
+                    .report-content{
+                        .title{
+                            font-size: 12pt ;
+                        }
+                        .form-control{
+                            font-size: 10pt ;
+                        }
+                    }
+                    .name-clinic{
+                        font-size: 10pt ;
+                        width: 120px;
+                    }
+                }
+            }
+            .descriptions{
+                .title{
+                    font-size: 12pt ;
+                }
+                .contents{
+                    .content{
+                        font-size: 12pt ;
+                    }
+                }
+            }
+            .vacci{
+                .show-case{
+                    .name-vacci{
+                        font-size: 12pt ;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:280px){
+    .animal-detail{
+        .order-info{
+            .prev-reports{
+                .show-case{
+                    .image-clinic{
+                        width: 60px ;
+                        height: 70px ;
+                    }
+                    .date{
+                        font-size: 10pt ;
+                    }
+                    .report-content{
+                        .title{
+                            font-size: 10pt ;
+                        }
+                        .form-control{
+                            font-size: 10pt ;
+                        }
+                        .content-select{
+                            font-size: 10pt ;
+                        }
+                    }
+                    .name-clinic{
+                        font-size: 10pt ;
+                    }
+                }
+            }
+            .descriptions{
+                .title{
+                    font-size: 10pt ;
+                }
+                .contents{
+                    .content{
+                        font-size: 10pt ;
+                    }
+                }
+            }
+            .vacci{
+                .show-case{
+                    .name-vacci{
+                        font-size: 10pt ;
+                    }
+                }
+            }
+        }
+    }
+}

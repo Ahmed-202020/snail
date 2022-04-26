@@ -4533,6 +4533,144 @@ html[dir="ltr"] .bank-info .modal-content .form-group label select.form-control 
   -o-border-radius: 10px;
 }
 
+html[dir="ltr"] .order-info .animal-details .text {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+html[dir="ltr"] .order-info .prev-reports .show-case .image-clinic {
+  right: 1%;
+  left: initial;
+}
+
+html[dir="ltr"] .order-info .prev-reports .show-case .date .text {
+  margin-left: 3px;
+  margin-right: 0;
+}
+
+html[dir="ltr"] .order-info .prev-reports .show-case .report-content .form-control {
+  background-position: 95% center;
+}
+
+html[dir="ltr"] .order-info .prev-reports .show-case .name-clinic {
+  right: 3px;
+  left: initial;
+}
+
+html[dir="ltr"] .order-info .descriptions .show-case .description .contents .content:not(:last-child) {
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+html[dir="ltr"] .order-info .vacci .show-case .date .text {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+html[dir="ltr"] .order-info .vacci .show-case .name-vacci .text {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+@media (max-width: 1024px) {
+  .animal-detail .order-info .animal-image {
+    width: 60%;
+  }
+  .animal-detail .order-info .animal-details, .animal-detail .order-info .prev-reports {
+    width: 61%;
+  }
+}
+
+@media (max-width: 768px) {
+  .animal-detail .order-info .animal-image {
+    width: 70%;
+  }
+  .animal-detail .order-info .animal-details, .animal-detail .order-info .prev-reports {
+    width: 71%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .animal-detail .order-info .animal-image {
+    width: 90%;
+  }
+  .animal-detail .order-info .animal-details, .animal-detail .order-info .prev-reports {
+    width: 91%;
+  }
+}
+
+@media (max-width: 500px) {
+  .animal-detail .order-info {
+    padding: 50px 5px 80px;
+  }
+  .animal-detail .order-info .animal-image {
+    width: 96%;
+  }
+  .animal-detail .order-info .animal-details, .animal-detail .order-info .prev-reports {
+    width: 95%;
+  }
+  .animal-detail .order-info .animal-details .show-case, .animal-detail .order-info .prev-reports .show-case {
+    padding: 25px 10px;
+  }
+  .animal-detail .order-info .prev-reports .show-case .image-clinic {
+    width: 80px;
+    height: 90px;
+  }
+  .animal-detail .order-info .prev-reports .show-case .date {
+    font-size: 12pt;
+  }
+  .animal-detail .order-info .prev-reports .show-case .report-content .title {
+    font-size: 12pt;
+  }
+  .animal-detail .order-info .prev-reports .show-case .report-content .form-control {
+    font-size: 10pt;
+  }
+  .animal-detail .order-info .prev-reports .show-case .name-clinic {
+    font-size: 10pt;
+    width: 120px;
+  }
+  .animal-detail .order-info .descriptions .title {
+    font-size: 12pt;
+  }
+  .animal-detail .order-info .descriptions .contents .content {
+    font-size: 12pt;
+  }
+  .animal-detail .order-info .vacci .show-case .name-vacci {
+    font-size: 12pt;
+  }
+}
+
+@media (max-width: 280px) {
+  .animal-detail .order-info .prev-reports .show-case .image-clinic {
+    width: 60px;
+    height: 70px;
+  }
+  .animal-detail .order-info .prev-reports .show-case .date {
+    font-size: 10pt;
+  }
+  .animal-detail .order-info .prev-reports .show-case .report-content .title {
+    font-size: 10pt;
+  }
+  .animal-detail .order-info .prev-reports .show-case .report-content .form-control {
+    font-size: 10pt;
+  }
+  .animal-detail .order-info .prev-reports .show-case .report-content .content-select {
+    font-size: 10pt;
+  }
+  .animal-detail .order-info .prev-reports .show-case .name-clinic {
+    font-size: 10pt;
+  }
+  .animal-detail .order-info .descriptions .title {
+    font-size: 10pt;
+  }
+  .animal-detail .order-info .descriptions .contents .content {
+    font-size: 10pt;
+  }
+  .animal-detail .order-info .vacci .show-case .name-vacci {
+    font-size: 10pt;
+  }
+}
+
 .add-report .order-info:not(:last-child) {
   margin-bottom: 40px;
 }
@@ -4800,6 +4938,142 @@ html[dir="ltr"] .bank-info .modal-content .form-group label select.form-control 
   width: 100%;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+html[dir="ltr"] .add-report .reports .special-report {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+html[dir="ltr"] .add-report .reports .special-report .form-group .content .form-control {
+  background-position: 95% center;
+}
+
+html[dir="ltr"] .add-report .reports .special-report .descriptions .content .form-control {
+  background-position: 95% center;
+}
+
+html[dir="ltr"] .add-report .reports .special-report .descriptions .select-content span img {
+  right: 7px;
+  left: initial;
+}
+
+html[dir="ltr"] .add-report .reports .special-report .descriptions .select-content span:not(:last-child) {
+  margin-right: 15px;
+  margin-left: 0;
+}
+
+html[dir="ltr"] .add-report .recorded-reports .report {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+html[dir="ltr"] .add-report .recorded-reports .report .title span {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+html[dir="ltr"] .add-report .recorded-reports .report .title img:not(:last-child) {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+#edit-report .modal-dialog .modal-content .close {
+  left: 2%;
+  right: initial;
+}
+
+#edit-report .modal-dialog .modal-content .show-case .form-group select {
+  background-position: 95% center;
+  text-align: left;
+}
+
+@media (max-width: 1199.98px) {
+  .add-report .reports .special-report .descriptions .content {
+    width: 80%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .add-report .reports .special-report .descriptions .content {
+    width: 95%;
+  }
+}
+
+@media (max-width: 920px) {
+  .add-report .reports .special-report .form-group {
+    width: 120%;
+  }
+  .add-report .reports .special-report .descriptions .content {
+    width: 110%;
+  }
+  #edit-report .modal-dialog .modal-content .show-case .form-group select {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .add-report .reports .special-report {
+    padding-right: 0px;
+    width: 85%;
+  }
+  .add-report .recorded-reports .report {
+    padding-right: 0;
+    width: 100%;
+  }
+  #edit-report .modal-dialog .modal-content .show-case {
+    width: 90%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #edit-report .modal-dialog .modal-content .show-case {
+    padding: 50px 10px 200px;
+  }
+}
+
+@media (max-width: 400px) {
+  .add-report .reports .special-report .form-group .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .add-report .reports .special-report .form-group .content .form-control {
+    width: 96%;
+  }
+  .add-report .reports .special-report .descriptions .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .add-report .reports .special-report .descriptions .content .form-control {
+    width: 100%;
+  }
+  .add-report .reports .special-report .descriptions .select-content {
+    width: 115%;
+  }
+  .add-report .button .btn {
+    width: 90%;
+  }
+  #edit-report .modal-dialog .modal-content .show-case .form-group select {
+    width: 100%;
+  }
+  #edit-report .modal-dialog .modal-content .show-case .form-group .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  html[dir="ltr"] .add-report .reports {
+    padding-left: 0;
+    margin-left: 0;
+  }
+  html[dir="ltr"] .add-report .recorded-reports {
+    padding-left: 0;
+    margin-left: 0;
+  }
 }
 
 .header .navbar {
@@ -5880,6 +6154,7 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   }
   .footer .row .logo {
     margin-bottom: 40px;
+    width: 180px;
   }
   .footer .row .explanation .text {
     width: 300px;
@@ -5946,6 +6221,7 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   }
   .footer .row .logo {
     margin-bottom: 40px;
+    width: 180px;
   }
   .footer .row .explanation .text {
     font-size: 15pt;
@@ -5988,7 +6264,7 @@ html[dir="ltr"] .footer .row .contact .custom-items {
   }
   .footer .row .logo {
     margin-bottom: 30px;
-    width: 90px;
+    width: 160px;
   }
   .footer .row .explanation .text {
     width: auto;
@@ -6065,7 +6341,7 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     width: 100%;
   }
   .footer .row .col-4 .logo {
-    width: 100px;
+    width: 160px;
   }
   .footer .row .col-4 .explanation .text {
     width: auto;
@@ -6201,7 +6477,7 @@ html[dir="ltr"] .footer .row .contact .custom-items {
     width: 100%;
   }
   .footer .row .col-4 .logo {
-    width: 100px;
+    width: 160px;
   }
   .footer .row .col-4 .explanation .text {
     width: auto;

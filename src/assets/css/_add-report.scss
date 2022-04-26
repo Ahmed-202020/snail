@@ -240,3 +240,235 @@
         }
     }
 }
+
+//ltr 
+html[dir = "ltr"]{
+    .add-report{
+        .reports{
+            .special-report{
+                padding-left: 0;
+                padding-right: 0 ;
+                .form-group{
+                    .content{
+                        .form-control{
+                            background-position: 95% center ;
+                        }
+                    }
+                }
+                .descriptions{
+                    .content{
+                        .form-control{
+                            background-position: 95% center ;
+                        }
+                    }
+                    .select-content{
+                        span{
+                            img{
+                                right: 7px ;
+                                left: initial ;
+                            }
+                            &:not(:last-child){
+                                margin-right: 15px ;
+                                margin-left: 0 ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .recorded-reports{
+            .report{
+                margin-left: 0 ;
+                margin-right: 0 ;
+                .title{
+                    span{
+                        margin-right: 10px ;
+                        margin-left: 0 ;
+                    }
+                    img{
+                        &:not(:last-child){
+                            margin-left: 0 ;
+                            margin-right: 10px ; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#edit-report{
+    .modal-dialog{
+        .modal-content{
+            .close{
+                left: 2% ;
+                right: initial ;
+            }
+            .show-case{
+                .form-group{
+                    select{
+                        background-position: 95% center ;
+                        text-align: left ;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//res rtl
+
+@media(max-width:1199.98px){
+    .add-report{
+        .reports{
+            .special-report{
+                .descriptions{
+                    .content{
+                        width: 80% ;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:991.98px){
+    .add-report{
+        .reports{
+            .special-report{
+                .descriptions{
+                    .content{
+                        width: 95% ;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:920px){
+    .add-report{
+        .reports{
+            .special-report{
+                .form-group{
+                    width:120% ; 
+                }
+                .descriptions{
+                    .content{
+                        width: 110% ;
+                    }
+                }
+            }
+        }
+    }
+    #edit-report{
+        .modal-dialog{
+            .modal-content{
+                .show-case{
+                    .form-group{
+                        select{
+                            width: 50% ;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
+@media(max-width:768px){
+    .add-report{
+        .reports{
+            .special-report{
+                padding-right: 0px;
+                width: 85%;
+            }
+        }
+        .recorded-reports{
+            .report{
+                padding-right: 0;
+                width: 100%;
+            }
+        }
+    }
+    #edit-report{
+        .modal-dialog{
+            .modal-content{
+                .show-case{
+                    width: 90% ;
+                }
+            }
+        }
+    }
+}
+@media(max-width:575.98px){
+    #edit-report{
+        .modal-dialog{
+            .modal-content{
+                .show-case{
+                    padding: 50px 10px 200px ;
+                }
+            }
+        }
+    }    
+}
+@media(max-width:400px){
+    .add-report{
+        .reports{
+            .special-report{
+                .form-group{
+                    .content{
+                        flex-direction: column ;
+                        .form-control{
+                            width: 96% ;
+                        }
+                    }
+                }
+                .descriptions{
+                    .content{
+                        flex-direction: column ;
+                        .form-control{
+                            width: 100% ;
+                        }
+                    }
+                    .select-content{
+                        width: 115% ;
+                    }
+                }
+            }
+        }
+        .button{
+            .btn{
+                width: 90% ;
+            }
+        }
+    }
+    #edit-report{
+        .modal-dialog{
+            .modal-content{
+                .show-case{
+                    .form-group {
+                        select{
+                            width: 100% ;
+                        }
+                        .button{
+                            width: 100% ;
+                        }
+                    }
+                }
+            }
+        }
+    }   
+}
+
+//dir(ltr)
+@media(max-width:768px){
+    html[dir = "ltr"]{
+        .add-report{
+            .reports{
+                padding-left: 0 ;
+                margin-left: 0 ;
+            }
+            .recorded-reports{
+                padding-left: 0 ;
+                margin-left: 0;
+            }
+        }
+    }
+}
